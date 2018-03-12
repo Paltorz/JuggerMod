@@ -1,0 +1,331 @@
+{
+	"Strike_P": {
+		"NAME": "Strike",
+		"DESCRIPTION": "Deal !D! damage."
+	},
+	"Defend_P": {
+		"NAME": "Defend",
+		"DESCRIPTION": "Gain !B! Block."
+	},
+	"Struggle": {
+		"NAME": "Struggle",
+		"DESCRIPTION": "Deal !D! damage. Costs 1 more [R] for each card in your hand except this card."
+	},
+	"Fury": {
+		"NAME": "Fury",
+		"DESCRIPTION": "Deal !D! damage. Discard a random card in your hand."
+	},
+	"Steel Force": {
+		"NAME": "Steel Force",
+		"DESCRIPTION": "Can only be played if you have 10 or more Plated Armor. Deal !D! damage. Overflow - gain 1 Plated Armor.",
+		"EXTENDED_DESCRIPTION": [ "I do not have any Plated Armor." ]
+	},
+	"Heavy Crash": {
+		"NAME": "Heavy Crash",
+		"DESCRIPTION": "Deal damage equal to !M! times your current Plated Armor to All enemies. Remove all of your Plated Armor.",
+		"UPGRADE_DESCRIPTION": "(Deals !D! damage.)",
+		"EXTENDED_DESCRIPTION": [ "I do not have any Plated Armor." ]
+	},
+	"Earthquake": {
+		"NAME": "Earthquake",
+		"DESCRIPTION": "Deal !D! damage and apply 2 Vulnerable to All enemies."
+	},
+	"Skull Bash": {
+		"NAME": "Skull Bash",
+		"DESCRIPTION": "Deal !D! damage. Gain Confused. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. Deal !D! damage. Gain Confused. Exhaust."
+	},
+	"Lash Out": {
+		"NAME": "Lash Out",
+		"DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Exhaust."
+	},
+	"Unstoppable Force": {
+		"NAME": "Unstoppable Force",
+		"DESCRIPTION": "Enemy loses All Block. Deal !D! damage."
+	},
+	"Overpower": {
+		"NAME": "Overpower",
+		"DESCRIPTION": "Deals 8 damage. Strength affects Overpower !M! times.",
+		"UPGRADE_DESCRIPTION": "(Currently deals: !D! damage.)"
+	},
+	"Hammer Arm": {
+		"NAME": "Hammer Arm",
+		"DESCRIPTION": "Deal !D! damage. Lose 2 Dexterity."
+	},
+	"Mangle": {
+		"NAME": "Mangle",
+		"DESCRIPTION": "Deal !D! damage. Enemy loses !M! HP at the end of each of its turns."
+	},
+	"Overexert": {
+		"NAME": "Overexert",
+		"DESCRIPTION": "Draw !M! cards. Lose 2 Dexterity.",
+		"UPGRADE_DESCRIPTION": "Draw !M! cards. Lose 2 Dexterity. Overflow - Put a card from your hand on top of your draw pile."
+	},
+	"Pulverize": {
+		"NAME": "Pulverize",
+		"DESCRIPTION": "Deal !D! damage. Gain 2 Draw-Reduction."
+	},
+	"Destructive Finish": {
+		"NAME": "Destructive Finish",
+		"DESCRIPTION": "Deal !D! damage. You may discard up to !M! card to deal the damage an additional !M! time.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. You may discard up to !M! cards to deal the damage an additional !M! times."
+	},
+	"Feast": {
+		"NAME": "Feast",
+		"DESCRIPTION": "Deal !D! damage. If this kills a non-minion enemy, Heal !M! HP. Exhaust."
+	},
+	"Shoulder Blow": {
+		"NAME": "Shoulder Blow",
+		"DESCRIPTION": "Gain !M! Plated Armor. Deal !D! damage."
+	},
+	"Flying Press": {
+		"NAME": "Flying Press",
+		"DESCRIPTION": "Deal damage equal to twice your current Block. Exhaust.",
+		"UPGRADE_DESCRIPTION": "(Deals !D! damage.)"
+	},
+	"Smother": {
+		"NAME": "Smother",
+		"DESCRIPTION": "Deal !D! damage. Apply !M! Weak. Overflow - Apply 1 Weak to all enemies."
+	},
+	"Feint": {
+		"NAME": "Feint",
+		"DESCRIPTION": "Deal !D! damage. If you have Draw-Reduction, gain [R] and Draw 1 card."
+	},
+	"Charge": {
+		"NAME": "Charge",
+		"DESCRIPTION": "Deal !D! damage. If this card is played on turn 1, the damage is doubled.",
+		"UPGRADE_DESCRIPTION": "Innate. Deal !D! damage. If this card is played on turn 1, the damage is doubled."
+	},
+	"Heavy Assault": {
+		"NAME": "Heavy Assault",
+		"DESCRIPTION": "Ethereal. If your Dexterity is less than 0, deal damage equal to the difference to All enemies !M! times.",
+		"UPGRADE_DESCRIPTION": "(Deals !D! damage !M! times.)"
+	},
+	"Frenzy": {
+		"NAME": "Frenzy",
+		"DESCRIPTION": "Deal !D! damage. Draw 1 card. Gain 2 Draw-Reduction."
+	},
+	"Perfected Blow": {
+		"NAME": "Perfected Blow",
+		"DESCRIPTION": "Deal !D! damage. Activate the effect of Heavy Body."
+	},
+	"Relentless Blows": {
+		"NAME": "Relentless Blows",
+		"DESCRIPTION": "Deal !D! damage. Next turn gain [R] ."
+	},
+	"Cascading Steel": {
+		"NAME": "Cascading Steel",
+		"DESCRIPTION": "Deal !D! damage to All enemies. Overflow - gain !M! Artifact."
+	},
+	"Giga Impact": {
+		"NAME": "Giga Impact",
+		"DESCRIPTION": "Deal !D! damage. Next turn lose [R] [R]."
+	},
+	"Apex Predator": {
+		"NAME": "Apex Predator",
+		"DESCRIPTION": "Gain !B! Block. Deal !D! damage. If this kills a non-minion enemy, All enemies lose !M! Strength. Exhaust."
+	},
+	"Bulldoze": {
+		"NAME": "Bulldoze",
+		"DESCRIPTION": "Deal !D! damage. If the enemy is Weak or Vulnerable, the damage is doubled. Lose 3 Dexterity."
+	},
+	"Lunge": {
+		"NAME": "Lunge",
+		"DESCRIPTION": "Deal !D! damage. Gain 2 Strength. Overflow - Gain 1 Strength."
+	},
+	"Thunder Struck": {
+		"NAME": "Thunder Struck",
+		"DESCRIPTION": "Deal !D! damage to All enemies. All enemies lose 8 Strength for 1 turn. Overflow - All enemies lose !M! Strength for 1 turn."
+	},
+	"Hysteria": {
+		"NAME": "Hysteria",
+		"DESCRIPTION": "Deal !D! damage. Draw 2 cards. Overflow - gain Confusion."
+	},
+	"Challenging Roar": {
+		"NAME": "Challenging Roar",
+		"DESCRIPTION": "Apply 2 Weak to All enemies.",
+		"UPGRADE_DESCRIPTION": "Apply 2 Weak to All enemies. Overflow - Gain 1 Strength."
+	},
+	"Simple Minded": {
+		"NAME": "Simple Minded",
+		"DESCRIPTION": "Gain Confusion. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. Gain Confusion. Exhaust."
+	},
+	"On Guard": {
+		"NAME": "On Guard",
+		"DESCRIPTION": "Gain !M! Plated Armor."
+	},
+	"Breakthrough": {
+		"NAME": "Breakthrough",
+		"DESCRIPTION": "Draw !M! card for each of your Draw-Reduction. You cannot draw any additional cards this turn.",
+		"UPGRADE_DESCRIPTION": "Draw !M! cards for each of your Draw-Reduction. You cannot draw any additional cards this turn."
+	},
+	"Slow and Steady": {
+		"NAME": "Slow and Steady",
+		"DESCRIPTION": "If your Dexterity is less than 0, put !M! card from your discard pile on top of your draw pile. Overflow - Lose 1 Dexterity.",
+		"UPGRADE_DESCRIPTION": "If your Dexterity is less than 0, put !M! cards from your discard pile on top of your draw pile. Overflow - Lose 1 Dexterity.",
+		"EXTENDED_DESCRIPTION": [ "My Dexterity is too high." ]
+	},
+	"Blitz": {
+		"NAME": "Blitz",
+		"DESCRIPTION": "Gain [R]. If this card is played on turn 1, gain [R] [R] instead, and draw 1 card. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. Gain [R]. If this card is played on turn 1, gain [R] [R] instead, and draw 1 card. Exhaust."
+	},
+	"Call to Arms": {
+		"NAME": "Call to Arms",
+		"DESCRIPTION": "Choose a card from your draw pile and place it into your hand. Exhaust."
+	},
+	"Cannibalize": {
+		"NAME": "Cannibalize",
+		"DESCRIPTION": "Exhaust a card in your hand. Gain [R] equal to its cost. Exhaust."
+	},
+	"Improvisation": {
+		"NAME": "Improvisation",
+		"DESCRIPTION": "Ethereal. Create a copy of a card in your hand. If this card is played on turn 1, gain [R].",
+		"UPGRADE_DESCRIPTION": "Innate. Ethereal. Create a copy of a card in your hand. If this card is played on turn 1, gain [R]."
+	},
+	"Pursuit": {
+		"NAME": "Pursuit",
+		"DESCRIPTION": "If the enemy does not intend to attack, on your next turn, your attack damage is doubled.",
+		"UPGRADE_DESCRIPTION": "If an enemy intends to not attack, on your next turn, your attack damage is doubled. Overflow - Gain !B! Block."
+	},
+	"Endure": {
+		"NAME": "Endure",
+		"DESCRIPTION": "All enemies lose !M! Strength for 1 turn."
+	},
+	"Bide": {
+		"NAME": "Bide",
+		"DESCRIPTION": "On the start of your next turn, deal damage to All enemies equal to the damage you receive this turn. Exhaust.",
+		"UPGRADE_DESCRIPTION": "On the start of your next turn, deal damage to All enemies equal to the damage you receive this turn."
+	},
+	"Impenetrable": {
+		"NAME": "Impenetrable",
+		"DESCRIPTION": "Gain 3 Plated Armor. Overflow - You do not lose Plated Armor for !M! turn",
+		"UPGRADE_DESCRIPTION": "Gain 4 Plated Armor. Overflow - You do not lose Plated Armor for !M! turns."
+	},
+	"Battle Shout": {
+		"NAME": "Battle Shout",
+		"DESCRIPTION": "Gain 2 Strength, If this card is played on turn 1, gain 4 Strength instead.",
+        "UPGRADE_DESCRIPTION": "Innate. Gain 2 Strength, If this card is played on turn 1, gain 4 Strength instead."
+	},
+	"Galvanize": {
+		"NAME": "Galvanize",
+		"DESCRIPTION": "Gain !M! Plated Armor. Gain 2 Draw-Reduction."
+	},
+	"Accelerate": {
+		"NAME": "Accelerate",
+		"DESCRIPTION": "Draw 2 cards. Gain 1 Dexterity.",
+		"UPGRADE_DESCRIPTION": "Draw 2 cards. Gain 1 Dexterity. Overflow - Next turn, draw 1 card."
+	},
+	"Bolster": {
+		"NAME": "Bolster",
+		"DESCRIPTION": "Gain !B! Block. If your Dexterity is less than 0, gain !M! Plated Armor instead."
+	},
+	"Bulwark": {
+		"NAME": "Bulwark",
+		"DESCRIPTION": "Gain !B! Block. Gain 2 Draw-Reduction."
+	},
+	"Heavy Armor": {
+		"NAME": "Heavy Armor",
+		"DESCRIPTION": "Gain !B! Block. Gain additional Block equal to your Strength times !M!.",
+		"UPGRADE_DESCRIPTION": "(Gain !B! Block.)"
+	},
+	"Grapple": {
+		"NAME": "Grapple",
+		"DESCRIPTION": "Apply !M! Vulnerable. Whenever you play a card this turn, targeted enemy loses 3 HP.",
+		"UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. Whenever you play a card this turn, targeted enemy loses 5 HP."
+	},
+	"Inhuman Recovery": {
+		"NAME": "Inhuman Recovery",
+		"DESCRIPTION": "Heal 4 HP at the start of your turn for !M! turns. Overflow - Heal 4 HP. Exhaust."
+	},
+	"Mercurial": {
+		"NAME": "Mercurial",
+		"DESCRIPTION": "Ethereal. Play the top card of your draw pile.",
+		"UPGRADE_DESCRIPTION": "Ethereal. Play the top card of your draw pile. Overflow - Exhaust a random card in your hand." 
+	},
+	"Taunt": {
+		"NAME": "Taunt",
+		"DESCRIPTION": "All enemies that do not intend to attack you lose all Block and lose !M! Strength. Exhaust."
+	},
+	"Hunker Down": {
+		"NAME": "Hunker Down",
+		"DESCRIPTION": "If your Dexterity is less than 0, gain Plated Armor equal to the difference. Overflow - Lose 1 Dexterity. Exhaust.",
+		"UPGRADE_DESCRIPTION": "If your Dexterity is less than 0, gain Plated Armor equal to the difference. Overflow - Lose 1 Dexterity.",
+		"EXTENDED_DESCRIPTION": [ "I have too much Dexterity." ]
+	},
+	"Focused Power": {
+		"NAME": "Focused Power",
+		"DESCRIPTION": "Gain 1 Strength for each of your Draw-Reduction. Exhaust."
+	},
+	"Convert Flesh": {
+		"NAME": "Convert Flesh",
+		"DESCRIPTION": "Lose !M! HP. Double your Plated Armor. Exhaust."
+	},
+	"Living Armor": {
+		"NAME": "Living Armor",
+		"DESCRIPTION": "Gain !M! Plated Armor. Can be Upgraded any number of times."
+	},
+	"Unshakable": {
+		"NAME": "Unshakable",
+		"DESCRIPTION": "Gain 7 Plated Armor. Apply !M! Weak.",
+		"UPGRADE_DESCRIPTION": "Gain 8 Plated Armor. Apply !M! Weak."
+	},
+	"Reversal": {
+		"NAME": "Reversal",
+		"DESCRIPTION": "Enemy has their Strength set to 0. Gain Strength equal to the Strength the enemy loses. Overflow - All enemies gain !M! Strength. Exhaust."
+	},
+	"Vengeance": {
+		"NAME": "Vengeance",
+		"DESCRIPTION": "Costs one less for each time you've taken damage this combat. Gain [R]. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Costs one less for each time you've taken damage this combat. Gain [R]."
+	},
+	"Brute Force": {
+		"NAME": "Brute Force",
+		"DESCRIPTION": "Gain [R] at the start of your turn. Lose !M! HP at the end of your turn."
+	},
+	"Combat Training": {
+		"NAME": "Combat Training",
+		"DESCRIPTION": "Every turn, the first 1 Upgradeable cards played are Upgraded after they enter the discard pile."
+	},
+	"Inertia": {
+		"NAME": "Inertia",
+		"DESCRIPTION": "At the end of your turn, you no longer discard your hand."
+	},
+	"Release Restraint": {
+		"NAME": "Release Restraint",
+		"DESCRIPTION": "Lose 4 Strength. Gain 2 Dexterity. Gain [R] at the start of your turn.",
+		"UPGRADE_DESCRIPTION": "Lose 4 Strength. Gain 2 Dexterity. Gain [R] at the start of your turn. Overflow - Gain 1 Dexterity."
+	},
+	"Indomitable Will": {
+		"NAME": "Indomitable Will",
+		"DESCRIPTION": "Weak has the opposite effect on you.",
+		"UPGRADE_DESCRIPTION": "Innate. Weaken has the opposite effect on you."
+	},
+	"Overflowing Armor": {
+		"NAME": "Overflowing Armor",
+		"DESCRIPTION": "Whenever an Overflow is activated, gain 1 Plated Armor",
+		"UPGRADE_DESCRIPTION": "Whenever an Overflow is activated, gain 1 Plated Armor and 1 Block."
+	},
+	"Atlas": {
+		"NAME": "Atlas",
+		"DESCRIPTION": "Whenever an Overflow is activated, gain 1 Strength.",
+		"UPGRADE_DESCRIPTION": "Whenever an Overflow is activated, gain 1 Strength. Overflow - Gain 1 Strength."
+	},
+	"Shatter": {
+		"NAME": "Shatter",
+		"DESCRIPTION": "At the end of your turn, if you have Plated Armor, lose 1 Plated Armor and deal !M! damage to All enemies."
+	},
+	"Spiked Armor": {
+		"NAME": "Spiked Armor",
+		"DESCRIPTION": "Deal damage equal to your Plated Armor to enemies who attack you, at the end of their turn."
+	},
+	"Natural Endurance": {
+		"NAME": "Natural Endurance",
+		"DESCRIPTION": "At the end of your turn gain Block equal to your Strength."
+	},
+	"Colossus": {
+		"NAME": "Colossus",
+		"DESCRIPTION": "Gain !M! Strength. Gain 8 Plated Armor. You cannot gain Block from cards."
+	}
+}

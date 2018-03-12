@@ -1,0 +1,9 @@
+{
+  "Heavy Body": {
+    "NAME": "Heavy Body",
+    "FLAVOR": "Paltorz",
+    "DESCRIPTIONS": [
+      "At the start of your turn, choose a card in your hand and gain an effect based on its type."
+    ]
+  }
+}
