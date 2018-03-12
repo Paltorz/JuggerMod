@@ -11,8 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import juggermod.JuggerMod;
 import juggermod.actions.unique.MercurialAction;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.OverflowCard;
 
-public class Mercurial extends CustomCard{
+public class Mercurial extends OverflowCard{
     public static final String ID = "Mercurial";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -49,6 +50,7 @@ public class Mercurial extends CustomCard{
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.isOverflow = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

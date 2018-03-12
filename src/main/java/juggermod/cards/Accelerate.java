@@ -14,8 +14,9 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.OverflowCard;
 
-public class Accelerate extends CustomCard{
+public class Accelerate extends OverflowCard{
     private static final String ID = "Accelerate";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -59,6 +60,7 @@ public class Accelerate extends CustomCard{
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.isOverflow = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

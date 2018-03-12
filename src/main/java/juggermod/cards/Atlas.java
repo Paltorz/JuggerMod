@@ -2,57 +2,58 @@ package juggermod.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.RegenerationPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
+import juggermod.powers.AtlasPower;
 
-public class InhumanRecovery extends OverflowCard{
-    public static final String ID = "Inhuman Recovery";
+public class Atlas extends OverflowCard{
+    public static final String ID = "Atlas";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
-    private static final int HEAL_AMT = 4;
-    private static final int TURNS_HEALED = 4;
-    private static final int TURNS_HEALED_UP = 1;
+    private static final int OVERFLOW_AMT = 1;
     private static final int POOL = 1;
 
-    public InhumanRecovery() {
-        super(ID, NAME, JuggerMod.makePath(JuggerMod.INHUMAN_RECOVERY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
-        this.magicNumber = this.baseMagicNumber = TURNS_HEALED;
-        this.exhaust = true;
-        this.isOverflow = true;
+    public Atlas() {
+        super(ID, NAME, JuggerMod.makePath(JuggerMod.ATLAS), COST, DESCRIPTION,
+                AbstractCard.CardType.POWER, AbstractCardEnum.BROWN,
+                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, HEAL_AMT));
+        if (this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, OVERFLOW_AMT), OVERFLOW_AMT));
+        }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenerationPower(p, this.magicNumber, HEAL_AMT), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AtlasPower(p, 1), 1));
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new InhumanRecovery();
+        return new Atlas();
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(TURNS_HEALED_UP);
+            this.isOverflow = true;
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 }

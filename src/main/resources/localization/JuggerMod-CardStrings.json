@@ -17,14 +17,14 @@
 	},
 	"Steel Force": {
 		"NAME": "Steel Force",
-		"DESCRIPTION": "Can only be played if you have 10 or more Plated Armor. Deal !D! damage. Overflow - gain 1 Plated Armor.",
-		"EXTENDED_DESCRIPTION": [ "I do not have any Plated Armor." ]
+		"DESCRIPTION": "Can only be played if you have 10 or more Plated-Armor. Deal !D! damage. Overflow - gain 1 Plated-Armor.",
+		"EXTENDED_DESCRIPTION": [ "I do not have any Plated-Armor." ]
 	},
 	"Heavy Crash": {
 		"NAME": "Heavy Crash",
-		"DESCRIPTION": "Deal damage equal to !M! times your current Plated Armor to All enemies. Remove all of your Plated Armor.",
+		"DESCRIPTION": "Deal damage equal to !M! times your current Plated-Armor to All enemies. Remove all of your Plated-Armor.",
 		"UPGRADE_DESCRIPTION": "(Deals !D! damage.)",
-		"EXTENDED_DESCRIPTION": [ "I do not have any Plated Armor." ]
+		"EXTENDED_DESCRIPTION": [ "I do not have any Plated-Armor." ]
 	},
 	"Earthquake": {
 		"NAME": "Earthquake",
@@ -76,7 +76,7 @@
 	},
 	"Shoulder Blow": {
 		"NAME": "Shoulder Blow",
-		"DESCRIPTION": "Gain !M! Plated Armor. Deal !D! damage."
+		"DESCRIPTION": "Gain !M! Plated-Armor. Deal !D! damage."
 	},
 	"Flying Press": {
 		"NAME": "Flying Press",
@@ -153,7 +153,7 @@
 	},
 	"On Guard": {
 		"NAME": "On Guard",
-		"DESCRIPTION": "Gain !M! Plated Armor."
+		"DESCRIPTION": "Gain !M! Plated-Armor."
 	},
 	"Breakthrough": {
 		"NAME": "Breakthrough",
@@ -200,8 +200,8 @@
 	},
 	"Impenetrable": {
 		"NAME": "Impenetrable",
-		"DESCRIPTION": "Gain 3 Plated Armor. Overflow - You do not lose Plated Armor for !M! turn",
-		"UPGRADE_DESCRIPTION": "Gain 4 Plated Armor. Overflow - You do not lose Plated Armor for !M! turns."
+		"DESCRIPTION": "Gain 3 Plated-Armor. Overflow - You do not lose Plated-Armor for !M! turn",
+		"UPGRADE_DESCRIPTION": "Gain 4 Plated-Armor. Overflow - You do not lose Plated-Armor for !M! turns."
 	},
 	"Battle Shout": {
 		"NAME": "Battle Shout",
@@ -210,7 +210,7 @@
 	},
 	"Galvanize": {
 		"NAME": "Galvanize",
-		"DESCRIPTION": "Gain !M! Plated Armor. Gain 2 Draw-Reduction."
+		"DESCRIPTION": "Gain !M! Plated-Armor. Gain 2 Draw-Reduction."
 	},
 	"Accelerate": {
 		"NAME": "Accelerate",
@@ -219,7 +219,7 @@
 	},
 	"Bolster": {
 		"NAME": "Bolster",
-		"DESCRIPTION": "Gain !B! Block. If your Dexterity is less than 0, gain !M! Plated Armor instead."
+		"DESCRIPTION": "Gain !B! Block. If your Dexterity is less than 0, gain !M! Plated-Armor instead."
 	},
 	"Bulwark": {
 		"NAME": "Bulwark",
@@ -250,8 +250,8 @@
 	},
 	"Hunker Down": {
 		"NAME": "Hunker Down",
-		"DESCRIPTION": "If your Dexterity is less than 0, gain Plated Armor equal to the difference. Overflow - Lose 1 Dexterity. Exhaust.",
-		"UPGRADE_DESCRIPTION": "If your Dexterity is less than 0, gain Plated Armor equal to the difference. Overflow - Lose 1 Dexterity.",
+		"DESCRIPTION": "If your Dexterity is less than 0, gain Plated-Armor equal to the difference. Overflow - Lose 1 Dexterity. Exhaust.",
+		"UPGRADE_DESCRIPTION": "If your Dexterity is less than 0, gain Plated-Armor equal to the difference. Overflow - Lose 1 Dexterity.",
 		"EXTENDED_DESCRIPTION": [ "I have too much Dexterity." ]
 	},
 	"Focused Power": {
@@ -260,16 +260,16 @@
 	},
 	"Convert Flesh": {
 		"NAME": "Convert Flesh",
-		"DESCRIPTION": "Lose !M! HP. Double your Plated Armor. Exhaust."
+		"DESCRIPTION": "Lose !M! HP. Double your Plated-Armor. Exhaust."
 	},
 	"Living Armor": {
 		"NAME": "Living Armor",
-		"DESCRIPTION": "Gain !M! Plated Armor. Can be Upgraded any number of times."
+		"DESCRIPTION": "Gain !M! Plated-Armor. Can be Upgraded any number of times."
 	},
 	"Unshakable": {
 		"NAME": "Unshakable",
-		"DESCRIPTION": "Gain 7 Plated Armor. Apply !M! Weak.",
-		"UPGRADE_DESCRIPTION": "Gain 8 Plated Armor. Apply !M! Weak."
+		"DESCRIPTION": "Gain 7 Plated-Armor. Apply !M! Weak.",
+		"UPGRADE_DESCRIPTION": "Gain 8 Plated-Armor. Apply !M! Weak."
 	},
 	"Reversal": {
 		"NAME": "Reversal",
@@ -304,21 +304,21 @@
 	},
 	"Overflowing Armor": {
 		"NAME": "Overflowing Armor",
-		"DESCRIPTION": "Whenever an Overflow is activated, gain 1 Plated Armor",
-		"UPGRADE_DESCRIPTION": "Whenever an Overflow is activated, gain 1 Plated Armor and 1 Block."
+		"DESCRIPTION": "Whenever an Overflow is activated, gain 1 Plated-Armor",
+		"UPGRADE_DESCRIPTION": "At the end of your turn, gain 1 Plated-Armor and 1 Block for each Overflow Card in your hand."
 	},
 	"Atlas": {
 		"NAME": "Atlas",
 		"DESCRIPTION": "Whenever an Overflow is activated, gain 1 Strength.",
-		"UPGRADE_DESCRIPTION": "Whenever an Overflow is activated, gain 1 Strength. Overflow - Gain 1 Strength."
+		"UPGRADE_DESCRIPTION": "At the end of your turn, gain 1 Strength for each Overflow Card in your hand. Overflow - Gain 1 Strength."
 	},
 	"Shatter": {
 		"NAME": "Shatter",
-		"DESCRIPTION": "At the end of your turn, if you have Plated Armor, lose 1 Plated Armor and deal !M! damage to All enemies."
+		"DESCRIPTION": "At the end of your turn, if you have Plated-Armor, lose 1 Plated-Armor and deal !M! damage to All enemies."
 	},
 	"Spiked Armor": {
 		"NAME": "Spiked Armor",
-		"DESCRIPTION": "Deal damage equal to your Plated Armor to enemies who attack you, at the end of their turn."
+		"DESCRIPTION": "Deal damage equal to your Plated-Armor to enemies who attack you, at the end of their turn."
 	},
 	"Natural Endurance": {
 		"NAME": "Natural Endurance",
@@ -326,6 +326,6 @@
 	},
 	"Colossus": {
 		"NAME": "Colossus",
-		"DESCRIPTION": "Gain !M! Strength. Gain 8 Plated Armor. You cannot gain Block from cards."
+		"DESCRIPTION": "Gain !M! Strength. Gain 8 Plated-Armor. You cannot gain Block from cards."
 	}
 }

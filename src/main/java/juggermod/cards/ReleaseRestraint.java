@@ -13,8 +13,9 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.powers.ReleaseRestraintPower;
+import juggermod.patches.OverflowCard;
 
-public class ReleaseRestraint extends CustomCard{
+public class ReleaseRestraint extends OverflowCard{
     public static final String ID = "Release Restraint";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -55,6 +56,7 @@ public class ReleaseRestraint extends CustomCard{
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.isOverflow = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

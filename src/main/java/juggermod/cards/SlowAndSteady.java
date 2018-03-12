@@ -14,8 +14,9 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.OverflowCard;
 
-public class SlowAndSteady extends CustomCard{
+public class SlowAndSteady extends OverflowCard{
     public static final String ID = "Slow and Steady";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -31,6 +32,7 @@ public class SlowAndSteady extends CustomCard{
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SLOW_AND_STEADY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
                 AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = CARDS_TOP;
+        this.isOverflow = true;
     }
 
     @Override

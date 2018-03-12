@@ -17,8 +17,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.OverflowCard;
 
-public class Hysteria extends CustomCard{
+public class Hysteria extends OverflowCard{
     public static final String ID = "Hysteria";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -35,6 +36,7 @@ public class Hysteria extends CustomCard{
                 AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = DRAW;
+        this.isOverflow = true;
     }
 
     @Override

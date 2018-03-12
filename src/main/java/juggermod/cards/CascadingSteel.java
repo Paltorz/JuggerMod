@@ -13,8 +13,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.OverflowCard;
 
-public class CascadingSteel extends CustomCard{
+public class CascadingSteel extends OverflowCard{
     public static final String ID = "Cascading Steel";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -33,6 +34,7 @@ public class CascadingSteel extends CustomCard{
         this.isMultiDamage = true;
         this.damage=this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = ARTIFACT_AMT;
+        this.isOverflow = true;
     }
 
     @Override

@@ -15,8 +15,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.OverflowCard;
 
-public class Smother extends CustomCard{
+public class Smother extends OverflowCard{
     public static final String ID = "Smother";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -34,6 +35,7 @@ public class Smother extends CustomCard{
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SMOTHER), COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.damage=this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = WEAK_AMOUNT;
+        this.isOverflow = true;
     }
 
     @Override

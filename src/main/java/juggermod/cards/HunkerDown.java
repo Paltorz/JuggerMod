@@ -14,8 +14,9 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.OverflowCard;
 
-public class HunkerDown extends CustomCard {
+public class HunkerDown extends OverflowCard {
     public static final String ID = "Hunker Down";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -30,6 +31,7 @@ public class HunkerDown extends CustomCard {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HUNKER_DOWN), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
                 AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
         this.exhaust = true;
+        this.isOverflow = true;
     }
 
     @Override

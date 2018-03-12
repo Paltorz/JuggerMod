@@ -17,8 +17,9 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.OverflowCard;
 
-public class ThunderStruck extends CustomCard{
+public class ThunderStruck extends OverflowCard{
     public static final String ID = "Thunder Struck";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -37,6 +38,7 @@ public class ThunderStruck extends CustomCard{
         this.isMultiDamage = true;
         this.magicNumber = this.baseMagicNumber = OVERFLOW_SHACKLE;
         this.damage = this.baseDamage = ATTACK_DMG;
+        this.isOverflow = true;
     }
 
     @Override

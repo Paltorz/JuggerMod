@@ -60,7 +60,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 	public static final Logger logger = LogManager.getLogger(JuggerMod.class.getName());
 	
     private static final String MODNAME = "JuggerMod";
-    private static final String AUTHOR = "Paltorz, and the JuggerMod team";
+    private static final String AUTHOR = "Paltorz, and the FruityMod team";
     private static final String DESCRIPTION = "v0.4.3\n Adds Juggernaut as a playable third character";
     
     private static final Color PURPLE = CardHelper.getColor(85.0f, 50.0f, 0.0f);
@@ -146,12 +146,14 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String MANGLE = "cards/transference.png";
     public static final String CALL_TO_ARMS = "cards/brainstorm.png";
     public static final String PERFECTED_BLOW = "cards/unstable_orb.png";
+    public static final String OVERFLOWING_ARMOR = "cards/mind_over_matter.png";
+    public static final String ATLAS = "cards/retrograde.png";
     
     // power images
     public static final String ASTRAL_HAZE_POWER = "powers/astral_haze.png";
     public static final String ESSENCE_MIRROR_POWER = "powers/essence_mirror.png";
     public static final String ETHEREALIZE_POWER = "powers/essence_mirror.png";
-    public static final String ASTRAL_FORM_POWER = "powers/astral_form.png";
+    public static final String ASTRAL_FORM_POWER = "powers/chaos_form.png";
     public static final String VIGOR_POWER = "powers/vigor.png";
     public static final String ASTRAL_SHIFT_POWER = "powers/astral_shift.png";
     public static final String TENACITY_POWER = "powers/tenacity.png";
@@ -167,7 +169,7 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String NEXUS_POWER = "powers/nexus.png";
     public static final String BRUTE_FORCE_POWER = "powers/power_overwhelming.png";
     public static final String INERTIA_POWER = "powers/astral_haze.png";
-    public static final String COMBAT_TRAINING_POWER = "powers/astral_form.png";
+    public static final String COMBAT_TRAINING_POWER = "powers/chaos_form.png";
     public static final String RELEASE_RESTRAINT_POWER = "powers/astral_shift.png";
     public static final String SHATTER_POWER = "powers/brilliance.png";
     public static final String NATURAL_ENDURANCE_POWER = "powers/vigor.png";
@@ -177,6 +179,9 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String SPIKED_ARMOR_POWER = "powers/creativity.png";
     public static final String INDOMITABLE_WILL_POWER = "powers/tenacity.png";
     public static final String MANGLE_POWER = "powers/enigma.png";
+    public static final String OVERFLOWING_BLOCK_POWER = "powers/coalescence.png";
+    public static final String OVERFLOWING_PLATE_POWER = "powers/nexus.png";
+    public static final String ATLAS_POWER = "powers/nexus.png";
 
     // relic images
 
@@ -196,6 +201,18 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String BADGE_IMG = "FRelicBadge.png";
     
     // texture loaders
+    public static Texture getAtlasPowerTexture() {
+        return new Texture(makePath(ATLAS_POWER));
+    }
+
+    public static Texture getOverflowingBlockPowerTexture() {
+        return new Texture(makePath(OVERFLOWING_BLOCK_POWER));
+    }
+
+    public static Texture getOverflowingPlatePowerTexture() {
+        return new Texture(makePath(OVERFLOWING_PLATE_POWER));
+    }
+
     public static Texture getManglePowerTexture() {
         return new Texture(makePath(MANGLE_POWER));
     }
@@ -416,6 +433,8 @@ public class JuggerMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Strike_Purple());
 		BaseMod.addCard(new Defend_Purple());
 
+        BaseMod.addCard(new Atlas());
+        BaseMod.addCard(new OverflowingArmor());
         BaseMod.addCard(new PerfectedBlow());
         BaseMod.addCard(new CallToArms());
         BaseMod.addCard(new Mangle());
@@ -611,9 +630,9 @@ public class JuggerMod implements PostInitializeSubscriber,
 	@Override
 	public void receiveEditKeywords() {
         logger.info("setting up custom keywords");
-        BaseMod.addKeyword(new String[] {"plated armor", "Plated Armor"}, "Gain Block equal to your Plated Armor at the end of your turn.");
+        BaseMod.addKeyword(new String[] {"Plated-Armor", "Plated-Armor"}, "Gain Block equal to your Plated-Armor at the end of your turn. Taking damage from an attack reduces Plated-Armor by 1.");
         BaseMod.addKeyword(new String[] {"overflow", "Overflow"}, "When a card with Overflow is in your hand at the end of the turn, activate an effect.");
-        BaseMod.addKeyword(new String[] {"draw reduction", "Draw Reduction"}, "Draw 1 less card at the beginning of your turn.");
+        BaseMod.addKeyword(new String[] {"draw-reduction", "Draw-Reduction"}, "Draw 1 less card at the beginning of your turn.");
 	}
 	
 	//

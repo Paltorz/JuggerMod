@@ -15,8 +15,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.OverflowCard;
 
-public class Lunge extends CustomCard{
+public class Lunge extends OverflowCard{
     private static final String ID = "Lunge";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -33,6 +34,7 @@ public class Lunge extends CustomCard{
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
+        this.isOverflow = true;
     }
 
     @Override
