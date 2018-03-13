@@ -37,12 +37,12 @@ public class InhumanRecovery extends OverflowCard{
     @Override
     public void triggerOnEndOfPlayerTurn() {
         AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, HEAL_OVERFLOW));
+        AbstractDungeon.player.hand.moveToExhaustPile(this);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenerationPower(p, this.magicNumber, HEAL_AMT), this.magicNumber));
-        AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
     }
 
     @Override
