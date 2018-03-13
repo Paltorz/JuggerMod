@@ -22,7 +22,7 @@ public class Overpower extends CustomCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 8;
+    private static final int ATTACK_DMG = 6;
     private static final int STR_SCALING = 2;
     private static final int STR_SCALING_UP = 1;
     private static final int POOL = 1;

@@ -148,6 +148,7 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String PERFECTED_BLOW = "cards/unstable_orb.png";
     public static final String OVERFLOWING_ARMOR = "cards/mind_over_matter.png";
     public static final String ATLAS = "cards/retrograde.png";
+    public static final String IMPENETRABLE = "cards/entropy.png";
     
     // power images
     public static final String ASTRAL_HAZE_POWER = "powers/astral_haze.png";
@@ -182,6 +183,7 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String OVERFLOWING_BLOCK_POWER = "powers/coalescence.png";
     public static final String OVERFLOWING_PLATE_POWER = "powers/nexus.png";
     public static final String ATLAS_POWER = "powers/nexus.png";
+    public static final String IMPENETRABLE_POWER = "powers/vigor.png";
 
     // relic images
 
@@ -201,6 +203,10 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String BADGE_IMG = "FRelicBadge.png";
     
     // texture loaders
+    public static Texture getImpenetrablePowerTexture() {
+        return new Texture(makePath(IMPENETRABLE_POWER));
+    }
+
     public static Texture getAtlasPowerTexture() {
         return new Texture(makePath(ATLAS_POWER));
     }
@@ -433,6 +439,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Strike_Purple());
 		BaseMod.addCard(new Defend_Purple());
 
+        BaseMod.addCard(new Impenetrable());
         BaseMod.addCard(new Atlas());
         BaseMod.addCard(new OverflowingArmor());
         BaseMod.addCard(new PerfectedBlow());
