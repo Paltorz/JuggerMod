@@ -1,6 +1,7 @@
 package juggermod.cards;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -28,6 +29,11 @@ public class Improvisation extends CustomCard{
         super(ID, NAME, JuggerMod.makePath(JuggerMod.IMPROVISATION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
                 AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.isEthereal = true;
+    }
+
+    @Override
+    public void triggerOnEndOfPlayerTurn() {
+        AbstractDungeon.player.hand.moveToExhaustPile(this);
     }
 
     @Override
