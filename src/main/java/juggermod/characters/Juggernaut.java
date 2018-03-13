@@ -1,18 +1,17 @@
 package juggermod.characters;
 
-import java.util.ArrayList;
-
+import basemod.abstracts.CustomPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-
-import juggermod.actions.unique.HeavyBodyAction;
-import basemod.abstracts.CustomPlayer;
 import juggermod.JuggerMod;
+import juggermod.actions.unique.HeavyBodyAction;
 import juggermod.patches.JuggernautEnum;
+
+import java.util.ArrayList;
 
 public class Juggernaut extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 2;

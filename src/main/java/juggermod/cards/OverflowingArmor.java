@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
-import juggermod.powers.OverflowingPlatePower;
 import juggermod.powers.OverflowingBlockPower;
+import juggermod.powers.OverflowingPlatePower;
 
 public class OverflowingArmor extends CustomCard{
     public static final String ID = "Overflowing Armor";

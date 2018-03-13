@@ -237,7 +237,7 @@
 	},
 	"Inhuman Recovery": {
 		"NAME": "Inhuman Recovery",
-		"DESCRIPTION": "Heal 4 HP at the start of your turn for !M! turns. Overflow - Heal 4 HP. Exhaust."
+		"DESCRIPTION": "Heal 4 HP at the start of your turn for !M! turns. Overflow - Heal 6 HP. Exhaust."
 	},
 	"Mercurial": {
 		"NAME": "Mercurial",

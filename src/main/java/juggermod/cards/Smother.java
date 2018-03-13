@@ -1,6 +1,5 @@
 package juggermod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -41,7 +40,7 @@ public class Smother extends OverflowCard{
     @Override
     public void triggerOnEndOfPlayerTurn() {
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, WEAK_AMOUNT, false), WEAK_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, OVERFLOW_AMT, false), OVERFLOW_AMT, true, AbstractGameAction.AttackEffect.NONE));
         }
     }
 

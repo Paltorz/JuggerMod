@@ -1,6 +1,5 @@
 package juggermod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,8 +11,8 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
-import juggermod.powers.ReleaseRestraintPower;
 import juggermod.patches.OverflowCard;
+import juggermod.powers.ReleaseRestraintPower;
 
 public class ReleaseRestraint extends OverflowCard{
     public static final String ID = "Release Restraint";

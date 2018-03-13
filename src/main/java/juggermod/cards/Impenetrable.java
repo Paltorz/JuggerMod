@@ -1,6 +1,5 @@
 package juggermod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,9 +10,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.OverflowCard;
 import juggermod.powers.ImpenetrablePower;
 
-public class Impenetrable extends CustomCard {
+public class Impenetrable extends OverflowCard {
     public static final String ID = "Impenetrable";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -29,6 +29,7 @@ public class Impenetrable extends CustomCard {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.IMPENETRABLE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
                 AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = POWER_AMT;
+        this.isOverflow = true;
     }
 
     @Override

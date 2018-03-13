@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import juggermod.patches.OverflowCard;
 import juggermod.JuggerMod;
+import juggermod.patches.OverflowCard;
 
 public class OverflowingPlatePower extends AbstractPower{
     public static final String POWER_ID = "Overflowing Plate";

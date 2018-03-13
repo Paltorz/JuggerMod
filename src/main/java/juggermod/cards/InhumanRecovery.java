@@ -1,6 +1,5 @@
 package juggermod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,8 +20,9 @@ public class InhumanRecovery extends OverflowCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int HEAL_AMT = 4;
-    private static final int TURNS_HEALED = 4;
+    private static final int TURNS_HEALED = 3;
     private static final int TURNS_HEALED_UP = 1;
+    private static final int HEAL_OVERFLOW = 6;
     private static final int POOL = 1;
 
     public InhumanRecovery() {
@@ -30,12 +30,13 @@ public class InhumanRecovery extends OverflowCard{
                 AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = TURNS_HEALED;
         this.exhaust = true;
+        this.isEthereal = true;
         this.isOverflow = true;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, HEAL_AMT));
+        AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, HEAL_OVERFLOW));
     }
 
     @Override

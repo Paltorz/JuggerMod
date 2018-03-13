@@ -12,8 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import juggermod.JuggerMod;
-import juggermod.actions.common.DiscardWithCallbackAction;
-import juggermod.actions.common.IDiscardCallback;
+import juggermod.actions.unique.DestructiveFinishAction;
 import juggermod.patches.AbstractCardEnum;
 
 public class DestructiveFinish extends CustomCard{
@@ -40,15 +39,7 @@ public class DestructiveFinish extends CustomCard{
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom((new DamageAction((AbstractCreature) m,
                 new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY)));
-        DestructiveFinish that = this; // funny little naming convention for providing this to inner class
-        AbstractDungeon.actionManager.addToBottom(new DiscardWithCallbackAction(
-                p, p, this.magicNumber, false, true, true, false, new IDiscardCallback() {
-            @Override
-            public void processCard(AbstractCard c) {
-                    AbstractDungeon.actionManager.addToBottom(new DamageAction((AbstractCreature) m,
-                            new DamageInfo(p, that.damage, that.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-            }
-        }));
+        AbstractDungeon.actionManager.addToBottom(new DestructiveFinishAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.magicNumber));
     }
 
     @Override

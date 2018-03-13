@@ -466,7 +466,7 @@ public class JuggerMod implements PostInitializeSubscriber,
         BaseMod.addCard(new Shatter());
         BaseMod.addCard(new ReleaseRestraint());
         BaseMod.addCard(new CombatTraining());
-        BaseMod.addCard(new Inertia());
+        // BaseMod.addCard(new Inertia());
         BaseMod.addCard(new BruteForce());
         BaseMod.addCard(new Mercurial());
         //BaseMod.addCard(new Reversal());

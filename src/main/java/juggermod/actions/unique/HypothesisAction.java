@@ -1,5 +1,7 @@
 package juggermod.actions.unique;
 
+import basemod.BaseMod;
+import basemod.interfaces.PostDrawSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -7,9 +9,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
-import basemod.BaseMod;
-import basemod.interfaces.PostDrawSubscriber;
 
 public class HypothesisAction extends AbstractGameAction implements PostDrawSubscriber {
 	private boolean listening;
