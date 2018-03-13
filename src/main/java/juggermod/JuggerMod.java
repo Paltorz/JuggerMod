@@ -149,6 +149,10 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String OVERFLOWING_ARMOR = "cards/mind_over_matter.png";
     public static final String ATLAS = "cards/retrograde.png";
     public static final String IMPENETRABLE = "cards/entropy.png";
+    public static final String CHARGE = "cards/singularity.png";
+    public static final String BATTLE_SHOUT = "cards/prismatic_sphere.png";
+    public static final String BLITZ = "cards/coalescence.png";
+    public static final String IMPROVISATION = "cards/syzygy.png";
     
     // power images
     public static final String ASTRAL_HAZE_POWER = "powers/astral_haze.png";
@@ -439,6 +443,10 @@ public class JuggerMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Strike_Purple());
 		BaseMod.addCard(new Defend_Purple());
 
+        BaseMod.addCard(new Improvisation());
+        BaseMod.addCard(new Blitz());
+        BaseMod.addCard(new BattleShout());
+        BaseMod.addCard(new Charge());
         BaseMod.addCard(new Impenetrable());
         BaseMod.addCard(new Atlas());
         BaseMod.addCard(new OverflowingArmor());

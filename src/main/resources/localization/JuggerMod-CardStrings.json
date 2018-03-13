@@ -45,7 +45,7 @@
 	},
 	"Overpower": {
 		"NAME": "Overpower",
-		"DESCRIPTION": "Deals 8 damage. Strength affects Overpower !M! times.",
+		"DESCRIPTION": "Deals 6 damage. Strength affects Overpower !M! times.",
 		"UPGRADE_DESCRIPTION": "(Currently deals: !D! damage.)"
 	},
 	"Hammer Arm": {
@@ -168,8 +168,8 @@
 	},
 	"Blitz": {
 		"NAME": "Blitz",
-		"DESCRIPTION": "Gain [R]. If this card is played on turn 1, gain [R] [R] instead, and draw 1 card. Exhaust.",
-		"UPGRADE_DESCRIPTION": "Innate. Gain [R]. If this card is played on turn 1, gain [R] [R] instead, and draw 1 card. Exhaust."
+		"DESCRIPTION": "Gain [R]. If this card is played on turn 1, gain [R] [R] instead. Draw 2 cards. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. Gain [R]. If this card is played on turn 1, gain [R] [R] instead. Draw 2 cards. Exhaust."
 	},
 	"Call to Arms": {
 		"NAME": "Call to Arms",

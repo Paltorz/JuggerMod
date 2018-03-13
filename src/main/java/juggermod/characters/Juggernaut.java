@@ -17,6 +17,7 @@ import juggermod.patches.JuggernautEnum;
 public class Juggernaut extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 2;
 
+	public static int turnTracker = 0;
 	public static final String[] orbTextures = {
 			"img/char/seeker/orb/layer1.png",
 			"img/char/seeker/orb/layer2.png",
@@ -45,9 +46,20 @@ public class Juggernaut extends CustomPlayer {
 		for (AbstractPower p : this.powers) {
 			p.atEndOfTurn(true);
 		}
+		turnTracker++;
 	}
 
-	
+	@Override
+	public void onVictory() {
+		if (!this.isDying) {
+			for (AbstractRelic r : this.relics) {
+				r.onVictory();
+			}
+		}
+		turnTracker = 0;
+		this.damagedThisCombat = 0;
+	}
+
 	@Override
 	public void applyStartOfTurnPostDrawPowers() {
 		for (AbstractPower p : this.powers) {
