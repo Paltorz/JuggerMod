@@ -28,7 +28,7 @@ public class ConvertFlesh extends CustomCard{
 
     public ConvertFlesh() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.CONVERT_FLESH), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = HP_COST;
         this.exhaust = true;
     }

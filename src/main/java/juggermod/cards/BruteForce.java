@@ -25,7 +25,7 @@ public class BruteForce extends CustomCard{
 
     public BruteForce() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BRUTE_FORCE), COST, DESCRIPTION,
-                AbstractCard.CardType.POWER, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = AMT;
     }

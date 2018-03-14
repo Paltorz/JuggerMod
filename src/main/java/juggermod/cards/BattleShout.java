@@ -25,7 +25,7 @@ public class BattleShout extends CustomCard{
 
     public BattleShout() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BATTLE_SHOUT), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
     }
 
     @Override

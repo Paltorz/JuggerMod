@@ -23,7 +23,7 @@ public class NaturalEndurance extends CustomCard{
 
     public NaturalEndurance() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.NATURAL_ENDURANCE), COST, DESCRIPTION,
-                AbstractCard.CardType.POWER, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
     }
 

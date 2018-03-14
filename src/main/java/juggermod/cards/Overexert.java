@@ -29,7 +29,7 @@ public class Overexert extends CustomCard{
 
     public Overexert() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.OVEREXERT), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
         this.baseMagicNumber = DRAW;
         this.magicNumber = DRAW;

@@ -23,7 +23,7 @@ public class SimpleMinded extends CustomCard{
 
     public SimpleMinded() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SIMPLE_MINDED), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
         this.exhaust = true;
     }

@@ -23,7 +23,7 @@ public class Mercurial extends OverflowCard{
 
     public Mercurial() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.MERCURIAL), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
     }
 

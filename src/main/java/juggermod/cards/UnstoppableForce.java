@@ -27,7 +27,7 @@ public class UnstoppableForce extends CustomCard{
 
     public UnstoppableForce() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.UNSTOPPABLE_FORCE), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.damage=this.baseDamage = ATTACK_DMG;
     }

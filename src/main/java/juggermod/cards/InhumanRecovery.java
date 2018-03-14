@@ -27,7 +27,7 @@ public class InhumanRecovery extends OverflowCard{
 
     public InhumanRecovery() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.INHUMAN_RECOVERY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = TURNS_HEALED;
         this.exhaust = true;
         this.isEthereal = true;

@@ -31,7 +31,7 @@ public class SteelForce extends OverflowCard{
 
     public SteelForce() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.STEEL_FORCE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.damage=this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = PLATE_AMT;
         this.isOverflow = true;

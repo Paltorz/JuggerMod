@@ -26,7 +26,7 @@ public class Feast extends CustomCard{
 
     public Feast() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.FEAST), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = this.damage =  ATTACK_DMG;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = this.HEAL_AMOUNT;

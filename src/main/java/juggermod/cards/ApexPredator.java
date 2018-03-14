@@ -29,7 +29,7 @@ public class ApexPredator extends CustomCard{
 
     public ApexPredator() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.APEX_PREDATOR), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = this.damage =  ATTACK_DMG;
         this.baseBlock = BLOCK_AMT;
         this.exhaust = true;

@@ -27,7 +27,7 @@ public class Reversal extends CustomCard{
 
     public Reversal() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.REVERSAL), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.magicNumber = this.baseMagicNumber = STR_GAIN;
         this.exhaust = true;
     }

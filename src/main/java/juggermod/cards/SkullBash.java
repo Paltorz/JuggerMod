@@ -29,7 +29,7 @@ public class SkullBash extends CustomCard{
 
     public SkullBash() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SKULL_BASH), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
         this.exhaust = true;

@@ -23,7 +23,7 @@ public class IndomitableWill extends CustomCard {
 
     public IndomitableWill() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.INDOMITABLE_WILL), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
     }
 
     @Override

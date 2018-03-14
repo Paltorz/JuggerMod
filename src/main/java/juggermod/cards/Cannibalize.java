@@ -22,7 +22,7 @@ public class Cannibalize extends CustomCard{
 
     public Cannibalize() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.CANNIBALIZE), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.exhaust = true;
     }

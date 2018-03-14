@@ -24,7 +24,7 @@ public class OnGuard extends CustomCard{
 
     public OnGuard() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.ON_GUARD), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = PLATE_AMT;
     }
     @Override

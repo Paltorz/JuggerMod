@@ -26,7 +26,7 @@ public class Endure extends CustomCard{
 
     public Endure() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.ENDURE), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
         this.magicNumber = this.baseMagicNumber = BASE_WEAK;
     }
 

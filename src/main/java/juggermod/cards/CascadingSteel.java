@@ -28,7 +28,7 @@ public class CascadingSteel extends OverflowCard{
 
     public CascadingSteel() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.CASCADING_STEEL), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
         this.isMultiDamage = true;
         this.damage=this.baseDamage = ATTACK_DMG;

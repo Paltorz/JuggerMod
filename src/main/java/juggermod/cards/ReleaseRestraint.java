@@ -28,7 +28,7 @@ public class ReleaseRestraint extends OverflowCard{
 
     public ReleaseRestraint() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.RELEASE_RESTRAINT), COST, DESCRIPTION,
-                AbstractCard.CardType.POWER, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
     }
 

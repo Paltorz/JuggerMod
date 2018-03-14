@@ -31,7 +31,7 @@ public class Hysteria extends OverflowCard{
 
     public Hysteria() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HYSTERIA), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = DRAW;

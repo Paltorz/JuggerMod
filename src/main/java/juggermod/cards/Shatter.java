@@ -25,7 +25,7 @@ public class Shatter extends CustomCard{
 
     public Shatter() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SHATTER), COST, DESCRIPTION,
-                AbstractCard.CardType.POWER, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = DMG_AMT;
     }

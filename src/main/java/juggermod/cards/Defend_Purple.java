@@ -23,7 +23,7 @@ public class Defend_Purple extends CustomCard {
 
 	public Defend_Purple() {
 		super(ID, NAME, JuggerMod.makePath(JuggerMod.DEFEND_PURPLE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.BROWN, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF, POOL);
+				AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF, POOL);
 
 		this.baseBlock = BLOCK_AMT;
 	}

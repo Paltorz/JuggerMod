@@ -24,7 +24,7 @@ public class Pursuit extends OverflowCard{
 
     public Pursuit() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.PURSUIT), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF_AND_ENEMY, POOL);
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF_AND_ENEMY, POOL);
         this.baseBlock = BLOCK;
     }
 

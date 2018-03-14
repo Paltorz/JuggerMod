@@ -29,7 +29,7 @@ public class Grapple extends CustomCard{
 
     public Grapple() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.GRAPPLE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.magicNumber = this.baseMagicNumber = VULNERABLE_AMT;
     }
 

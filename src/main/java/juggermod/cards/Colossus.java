@@ -27,7 +27,7 @@ public class Colossus extends CustomCard{
 
     public Colossus() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.COLOSSUS), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = STR_AMOUNT;
     }
     @Override

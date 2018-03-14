@@ -29,7 +29,7 @@ public class Overpower extends CustomCard{
 
     public Overpower() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.OVERPOWER), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY, POOL);
         this.damage=this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = STR_SCALING;
     }

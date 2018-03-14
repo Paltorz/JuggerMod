@@ -29,7 +29,7 @@ public class Bulldoze extends CustomCard{
     private static final int POOL = 1;
 
     public Bulldoze() {
-        super(ID, NAME, JuggerMod.makePath(JuggerMod.BULLDOZE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+        super(ID, NAME, JuggerMod.makePath(JuggerMod.BULLDOZE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = DAMAGE;
     }
 

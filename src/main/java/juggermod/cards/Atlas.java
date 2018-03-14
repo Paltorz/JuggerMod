@@ -25,7 +25,7 @@ public class Atlas extends OverflowCard{
 
     public Atlas() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.ATLAS), COST, DESCRIPTION,
-                AbstractCard.CardType.POWER, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
     }
 

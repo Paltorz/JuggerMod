@@ -20,7 +20,7 @@ public class Strike_Purple extends CustomCard {
 
 	public Strike_Purple() {
 		super(ID, NAME, JuggerMod.makePath(JuggerMod.STRIKE_PURPLE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.BROWN, AbstractCard.CardRarity.BASIC,
+				AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC,
 				AbstractCard.CardTarget.ENEMY, POOL);
 
 		this.baseDamage = ATTACK_DMG;

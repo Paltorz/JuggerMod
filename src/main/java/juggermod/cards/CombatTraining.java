@@ -24,7 +24,7 @@ public class CombatTraining extends CustomCard{
 
     public CombatTraining() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.COMBAT_TRAINING), COST, DESCRIPTION,
-                AbstractCard.CardType.POWER, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = AMOUNT_UP;
     }

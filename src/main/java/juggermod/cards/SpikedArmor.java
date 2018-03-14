@@ -23,7 +23,7 @@ public class SpikedArmor extends CustomCard{
 
     public SpikedArmor() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SPIKED_ARMOR), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -26,7 +26,7 @@ public class ChallengingRoar extends OverflowCard{
     private static final int OVERFLOW_AMT = 1;
 
     public ChallengingRoar() {
-        super(ID, NAME, JuggerMod.makePath(JuggerMod.CHALLENGING_ROAR), COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+        super(ID, NAME, JuggerMod.makePath(JuggerMod.CHALLENGING_ROAR), COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
         this.baseMagicNumber = this.magicNumber = WEAK_AMOUNT;
     }
 

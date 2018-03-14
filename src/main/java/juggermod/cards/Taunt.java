@@ -23,7 +23,7 @@ public class Taunt extends CustomCard{
 
     public Taunt() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.TAUNT), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
         this.magicNumber = this.baseMagicNumber = STR_LOSS;
         this.exhaust = true;
     }

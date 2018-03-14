@@ -25,7 +25,7 @@ public class Galvanize extends CustomCard{
 
     public Galvanize() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.GALVANIZE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = PLATE_AMT;
     }
     @Override

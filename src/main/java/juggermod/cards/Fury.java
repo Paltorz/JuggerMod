@@ -27,7 +27,7 @@ public class Fury extends CustomCard {
 
     public Fury() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.FURY), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
     }

@@ -28,7 +28,7 @@ public class Unshakable extends CustomCard{
 
     public Unshakable() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.UNSHAKABLE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.magicNumber = this.baseMagicNumber = WEAK_AMOUNT;
     }
 

@@ -28,7 +28,7 @@ public class GigaImpact extends CustomCard{
 
     public GigaImpact() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.GIGA_IMPACT), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY, POOL);
         this.damage = this.baseDamage = ATTACK_DMG;
     }

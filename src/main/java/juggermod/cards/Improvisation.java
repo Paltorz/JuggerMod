@@ -27,7 +27,7 @@ public class Improvisation extends CustomCard{
 
     public Improvisation() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.IMPROVISATION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.isEthereal = true;
     }
 

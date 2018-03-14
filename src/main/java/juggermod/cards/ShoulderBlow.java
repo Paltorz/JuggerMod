@@ -30,7 +30,7 @@ public class ShoulderBlow extends CustomCard{
 
     public ShoulderBlow() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SHOULDER_BLOW), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.magicNumber = this.baseMagicNumber = PLATE_AMT;
         this.baseDamage = ATTACK_DMG;
     }

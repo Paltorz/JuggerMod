@@ -31,7 +31,7 @@ public class Earthquake extends CustomCard {
 
 	public Earthquake() {
 		super(ID, NAME, JuggerMod.makePath(JuggerMod.EARTHQUAKE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+				AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
 		this.isMultiDamage = true;
 		this.magicNumber = this.baseMagicNumber = VULNERABLE_AMT;
 		this.damage = this.baseDamage = ATTACK_DMG;

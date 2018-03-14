@@ -29,7 +29,7 @@ public class HeavyAssault extends CustomCard{
 
     public HeavyAssault() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HEAVY_ASSAULT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = DEX_SCALING;
         this.isEthereal = true;

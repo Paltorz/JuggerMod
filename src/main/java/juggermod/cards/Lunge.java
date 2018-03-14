@@ -30,7 +30,7 @@ public class Lunge extends OverflowCard{
 
     public Lunge() {
         super (ID, NAME, JuggerMod.makePath(JuggerMod.LUNGE), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
         this.isOverflow = true;

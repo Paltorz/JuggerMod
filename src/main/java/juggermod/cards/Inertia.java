@@ -23,7 +23,7 @@ public class Inertia extends CustomCard{
 
     public Inertia() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.INERTIA), COST, DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.BROWN,
+                CardType.POWER, AbstractCardEnum.COPPER,
                 CardRarity.UNCOMMON, CardTarget.SELF, POOL);
     }
 

@@ -25,7 +25,7 @@ public class FocusedPower extends CustomCard{
 
     public FocusedPower() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.FOCUSED_POWER), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
         this.exhaust = true;
     }
 

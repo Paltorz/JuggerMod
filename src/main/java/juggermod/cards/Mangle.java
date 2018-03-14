@@ -29,7 +29,7 @@ public class Mangle extends CustomCard{
 
     public Mangle() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.MANGLE), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = BLEED_AMT;

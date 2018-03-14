@@ -26,7 +26,7 @@ public class LashOut extends CustomCard{
 
     public LashOut() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.LASH_OUT), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
         this.damage = this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = NUM_ATTACKS;

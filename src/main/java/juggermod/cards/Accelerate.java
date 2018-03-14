@@ -29,7 +29,7 @@ public class Accelerate extends OverflowCard{
 
     public Accelerate() {
         super (ID, NAME, JuggerMod.makePath(JuggerMod.ACCELERATE), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = DRAW;
     }

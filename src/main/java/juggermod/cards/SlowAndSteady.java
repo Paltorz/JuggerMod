@@ -29,7 +29,7 @@ public class SlowAndSteady extends OverflowCard{
 
     public SlowAndSteady() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SLOW_AND_STEADY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = CARDS_TOP;
         this.isOverflow = true;
     }

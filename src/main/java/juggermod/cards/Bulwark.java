@@ -25,7 +25,7 @@ public class Bulwark extends CustomCard{
 
     public Bulwark() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BULWARK), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
         this.baseBlock = BLOCK;
     }
 

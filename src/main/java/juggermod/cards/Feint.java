@@ -30,7 +30,7 @@ public class Feint extends CustomCard{
 
     public Feint() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.FEINT), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
     }

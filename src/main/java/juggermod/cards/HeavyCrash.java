@@ -29,7 +29,7 @@ public class HeavyCrash extends CustomCard{
 
     public HeavyCrash() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HEAVY_CRASH), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
         this.damage=this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = PLATE_SCALING;
     }

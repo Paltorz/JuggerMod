@@ -24,7 +24,7 @@ public class Bide extends CustomCard{
 
     public Bide() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BIDE), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = AMOUNT;

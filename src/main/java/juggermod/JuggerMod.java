@@ -63,19 +63,19 @@ public class JuggerMod implements PostInitializeSubscriber,
     private static final String AUTHOR = "Paltorz, and the FruityMod team";
     private static final String DESCRIPTION = "v0.4.3\n Adds The Juggernaut as a playable third character";
     
-    private static final Color BROWN = CardHelper.getColor(186.0f, 108.0f, 31.0f);
+    private static final Color COPPER = CardHelper.getColor(186.0f, 108.0f, 31.0f);
     private static final String FRUITY_MOD_ASSETS_FOLDER = "img";
     
     // card backgrounds
-    private static final String ATTACK_BROWN = "512/bg_attack_brown.png";
-    private static final String SKILL_BROWN = "512/bg_attack_brown.png";
-    private static final String POWER_BROWN = "512/bg_attack_brown.png";
-    private static final String ENERGY_ORB_BROWN = "512/card_brown_orb.png";
+    private static final String ATTACK_COPPER = "512/bg_attack_brown.png";
+    private static final String SKILL_COPPER = "512/bg_attack_brown.png";
+    private static final String POWER_COPPER = "512/bg_attack_brown.png";
+    private static final String ENERGY_ORB_COPPER = "512/card_brown_orb.png";
     
-    private static final String ATTACK_BROWN_PORTRAIT = "1024/bg_attack_brown.png";
-    private static final String SKILL_BROWN_PORTRAIT = "1024/bg_attack_brown.png";
-    private static final String POWER_BROWN_PORTRAIT = "1024/bg_attack_brown.png";
-    private static final String ENERGY_ORB_BROWN_PORTRAIT = "1024/card_brown_orb.png";
+    private static final String ATTACK_COPPER_PORTRAIT = "1024/bg_attack_brown.png";
+    private static final String SKILL_COPPER_PORTRAIT = "1024/bg_attack_brown.png";
+    private static final String POWER_COPPER_PORTRAIT = "1024/bg_attack_brown.png";
+    private static final String ENERGY_ORB_COPPER_PORTRAIT = "1024/card_brown_orb.png";
     
     // card images
     public static final String STRIKE_PURPLE = "cards/strike_purple.png";
@@ -379,13 +379,13 @@ public class JuggerMod implements PostInitializeSubscriber,
          * the value of FRUITY_MOD_ASSETS_FOLDER must be created into which all the contents of the
          * `images/` folder must be relocated
          */
-        logger.info("creating the color " + AbstractCardEnum.BROWN.toString());
-        BaseMod.addColor(AbstractCardEnum.BROWN.toString(),
-        		BROWN, BROWN, BROWN, BROWN, BROWN, BROWN, BROWN,
-        		makePath(ATTACK_BROWN), makePath(SKILL_BROWN),
-        		makePath(POWER_BROWN), makePath(ENERGY_ORB_BROWN),
-        		makePath(ATTACK_BROWN_PORTRAIT), makePath(SKILL_BROWN_PORTRAIT),
-        		makePath(POWER_BROWN_PORTRAIT), makePath(ENERGY_ORB_BROWN_PORTRAIT));
+        logger.info("creating the color " + AbstractCardEnum.COPPER.toString());
+        BaseMod.addColor(AbstractCardEnum.COPPER.toString(),
+        		COPPER, COPPER, COPPER, COPPER, COPPER, COPPER, COPPER,
+        		makePath(ATTACK_COPPER), makePath(SKILL_COPPER),
+        		makePath(POWER_COPPER), makePath(ENERGY_ORB_COPPER),
+        		makePath(ATTACK_COPPER_PORTRAIT), makePath(SKILL_COPPER_PORTRAIT),
+        		makePath(POWER_COPPER_PORTRAIT), makePath(ENERGY_ORB_COPPER_PORTRAIT));
     }
 
     public static void initialize() {
@@ -416,7 +416,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 		
 		logger.info("add " + JuggernautEnum.JUGGERNAUT.toString());
 		BaseMod.addCharacter(TheJuggernaut.class, "The Juggernaut", "Juggernaut class string",
-				AbstractCardEnum.BROWN.toString(), "The Juggernaut",
+				AbstractCardEnum.COPPER.toString(), "The Juggernaut",
 				makePath(SEEKER_BUTTON), makePath(SEEKER_PORTRAIT),
 				JuggernautEnum.JUGGERNAUT.toString());
 		
@@ -429,7 +429,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 		logger.info("begin editting relics");
         
         // Add relics
-		BaseMod.addRelicToCustomPool(new HeavyBody(), AbstractCardEnum.BROWN.toString());
+		BaseMod.addRelicToCustomPool(new HeavyBody(), AbstractCardEnum.COPPER.toString());
         
         logger.info("done editting relics");
 	}

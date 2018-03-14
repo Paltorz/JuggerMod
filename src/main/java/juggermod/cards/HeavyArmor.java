@@ -26,7 +26,7 @@ public class HeavyArmor extends CustomCard{
 
     public HeavyArmor() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HEAVY_ARMOR), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.baseBlock = BLOCK_AMT;
         this.magicNumber = this.baseMagicNumber = STR_SCALING;
     }

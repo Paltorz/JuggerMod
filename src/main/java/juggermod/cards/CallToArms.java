@@ -22,7 +22,7 @@ public class CallToArms extends CustomCard{
 
     public CallToArms() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.CALL_TO_ARMS), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
         this.exhaust = true;
     }
 

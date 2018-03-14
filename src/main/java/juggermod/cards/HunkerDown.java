@@ -28,7 +28,7 @@ public class HunkerDown extends OverflowCard {
 
     public HunkerDown() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HUNKER_DOWN), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
         this.exhaust = true;
         this.isOverflow = true;
     }

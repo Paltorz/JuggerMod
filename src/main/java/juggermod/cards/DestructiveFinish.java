@@ -29,7 +29,7 @@ public class DestructiveFinish extends CustomCard{
 
     public DestructiveFinish() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.DESTRUCTIVE_FINISH), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 CardRarity.RARE, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = DISCARD_AMT;

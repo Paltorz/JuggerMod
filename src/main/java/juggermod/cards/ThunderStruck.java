@@ -33,7 +33,7 @@ public class ThunderStruck extends OverflowCard{
 
     public ThunderStruck() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.THUNDER_STRUCK), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY, POOL);
         this.isMultiDamage = true;
         this.magicNumber = this.baseMagicNumber = OVERFLOW_SHACKLE;
         this.damage = this.baseDamage = ATTACK_DMG;

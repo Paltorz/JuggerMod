@@ -23,7 +23,7 @@ public class Struggle extends CustomCard {
 
 	public Struggle() {
 		super(ID, NAME, JuggerMod.makePath(JuggerMod.STRUGGLE), COST, DESCRIPTION,
-				AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+				AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
 				AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.ENEMY, POOL);
 

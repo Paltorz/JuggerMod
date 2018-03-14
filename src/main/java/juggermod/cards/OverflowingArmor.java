@@ -24,7 +24,7 @@ public class OverflowingArmor extends CustomCard{
 
     public OverflowingArmor() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.OVERFLOWING_ARMOR), COST, DESCRIPTION,
-                AbstractCard.CardType.POWER, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
     }
 

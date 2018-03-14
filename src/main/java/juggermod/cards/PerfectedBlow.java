@@ -27,7 +27,7 @@ public class PerfectedBlow extends CustomCard{
 
     public PerfectedBlow() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.PERFECTED_BLOW), COST, DESCRIPTION,
-                AbstractCard.CardType.ATTACK, AbstractCardEnum.BROWN,
+                AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
     }

@@ -27,7 +27,7 @@ public class Blitz extends CustomCard{
 
     public Blitz() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BLITZ), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.BROWN, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
         this.exhaust = true;
     }
 
