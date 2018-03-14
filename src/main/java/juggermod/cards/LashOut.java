@@ -18,7 +18,7 @@ public class LashOut extends CustomCard{
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 4;
+    private static final int ATTACK_DMG = 2;
     private static final int ATTACK_UPGRADE = 0;
     private static final int NUM_ATTACKS = 3;
     private static final int NUM_ATTACKS_UPGRADE = 1;

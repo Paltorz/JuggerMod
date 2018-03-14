@@ -58,8 +58,8 @@
 	},
 	"Overexert": {
 		"NAME": "Overexert",
-		"DESCRIPTION": "Draw !M! cards. Lose 2 Dexterity.",
-		"UPGRADE_DESCRIPTION": "Draw !M! cards. Lose 2 Dexterity. Overflow - Put a card from your hand on top of your draw pile."
+		"DESCRIPTION": "Draw !M! cards. Lose 2 Dexterity. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Draw !M! cards. Lose 2 Dexterity. Overflow - Put a card from your hand on top of your draw pile. Exhaust."
 	},
 	"Pulverize": {
 		"NAME": "Pulverize",

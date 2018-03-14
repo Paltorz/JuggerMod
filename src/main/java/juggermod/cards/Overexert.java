@@ -33,6 +33,7 @@ public class Overexert extends CustomCard{
                 AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
         this.baseMagicNumber = DRAW;
         this.magicNumber = DRAW;
+        this.exhaust = true;
     }
 
     @Override
