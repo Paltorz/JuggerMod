@@ -460,13 +460,13 @@ public class JuggerMod implements PostInitializeSubscriber,
         BaseMod.addCard(new ApexPredator());
         BaseMod.addCard(new Feast());
         BaseMod.addCard(new GigaImpact());
-        //BaseMod.addCard(new Bide());
+        BaseMod.addCard(new Bide());
         BaseMod.addCard(new Cannibalize());
         BaseMod.addCard(new NaturalEndurance());
         BaseMod.addCard(new Shatter());
         BaseMod.addCard(new ReleaseRestraint());
         BaseMod.addCard(new CombatTraining());
-        // BaseMod.addCard(new Inertia());
+        BaseMod.addCard(new Inertia());
         BaseMod.addCard(new BruteForce());
         BaseMod.addCard(new Mercurial());
         //BaseMod.addCard(new Reversal());
@@ -645,7 +645,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 	@Override
 	public void receiveEditKeywords() {
         logger.info("setting up custom keywords");
-        BaseMod.addKeyword(new String[] {"Plated-Armor", "Plated-Armor"}, "Gain Block equal to your Plated-Armor at the end of your turn. Taking damage from an attack reduces Plated-Armor by 1.");
+        BaseMod.addKeyword(new String[] {"plated-armor", "Plated-Armor"}, "Gain Block equal to your Plated-Armor at the end of your turn. Taking damage from an attack reduces Plated-Armor by 1.");
         BaseMod.addKeyword(new String[] {"overflow", "Overflow"}, "When a card with Overflow is in your hand at the end of the turn, activate an effect.");
         BaseMod.addKeyword(new String[] {"draw-reduction", "Draw-Reduction"}, "Draw 1 less card at the beginning of your turn.");
 	}
@@ -667,7 +667,19 @@ public class JuggerMod implements PostInitializeSubscriber,
 		}
 	}
 
-	// used by fruitmod.patches.com.megacrit.cardcrawl.cards.status.Dazed.UseDazed
+    public static boolean hasRelicCustomI(String relicID) {
+        System.out.println("I was checked!");
+        // if it's checking for relicID.equals("Runic Pyramid") then we know we're in the block where
+        // we are saying if we can use a status card so also check if we have enigma and the card is Dazed
+        if (AbstractDungeon.player.hasPower("Inertia") ) {
+            return true;
+        } else {
+            // otherwise leave normal behavior intact
+            return AbstractDungeon.player.hasRelic(relicID);
+        }
+    }
+
+    // used by fruitmod.patches.com.megacrit.cardcrawl.cards.status.Dazed.UseDazed
 	public static void maybeUseDazed(Dazed dazed) {
 		System.out.println("maybe use dazed");
 		if (!AbstractDungeon.player.hasPower("EnigmaPower")) {

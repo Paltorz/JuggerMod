@@ -27,10 +27,12 @@ public class InertiaPower extends AbstractPower{
         this.description = DESCRIPTIONS[0];
     }
 
+    /*
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
             AbstractDungeon.actionManager.addToBottom(new InertiaAction());
         }
     }
+    */
 }
