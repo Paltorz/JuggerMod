@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import juggermod.JuggerMod;
 import juggermod.actions.common.DuplicateSelectedCardAction;
-import juggermod.characters.Juggernaut;
+import juggermod.characters.TheJuggernaut;
 import juggermod.patches.AbstractCardEnum;
 
 public class Improvisation extends CustomCard{
@@ -39,7 +39,7 @@ public class Improvisation extends CustomCard{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToTop(new DuplicateSelectedCardAction(p, COPY_AMT));
-        if (Juggernaut.turnTracker == 0) {
+        if (TheJuggernaut.turnTracker == 0) {
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN));
         }
     }

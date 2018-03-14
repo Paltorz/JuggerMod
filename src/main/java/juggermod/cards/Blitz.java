@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import juggermod.JuggerMod;
-import juggermod.characters.Juggernaut;
+import juggermod.characters.TheJuggernaut;
 import juggermod.patches.AbstractCardEnum;
 
 public class Blitz extends CustomCard{
@@ -33,7 +33,7 @@ public class Blitz extends CustomCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (Juggernaut.turnTracker == 0) {
+        if (TheJuggernaut.turnTracker == 0) {
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN * 2));
         }else{
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN));

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import juggermod.JuggerMod;
-import juggermod.characters.Juggernaut;
+import juggermod.characters.TheJuggernaut;
 import juggermod.patches.AbstractCardEnum;
 
 public class BattleShout extends CustomCard{
@@ -30,7 +30,7 @@ public class BattleShout extends CustomCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (Juggernaut.turnTracker == 0) {
+        if (TheJuggernaut.turnTracker == 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(AbstractDungeon.player, STR_GAIN * 2), STR_GAIN * 2));
         }else{
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(AbstractDungeon.player, STR_GAIN), STR_GAIN));

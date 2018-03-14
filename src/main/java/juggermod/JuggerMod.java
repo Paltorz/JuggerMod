@@ -46,7 +46,7 @@ import basemod.interfaces.PostExhaustSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import basemod.interfaces.SetUnlocksSubscriber;
 import juggermod.actions.unique.ConvergenceAction;
-import juggermod.characters.Juggernaut;
+import juggermod.characters.TheJuggernaut;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.JuggernautEnum;
 import juggermod.relics.HeavyBody;
@@ -61,21 +61,21 @@ public class JuggerMod implements PostInitializeSubscriber,
 	
     private static final String MODNAME = "JuggerMod";
     private static final String AUTHOR = "Paltorz, and the FruityMod team";
-    private static final String DESCRIPTION = "v0.4.3\n Adds Juggernaut as a playable third character";
+    private static final String DESCRIPTION = "v0.4.3\n Adds The Juggernaut as a playable third character";
     
-    private static final Color PURPLE = CardHelper.getColor(85.0f, 50.0f, 0.0f);
+    private static final Color BROWN = CardHelper.getColor(186.0f, 108.0f, 31.0f);
     private static final String FRUITY_MOD_ASSETS_FOLDER = "img";
     
     // card backgrounds
-    private static final String ATTACK_PURPLE = "512/bg_attack_purple.png";
-    private static final String SKILL_PURPLE = "512/bg_attack_purple.png";
-    private static final String POWER_PURPLE = "512/bg_attack_purple.png";
-    private static final String ENERGY_ORB_PURPLE = "512/card_purple_orb.png";
+    private static final String ATTACK_BROWN = "512/bg_attack_brown.png";
+    private static final String SKILL_BROWN = "512/bg_attack_brown.png";
+    private static final String POWER_BROWN = "512/bg_attack_brown.png";
+    private static final String ENERGY_ORB_BROWN = "512/card_brown_orb.png";
     
-    private static final String ATTACK_PURPLE_PORTRAIT = "1024/bg_attack_purple.png";
-    private static final String SKILL_PURPLE_PORTRAIT = "1024/bg_attack_purple.png";
-    private static final String POWER_PURPLE_PORTRAIT = "1024/bg_attack_purple.png";
-    private static final String ENERGY_ORB_PURPLE_PORTRAIT = "1024/card_purple_orb.png";
+    private static final String ATTACK_BROWN_PORTRAIT = "1024/bg_attack_brown.png";
+    private static final String SKILL_BROWN_PORTRAIT = "1024/bg_attack_brown.png";
+    private static final String POWER_BROWN_PORTRAIT = "1024/bg_attack_brown.png";
+    private static final String ENERGY_ORB_BROWN_PORTRAIT = "1024/card_brown_orb.png";
     
     // card images
     public static final String STRIKE_PURPLE = "cards/strike_purple.png";
@@ -381,11 +381,11 @@ public class JuggerMod implements PostInitializeSubscriber,
          */
         logger.info("creating the color " + AbstractCardEnum.BROWN.toString());
         BaseMod.addColor(AbstractCardEnum.BROWN.toString(),
-        		PURPLE, PURPLE, PURPLE, PURPLE, PURPLE, PURPLE, PURPLE,
-        		makePath(ATTACK_PURPLE), makePath(SKILL_PURPLE),
-        		makePath(POWER_PURPLE), makePath(ENERGY_ORB_PURPLE),
-        		makePath(ATTACK_PURPLE_PORTRAIT), makePath(SKILL_PURPLE_PORTRAIT),
-        		makePath(POWER_PURPLE_PORTRAIT), makePath(ENERGY_ORB_PURPLE_PORTRAIT));
+        		BROWN, BROWN, BROWN, BROWN, BROWN, BROWN, BROWN,
+        		makePath(ATTACK_BROWN), makePath(SKILL_BROWN),
+        		makePath(POWER_BROWN), makePath(ENERGY_ORB_BROWN),
+        		makePath(ATTACK_BROWN_PORTRAIT), makePath(SKILL_BROWN_PORTRAIT),
+        		makePath(POWER_BROWN_PORTRAIT), makePath(ENERGY_ORB_BROWN_PORTRAIT));
     }
 
     public static void initialize() {
@@ -415,8 +415,8 @@ public class JuggerMod implements PostInitializeSubscriber,
 		logger.info("begin editting characters");
 		
 		logger.info("add " + JuggernautEnum.JUGGERNAUT.toString());
-		BaseMod.addCharacter(Juggernaut.class, "Juggernaut", "Juggernaut class string",
-				AbstractCardEnum.BROWN.toString(), "Juggernaut",
+		BaseMod.addCharacter(TheJuggernaut.class, "The Juggernaut", "Juggernaut class string",
+				AbstractCardEnum.BROWN.toString(), "The Juggernaut",
 				makePath(SEEKER_BUTTON), makePath(SEEKER_PORTRAIT),
 				JuggernautEnum.JUGGERNAUT.toString());
 		

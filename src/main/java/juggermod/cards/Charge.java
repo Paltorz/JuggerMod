@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import juggermod.JuggerMod;
-import juggermod.characters.Juggernaut;
+import juggermod.characters.TheJuggernaut;
 import juggermod.patches.AbstractCardEnum;
 
 public class Charge extends CustomCard{
@@ -34,7 +34,7 @@ public class Charge extends CustomCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (Juggernaut.turnTracker == 0) {
+        if (TheJuggernaut.turnTracker == 0) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction((AbstractCreature) m, new DamageInfo(p, this.damage * 2, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }else{
             AbstractDungeon.actionManager.addToBottom(new DamageAction((AbstractCreature) m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
