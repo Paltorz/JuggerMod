@@ -40,7 +40,7 @@ public class BidePower extends AbstractPower{
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        this.dmgTaken += damageAmount + this.owner.currentBlock;
+        this.dmgTaken += info.output;
         return damageAmount;
     }
 
