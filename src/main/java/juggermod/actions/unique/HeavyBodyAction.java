@@ -59,6 +59,7 @@ public class HeavyBodyAction extends AbstractGameAction {
             this.tickDuration();
         }
         AbstractDungeon.player.hand.refreshHandLayout();
+        AbstractDungeon.player.hand.glowCheck();
         this.isDone = true;
     }
 }

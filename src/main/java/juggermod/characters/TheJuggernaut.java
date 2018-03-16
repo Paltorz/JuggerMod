@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import juggermod.JuggerMod;
 import juggermod.actions.unique.HeavyBodyAction;
-import juggermod.patches.JuggernautEnum;
+import juggermod.patches.TheJuggernautEnum;
 
 import java.util.ArrayList;
 
@@ -93,7 +93,8 @@ public class TheJuggernaut extends CustomPlayer {
 	public static CharSelectInfo getLoadout() {
 		return new CharSelectInfo("The Juggernaut", "A fearless behemoth. He has weathered countless blows, and dealt countless more.",
 				90, 90, 99, 5,
-			JuggernautEnum.JUGGERNAUT, getStartingRelics(), getStartingDeck(), false);
+			TheJuggernautEnum.THE_JUGGERNAUT, getStartingRelics(), getStartingDeck(), false);
 	}
-	
+
+
 }

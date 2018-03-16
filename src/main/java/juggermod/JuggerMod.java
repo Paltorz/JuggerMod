@@ -48,7 +48,7 @@ import basemod.interfaces.SetUnlocksSubscriber;
 import juggermod.actions.unique.ConvergenceAction;
 import juggermod.characters.TheJuggernaut;
 import juggermod.patches.AbstractCardEnum;
-import juggermod.patches.JuggernautEnum;
+import juggermod.patches.TheJuggernautEnum;
 import juggermod.relics.HeavyBody;
 
 @SpireInitializer
@@ -81,78 +81,78 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String STRIKE_PURPLE = "cards/strike_purple.png";
     public static final String DEFEND_PURPLE = "cards/defend_purple.png";
 
-    public static final String EARTHQUAKE = "cards/phase_coil.png";
-    public static final String ON_GUARD = "cards/corona.png";
-    public static final String FURY = "cards/phase_coil.png";
-    public static final String STRUGGLE = "cards/prismatic_sphere.png";
-    public static final String SKULL_BASH = "cards/flux.png";
-    public static final String HAMMER_ARM = "cards/overload.png";
-    public static final String PULVERIZE = "cards/retrograde.png";
-    public static final String SHOULDER_BLOW = "cards/thought_raze.png";
-    public static final String FLYING_PRESS = "cards/syzygy.png";
-    public static final String FRENZY = "cards/convergence.png";
-    public static final String RELENTLESS_BLOWS = "cards/singularity.png";
-    public static final String LUNGE = "cards/siphon_power.png";
-    public static final String CHALLENGING_ROAR = "cards/disperse.png";
-    public static final String SIMPLE_MINDED = "cards/mind_over_matter.png";
-    public static final String HYSTERIA = "cards/disperse.png";
-    public static final String SMOTHER = "cards/power_overwhelming.png";
-    public static final String CASCADING_STEEL = "cards/reflection_ward.png";
-    public static final String FEINT = "cards/unstable_orb.png";
-    public static final String BULLDOZE = "cards/feedback.png";
-    public static final String PURSUIT = "cards/astral_haze.png";
-    public static final String ENDURE = "cards/genesis.png";
-    public static final String GALVANIZE = "cards/nova.png";
-    public static final String ACCELERATE = "cards/mind_over_matter.png";
-    public static final String BULWARK = "cards/genesis.png";
-    public static final String FOCUSED_POWER = "cards/archives.png";
-    public static final String UNSHAKABLE = "cards/gravity_well.png";
-    public static final String CONVERT_FLESH = "cards/corona.png";
-    public static final String VENGEANCE = "cards/zenith.png";
-    public static final String OVERPOWER = "cards/phase_coil.png";
-    public static final String HEAVY_CRASH = "cards/singularity.png";
-    public static final String STEEL_FORCE = "cards/disperse.png";
-    public static final String LASH_OUT = "cards/syzygy.png";
-    public static final String UNSTOPPABLE_FORCE = "cards/vortex.png";
-    public static final String HEAVY_ASSAULT = "cards/thought_raze.png";
-    public static final String SLOW_AND_STEADY = "cards/convergence.png";
-    public static final String BREAKTHROUGH = "cards/shimmer.png";
-    public static final String HEAVY_ARMOR = "cards/flow.png";
-    public static final String GRAPPLE = "cards/entropy.png";
-    public static final String INHUMAN_RECOVERY = "cards/flux.png";
-    public static final String HUNKER_DOWN = "cards/runic_binding.png";
-    public static final String TAUNT = "cards/coalescence.png";
-    public static final String DESTRUCTIVE_FINISH = "cards/archives.png";
-    public static final String THUNDER_STRUCK = "cards/enigma.png";
-    public static final String LIVING_ARMOR = "cards/chaos_form.png";
+    public static final String EARTHQUAKE = "cards/earth_quake.png";
+    public static final String ON_GUARD = "cards/on_guard.png";
+    public static final String FURY = "cards/fury.png";
+    public static final String STRUGGLE = "cards/struggle.png";
+    public static final String SKULL_BASH = "cards/skull_bash.png";
+    public static final String HAMMER_ARM = "cards/hammer_arm.png";
+    public static final String PULVERIZE = "cards/pulverize.png";
+    public static final String SHOULDER_BLOW = "cards/shoulder_blow.png";
+    public static final String FLYING_PRESS = "cards/flying_press.png";
+    public static final String FRENZY = "cards/frenzy.png";
+    public static final String RELENTLESS_BLOWS = "cards/relentless_blows.png";
+    public static final String LUNGE = "cards/lunge.png";
+    public static final String CHALLENGING_ROAR = "cards/challenging_roar.png";
+    public static final String SIMPLE_MINDED = "cards/simple_minded.png";
+    public static final String HYSTERIA = "cards/hysteria.png";
+    public static final String SMOTHER = "cards/smother.png";
+    public static final String CASCADING_STEEL = "cards/cascading_steel.png";
+    public static final String FEINT = "cards/feint.png";
+    public static final String BULLDOZE = "cards/bulldoze.png";
+    public static final String PURSUIT = "cards/pursuit.png";
+    public static final String ENDURE = "cards/endure.png";
+    public static final String GALVANIZE = "cards/galvanize.png";
+    public static final String ACCELERATE = "cards/accelerate.png";
+    public static final String BULWARK = "cards/bulwark.png";
+    public static final String FOCUSED_POWER = "cards/focused_power.png";
+    public static final String UNSHAKABLE = "cards/unshakable.png";
+    public static final String CONVERT_FLESH = "cards/convert_flesh.png";
+    public static final String VENGEANCE = "cards/vengeance.png";
+    public static final String OVERPOWER = "cards/overpower.png";
+    public static final String HEAVY_CRASH = "cards/heavy_crash.png";
+    public static final String STEEL_FORCE = "cards/steel_force.png";
+    public static final String LASH_OUT = "cards/lash_out.png";
+    public static final String UNSTOPPABLE_FORCE = "cards/unstoppable_force.png";
+    public static final String HEAVY_ASSAULT = "cards/heavy_assault.png";
+    public static final String SLOW_AND_STEADY = "cards/slow_and_steady.png";
+    public static final String BREAKTHROUGH = "cards/breakthrough.png";
+    public static final String HEAVY_ARMOR = "cards/heavy_armor.png";
+    public static final String GRAPPLE = "cards/grapple.png";
+    public static final String INHUMAN_RECOVERY = "cards/inhuman_recovery.png";
+    public static final String HUNKER_DOWN = "cards/hunker_down.png";
+    public static final String TAUNT = "cards/taunt.png";
+    public static final String DESTRUCTIVE_FINISH = "cards/destructive_finish.png";
+    public static final String THUNDER_STRUCK = "cards/thunder_struck.png";
+    public static final String LIVING_ARMOR = "cards/living_armor.png";
     public static final String REVERSAL = "cards/reflection_ward.png";
-    public static final String MERCURIAL = "cards/implosion.png";
-    public static final String BRUTE_FORCE = "cards/stroke_of_genius.png";
-    public static final String INERTIA = "cards/disperse.png";
-    public static final String COMBAT_TRAINING = "cards/retrograde.png";
-    public static final String RELEASE_RESTRAINT = "cards/chaos_form.png";
-    public static final String SHATTER = "cards/nova.png";
-    public static final String NATURAL_ENDURANCE = "cards/flicker.png";
-    public static final String BOLSTER = "cards/umbral_bolt.png";
-    public static final String CANNIBALIZE = "cards/overload.png";
-    public static final String BIDE = "cards/anomaly.png";
-    public static final String GIGA_IMPACT = "cards/force_ripple.png";
-    public static final String FEAST = "cards/thought_raze.png";
-    public static final String APEX_PREDATOR = "cards/vacuum.png";
-    public static final String OVEREXERT = "cards/feedback.png";
-    public static final String COLOSSUS = "cards/echo.png";
-    public static final String SPIKED_ARMOR = "cards/reflection_ward.png";
-    public static final String INDOMITABLE_WILL = "cards/zenith.png";
-    public static final String MANGLE = "cards/transference.png";
-    public static final String CALL_TO_ARMS = "cards/brainstorm.png";
-    public static final String PERFECTED_BLOW = "cards/unstable_orb.png";
-    public static final String OVERFLOWING_ARMOR = "cards/mind_over_matter.png";
-    public static final String ATLAS = "cards/retrograde.png";
-    public static final String IMPENETRABLE = "cards/entropy.png";
-    public static final String CHARGE = "cards/singularity.png";
-    public static final String BATTLE_SHOUT = "cards/prismatic_sphere.png";
-    public static final String BLITZ = "cards/coalescence.png";
-    public static final String IMPROVISATION = "cards/syzygy.png";
+    public static final String MERCURIAL = "cards/mercurial.png";
+    public static final String BRUTE_FORCE = "cards/brute_force.png";
+    public static final String INERTIA = "cards/inertia.png";
+    public static final String COMBAT_TRAINING = "cards/combat_training.png";
+    public static final String RELEASE_RESTRAINT = "cards/release_restraint.png";
+    public static final String SHATTER = "cards/shatter.png";
+    public static final String NATURAL_ENDURANCE = "cards/natural_endurance.png";
+    public static final String BOLSTER = "cards/bolster.png";
+    public static final String CANNIBALIZE = "cards/cannibalize.png";
+    public static final String BIDE = "cards/bide.png";
+    public static final String GIGA_IMPACT = "cards/giga_impact.png";
+    public static final String FEAST = "cards/feast.png";
+    public static final String APEX_PREDATOR = "cards/apex_predator.png";
+    public static final String OVEREXERT = "cards/overexert.png";
+    public static final String COLOSSUS = "cards/colossus.png";
+    public static final String SPIKED_ARMOR = "cards/spiked_armor.png";
+    public static final String INDOMITABLE_WILL = "cards/indomitable_will.png";
+    public static final String MANGLE = "cards/mangle.png";
+    public static final String CALL_TO_ARMS = "cards/call_to_arms.png";
+    public static final String PERFECTED_BLOW = "cards/perfected_blow.png";
+    public static final String OVERFLOWING_ARMOR = "cards/overflowing_armor.png";
+    public static final String ATLAS = "cards/atlas.png";
+    public static final String IMPENETRABLE = "cards/impenetrable.png";
+    public static final String CHARGE = "cards/charge.png";
+    public static final String BATTLE_SHOUT = "cards/battle_shout.png";
+    public static final String BLITZ = "cards/blitz.png";
+    public static final String IMPROVISATION = "cards/improvisation.png";
     
     // power images
     public static final String ASTRAL_HAZE_POWER = "powers/astral_haze.png";
@@ -414,11 +414,11 @@ public class JuggerMod implements PostInitializeSubscriber,
 	public void receiveEditCharacters() {
 		logger.info("begin editting characters");
 		
-		logger.info("add " + JuggernautEnum.JUGGERNAUT.toString());
+		logger.info("add " + TheJuggernautEnum.THE_JUGGERNAUT.toString());
 		BaseMod.addCharacter(TheJuggernaut.class, "The Juggernaut", "Juggernaut class string",
 				AbstractCardEnum.COPPER.toString(), "The Juggernaut",
 				makePath(SEEKER_BUTTON), makePath(SEEKER_PORTRAIT),
-				JuggernautEnum.JUGGERNAUT.toString());
+				TheJuggernautEnum.THE_JUGGERNAUT.toString());
 		
 		logger.info("done editting characters");
 	}
@@ -438,7 +438,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 	public void receiveEditCards() {
 		logger.info("begin editting cards");
 		
-		logger.info("add cards for " + JuggernautEnum.JUGGERNAUT.toString());
+		logger.info("add cards for " + TheJuggernautEnum.THE_JUGGERNAUT.toString());
 		
 		BaseMod.addCard(new Strike_Purple());
 		BaseMod.addCard(new Defend_Purple());
@@ -622,12 +622,12 @@ public class JuggerMod implements PostInitializeSubscriber,
 //		// seeker unlock 1
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 //				"Flicker", "Transference", "ForceRipple"
-//				), JuggernautEnum.JUGGERNAUT, 1);
+//				), TheJuggernautEnum.THE_JUGGERNAUT, 1);
 //		
 //		// seeker unlock 2
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 //				"Channel", "Shimmer", "ThoughtRaze"
-//				), JuggernautEnum.JUGGERNAUT, 2);
+//				), TheJuggernautEnum.THE_JUGGERNAUT, 2);
 //		UnlockTracker.addCard("Channel");
 //		UnlockTracker.addCard("Shimmer");
 //		UnlockTracker.addCard("ThoughtRaze");
@@ -635,7 +635,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 //		// seeker unlock 3 (Vacuum tmp in place of Feedback)
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 //				"Convergence", "Hypothesis", "Nexus"
-//				), JuggernautEnum.JUGGERNAUT, 3);
+//				), TheJuggernautEnum.THE_JUGGERNAUT, 3);
 //		UnlockTracker.addCard("Convergence");
 //		UnlockTracker.addCard("Hypothesis");
 //		UnlockTracker.addCard("Nexus");

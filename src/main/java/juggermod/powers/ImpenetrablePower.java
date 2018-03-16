@@ -21,6 +21,7 @@ public class ImpenetrablePower extends AbstractPower{
         this.ID = "Impenetrable";
         this.owner = owner;
         this.amount = amount;
+        this.description = DESCRIPTIONS[0];
         this.updateDescription();
         this.img = JuggerMod.getImpenetrablePowerTexture();
     }
