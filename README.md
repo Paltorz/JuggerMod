@@ -1,34 +1,22 @@
-# FruityMod-StS
-**Fruity Mod** for **Slay The Spire**
+# JuggerMod-StS
+**JuggerMod** for **Slay The Spire**
 
 ## Content/Gameplay ##
-**Fruity Mod** for **Slay The Spire** adds an entirely new character class, **The Seeker**, and a new set of 75 cards for him to use. **The Seeker** is a purple colored combination mage/astronomer that uses power from the Astral Plane to cast his spells upon himself and his enemies.
+**JuggerMod** for **Slay The Spire** adds an entirely new character class, **The Juggernaut**, and a new set of 75 cards for him to use. **The Juggernaut** is a copper colored behemoth that uses brute force to shrug off blows while crushing enemies.
 
-**The Seeker** focuses on utilizing Ethereal cards and new cards in his deck that combine with the Ethereal keyword to make powerful effects. He also can gain strong ablities by debuffing himself or his enemies.
+**The Juggernaut** focuses on Plated Armor, self-debuffs, and a new mechanic called Overflow that gives unique effects when a card is in hand at the end of the turn.
 
-**The Seeker** is an entirely new playable character. He does not overwrite The Ironclad or The Silent. This mod makes no changes to the base game other than adding **The Seeker**.
+**The Juggernaut** is an entirely new playable character. He does not overwrite The Ironclad or The Silent. This mod makes no changes to the base game other than adding **The Juggernaut**.
 
 ## Current State ##
-Currently **The Seeker** is completely playable. We have art for all the cards but it is currently just color adjusted versions of base game assets until we can find an artists. We're still looking for an artist so if you want to do that make a `Github Issue` so we can talk to you about it. Also we are well aware that **The Seeker** is not fully balanced yet. We are doing our best to balance him in line with The Ironclad and The Silent.
+Currently **The Juggernaut** is completely playable. We have art for all the cards but it is currently just color adjusted versions of base game assets until we can find an artists. We're still looking for an artist so if you want to do that make a `Github Issue` so we can talk to you about it. Also we are well aware that **The Juggernaut** is not fully balanced yet. We are doing our best to balance him in line with The Ironclad and The Silent.
 
 ## Roadmap ##
-1. Make necessary balance changes to **The Seeker**, fix any bugs discovered for the cards used by **The Seeker** and finish art for **The Seeker**
-2. Add some new relics to use as unlocks for **The Seeker** and add some new relics specific to **The Seeker**
-3. Maybe another character... maybe more potions... maybe more events... (we're not really sure about where we're going after **The Seeker** is done)
+1. Get proper character art and a model.
+2. Fix/update textures and text.
+3. Make necessary balance changes to **The Juggernaut**, fix any bugs discovered for the cards used by **The Juggernaut** and finish art for **The Juggernaut**
+4. Add some new relics to use as unlocks for **The Juggernaut** and add some new relics specific to **The Juggernaut**
 
-## The Seeker
-
-![The Seeker Image](github_resources/character_select.png)
-
-![The Seeker Game Begin](github_resources/sample_fight.png)
-
-![The Seeker Starting Deck](github_resources/starting_deck_new.png)
-
-![The Seeker Relics](github_resources/relics.png)
-
-![The Seeker Card Library](github_resources/card_library.png)
-
-Card list: [click here](https://drive.google.com/file/d/1aojRAKPQCbDW7mSW6Co6XTKwbB8IlexQ/view)
 
 ## Requirements ##
 #### General Use ####
