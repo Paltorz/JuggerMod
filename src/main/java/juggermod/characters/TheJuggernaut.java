@@ -17,6 +17,19 @@ public class TheJuggernaut extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 2;
 
 	public static int turnTracker = 0;
+	public static final float[] orbRotations = {
+			0.0F,
+			0.0F,
+			0.0F,
+			0.0F,
+			0.0F,
+			0.0F,
+			0.0F,
+			0.0F,
+			0.0F,
+			0.0F,
+	};
+
 	public static final String[] orbTextures = {
 			"img/char/seeker/orb/layer1.png",
 			"img/char/seeker/orb/layer2.png",
