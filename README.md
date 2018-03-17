@@ -17,6 +17,8 @@ Currently **The Juggernaut** is completely playable. We have art for all the car
 3. Make necessary balance changes to **The Juggernaut**, fix any bugs discovered for the cards used by **The Juggernaut** and finish art for **The Juggernaut**
 4. Add some new relics to use as unlocks for **The Juggernaut** and add some new relics specific to **The Juggernaut**
 
+## The Juggernaut
+Card list: [click here](https://drive.google.com/file/d/1aojRAKPQCbDW7mSW6Co6XTKwbB8IlexQ/view)
 
 ## Requirements ##
 #### General Use ####
@@ -39,15 +41,7 @@ Currently **The Juggernaut** is completely playable. We have art for all the car
 Here is a great video showing how to install mods, by Xterminator: https://www.youtube.com/watch?v=r2m2aL1eEjw
 
 ## Credits / Acknowledgements ##
-* Fruitstrike (https://github.com/gskleres) for game design, project management, and being a hype train
-* ColdRain451 (https://github.com/dvalldejuli) for a ton of card implementations and getting the code base started
-* test447 (https://github.com/daviscook477) for card implementations and adding lots of needed API hooks to BaseMod 
-* fiiiiilth (https://github.com/fiiiiilth) for testing, bug fixes and card updates/implementations
-* Pal (https://github.com/Paltorz) for testing and feedback
-* Grumpai (@Grumpai on Discord) for the current character model
-* Jrawly (@Jrawly on Discord) for character concept art
-* Butcherberries (@Butcherberries on Discord) for card art
-* LikeAWass, Celerity, JohnDruitt, Zoochz, SirJesterful, and Jimquisitive for playtesting and feedback
+* The FruityMod Team (https://github.com/gskleres/FruityMod-StS) For the framework this mod was built on.
 
 ## Special Thanks ##
 1. Thanks to the [devs](https://www.megacrit.com/) of **SlayTheSpire** for making such and awesome game, allowing us to mod it, and allowing us to use recolored versions of their art assets in our mod
@@ -57,7 +51,6 @@ Here is a great video showing how to install mods, by Xterminator: https://www.y
 
 ## Art Assets ##
 Creative Commons and other licenses are great and helped make some of this mod happen.
-1. Power Cells relic art - (https://www.goodfreephotos.com/) (https://www.goodfreephotos.com/vector-images/simple-battery-vector-clipart.png.php)
 2. Mechanical Core relic art - (https://pixabay.com/en/spiral-circle-swirl-whorl-design-33987/)
 
 ## Notes For Contributors ##
@@ -74,7 +67,7 @@ Creative Commons and other licenses are great and helped make some of this mod h
 1. Modify `pom.xml` to point to the location you've placed the dependencies
 2. Copy `desktop-1.0.jar` from your Slay the Spire folder into `../_lib` relative to the repo.
 3. Decompile `desktop-1.0.jar` with `java -jar "cfr_0_124.jar" --comments false --showversion false --caseinsensitivefs true --outputdir "decompiled" --jarfilter com.megacrit.cardcrawl.* "desktop-1.0.jar"`
-4. Run `mvn package` to make the jar `FruityMod.jar` in the `targets` directory
+4. Run `mvn package` to make the jar `JuggerMod.jar` in the `targets` directory
 
 #### Building in Eclipse ###
 1. Right click on the project in eclipse then go to `configure` and `convert to maven project`
