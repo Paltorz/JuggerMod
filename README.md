@@ -18,7 +18,7 @@ Currently **The Juggernaut** is completely playable. We have art for all the car
 4. Add some new relics to use as unlocks for **The Juggernaut** and add some new relics specific to **The Juggernaut**
 
 ## The Juggernaut
-Card list: [click here](https://drive.google.com/file/d/1oF5-2vDYaB9jAmvdYv6Wh2b7CPiMsN8D/view)
+Card list: [click here ](https://drive.google.com/file/d/1oF5-2vDYaB9jAmvdYv6Wh2b7CPiMsN8D/view)
 
 ## Requirements ##
 #### General Use ####
