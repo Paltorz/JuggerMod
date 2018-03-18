@@ -18,6 +18,12 @@ Currently **The Juggernaut** is completely playable. We have art for all the car
 4. Add some new relics to use as unlocks for **The Juggernaut** and add some new relics specific to **The Juggernaut**
 
 ## The Juggernaut
+![The Juggernaut Character Select](github_resources/character_select.png)
+
+![The Juggernaut Game Begin](github_resources/sample_fight.png)
+
+![The Juggernaut Starting Deck](github_resources/starting_deck.png)
+
 Card list: [click here ](https://drive.google.com/file/d/1oF5-2vDYaB9jAmvdYv6Wh2b7CPiMsN8D/view)
 
 ## Requirements ##
@@ -45,12 +51,13 @@ Here is a great video showing how to install mods, by Xterminator: https://www.y
 
 ## Special Thanks ##
 1. Thanks to the [devs](https://www.megacrit.com/) of **SlayTheSpire** for making such and awesome game, allowing us to mod it, and allowing us to use recolored versions of their art assets in our mod
-2. Thanks to t-larson and contributors (https://github.com/t-larson) for BaseMod!!
+2. Thanks to test447 and contributors (https://github.com/daviscook477) for BaseMod!!
 3. Thanks to kiooeht and contributors (https://github.com/kiooeht) for ModTheSpire!!
 4. Thanks to all the people who have contributed bug reports or feedback on Discord or through the Github tracker. Without your help we couldn't make **The Seeker** as well-polished!
 
 ## Art Assets ##
 Creative Commons and other licenses are great and helped make some of this mod happen.
+1. Character Art - (https://thevampiredio.deviantart.com/art/arch-templar-171984434)
 2. Mechanical Core relic art - (https://pixabay.com/en/spiral-circle-swirl-whorl-design-33987/)
 
 ## Notes For Contributors ##
