@@ -24,6 +24,7 @@ public class ConvertFlesh extends CustomCard{
     private static final int COST_UPGRADE = 1;
     private static final int HP_COST = 8;
     private static final int HP_COST_UPGRADE = -2;
+    private static final double MULTIPLIER = 0.5;
     private static final int POOL = 1;
 
     public ConvertFlesh() {
@@ -36,9 +37,10 @@ public class ConvertFlesh extends CustomCard{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int plateCount = GetPowerCount(p, "Plated Armor");
+        int plateCount2 = (int)(plateCount * MULTIPLIER);
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, this.magicNumber));
         if (plateCount>0)
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p,  plateCount), plateCount));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p,  plateCount2), plateCount2));
     }
 
     private int GetPowerCount(AbstractCreature c, String powerId) {

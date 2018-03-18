@@ -39,11 +39,11 @@ public class Impenetrable extends OverflowCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.upgraded) {
+        //if (this.upgraded) {
+           // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, UPGRADED_PLATE), UPGRADED_PLATE));
+       // } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, PLATE_AMT), PLATE_AMT));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, UPGRADED_PLATE), UPGRADED_PLATE));
-        }
+        //}
     }
 
     @Override

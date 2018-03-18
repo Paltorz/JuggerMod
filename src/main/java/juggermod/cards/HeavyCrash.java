@@ -23,7 +23,7 @@ public class HeavyCrash extends CustomCard{
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
     private static final int ATTACK_DMG = 0;
-    private static final int PLATE_SCALING = 2;
+    private static final int PLATE_SCALING = 3;
     private static final int PLATE_SCALING_UP = 1;
     private static final int POOL = 1;
 

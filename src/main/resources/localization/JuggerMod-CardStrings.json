@@ -32,8 +32,8 @@
 	},
 	"Skull Bash": {
 		"NAME": "Skull Bash",
-		"DESCRIPTION": "Deal !D! damage. Gain Confused. Exhaust.",
-		"UPGRADE_DESCRIPTION": "Innate. Deal !D! damage. Gain Confused. Exhaust."
+		"DESCRIPTION": "Deal !D! damage. Gain Confusion. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. Deal !D! damage. Gain Confusion. Exhaust."
 	},
 	"Lash Out": {
 		"NAME": "Lash Out",
@@ -260,7 +260,7 @@
 	},
 	"Convert Flesh": {
 		"NAME": "Convert Flesh",
-		"DESCRIPTION": "Lose !M! HP. Double your Plated-Armor. Exhaust."
+		"DESCRIPTION": "Lose !M! HP. Increase your Plated-Armor by 50%. Exhaust."
 	},
 	"Living Armor": {
 		"NAME": "Living Armor",

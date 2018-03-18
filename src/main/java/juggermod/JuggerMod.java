@@ -648,6 +648,7 @@ public class JuggerMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"plated-armor", "Plated-Armor"}, "Gain Block equal to your Plated-Armor at the end of your turn. Taking damage from an attack reduces Plated-Armor by 1.");
         BaseMod.addKeyword(new String[] {"overflow", "Overflow"}, "When a card with Overflow is in your hand at the end of the turn, activate an effect.");
         BaseMod.addKeyword(new String[] {"draw-reduction", "Draw-Reduction"}, "Draw 1 less card at the beginning of your turn.");
+        BaseMod.addKeyword(new String[] {"confusion", "Confusion"}, "The costs of your cards are randomized when they are drawn.");
 	}
 	
 	//
