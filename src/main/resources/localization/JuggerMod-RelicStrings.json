@@ -5,5 +5,21 @@
     "DESCRIPTIONS": [
       "At the start of your turn, choose a card in your hand and gain an effect based on its type."
     ]
+  },
+  "Snecko Heart": {
+    "NAME": "Snecko Heart",
+    "FLAVOR": "The body of a Snecko is surprisingly valuable and bountiful.",
+    "DESCRIPTIONS":
+            [
+              "At the start of your turn, if you have Confusion, draw 1 additional card."
+            ]
+  },
+  "Rigid Armor": {
+    "NAME": "Rigid Armor",
+    "FLAVOR": "Action is unnecessary when nothing can threaten you.",
+    "DESCRIPTIONS":
+    [
+      "At the end of your turn, if you played 2 or less cards this turn, gain 2 Plated Armor."
+    ]
   }
 }
