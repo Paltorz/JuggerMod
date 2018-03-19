@@ -155,39 +155,23 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String IMPROVISATION = "cards/improvisation.png";
     
     // power images
-    public static final String ASTRAL_HAZE_POWER = "powers/astral_haze.png";
-    public static final String ESSENCE_MIRROR_POWER = "powers/essence_mirror.png";
-    public static final String ETHEREALIZE_POWER = "powers/essence_mirror.png";
-    public static final String ASTRAL_FORM_POWER = "powers/chaos_form.png";
-    public static final String VIGOR_POWER = "powers/vigor.png";
-    public static final String ASTRAL_SHIFT_POWER = "powers/astral_shift.png";
-    public static final String TENACITY_POWER = "powers/tenacity.png";
-    public static final String CELERITY_POWER = "powers/celerity.png";
-    public static final String POTENCY_POWER = "powers/potency.png";
-    public static final String COALESCENCE_POWER = "powers/coalescence.png";
-    public static final String CREATIVITY_POWER = "powers/creativity.png";
-    public static final String POWER_OVERWHELMING_POWER = "powers/power_overwhelming.png";
-    public static final String EVENT_HORIZON_POWER = "powers/event_horizon.png";
-    public static final String ENIGMA_POWER = "powers/enigma.png";
-    public static final String BRILLIANCE_POWER = "powers/brilliance.png";
-    public static final String ANOMALY_POWER = "powers/anomaly.png";
-    public static final String NEXUS_POWER = "powers/nexus.png";
-    public static final String BRUTE_FORCE_POWER = "powers/power_overwhelming.png";
-    public static final String INERTIA_POWER = "powers/astral_haze.png";
-    public static final String COMBAT_TRAINING_POWER = "powers/chaos_form.png";
-    public static final String RELEASE_RESTRAINT_POWER = "powers/astral_shift.png";
-    public static final String SHATTER_POWER = "powers/brilliance.png";
-    public static final String NATURAL_ENDURANCE_POWER = "powers/vigor.png";
-    public static final String BIDE_POWER = "powers/essence_mirror.png";
-    public static final String GIGA_IMPACT_POWER = "powers/event_horizon.png";
-    public static final String COLOSSUS_POWER = "powers/potency.png";
-    public static final String SPIKED_ARMOR_POWER = "powers/creativity.png";
-    public static final String INDOMITABLE_WILL_POWER = "powers/tenacity.png";
-    public static final String MANGLE_POWER = "powers/enigma.png";
-    public static final String OVERFLOWING_BLOCK_POWER = "powers/coalescence.png";
-    public static final String OVERFLOWING_PLATE_POWER = "powers/nexus.png";
-    public static final String ATLAS_POWER = "powers/nexus.png";
-    public static final String IMPENETRABLE_POWER = "powers/vigor.png";
+
+    public static final String BRUTE_FORCE_POWER = "powers/brute_force.png";
+    public static final String INERTIA_POWER = "powers/inertia.png";
+    public static final String COMBAT_TRAINING_POWER = "powers/combat_training.png";
+    public static final String RELEASE_RESTRAINT_POWER = "powers/release_restraint.png";
+    public static final String SHATTER_POWER = "powers/shatter.png";
+    public static final String NATURAL_ENDURANCE_POWER = "powers/natural_endurance.png";
+    public static final String BIDE_POWER = "powers/bide.png";
+    public static final String GIGA_IMPACT_POWER = "powers/giga_impact.png";
+    public static final String COLOSSUS_POWER = "powers/colossus.png";
+    public static final String SPIKED_ARMOR_POWER = "powers/spiked_armor.png";
+    public static final String INDOMITABLE_WILL_POWER = "powers/indomitable_will.png";
+    public static final String MANGLE_POWER = "powers/mangle.png";
+    public static final String OVERFLOWING_BLOCK_POWER = "powers/overflowing_block.png";
+    public static final String OVERFLOWING_PLATE_POWER = "powers/overflowing_plate.png";
+    public static final String ATLAS_POWER = "powers/atlas.png";
+    public static final String IMPENETRABLE_POWER = "powers/impenetrable.png";
 
     // relic images
 
@@ -265,74 +249,8 @@ public class JuggerMod implements PostInitializeSubscriber,
         return new Texture(makePath(BRUTE_FORCE_POWER));
     }
 
-    public static Texture getAstralHazePowerTexture() {
-        return new Texture(makePath(ASTRAL_HAZE_POWER));
-    }
-
-    public static Texture getEssenceMirrorPowerTexture() {
-        return new Texture(makePath(ESSENCE_MIRROR_POWER));
-    }
-
-    public static Texture getEtherealizePowerTexture() {
-        return new Texture(makePath(ETHEREALIZE_POWER));
-    }
-
-    public static Texture getAstralFormPowerTexture() {
-        return new Texture(makePath(ASTRAL_FORM_POWER));
-    }
-
-    public static Texture getVigorPowerTexture() {
-        return new Texture(makePath(VIGOR_POWER));
-    }
-
-    public static Texture getAstralShiftTexture() {
-        return new Texture(makePath(ASTRAL_SHIFT_POWER));
-    }
-
-    public static Texture getTenacityPowerTexture() {
-        return new Texture(makePath(TENACITY_POWER));
-    }
-
-    public static Texture getCelerityPowerTexture() {
-        return new Texture(makePath(CELERITY_POWER));
-    }
-
-    public static Texture getPotencyPowerTexture() {
-        return new Texture(makePath(POTENCY_POWER));
-    }
-
-    public static Texture getCoalescencePowerTexture() {
-        return new Texture(makePath(COALESCENCE_POWER));
-    }
-
-    public static Texture getCreativityPowerTexture() {
-        return new Texture(makePath(CREATIVITY_POWER));
-    }
-
-    public static Texture getPowerOverwhelmingPowerTexture() {
-        return new Texture(makePath(POWER_OVERWHELMING_POWER));
-    }
-
-    public static Texture getEventHorizonPowerTexture() {
-        return new Texture(makePath(EVENT_HORIZON_POWER));
-    }
-
-    public static Texture getEnigmaPowerTexture() {
-        return new Texture(makePath(ENIGMA_POWER));
-    }
-
-
     public static Texture getHeavyBodyTexture() { return new Texture(makePath(HEAVY_BODY_RELIC)); }
 
-    public static Texture getBrillancePowerTexture() { return new Texture(makePath(BRILLIANCE_POWER)); }
-
-    public static Texture getAnomalyPowerTexture() {
-        return new Texture(makePath(BRILLIANCE_POWER));
-    }
-
-    public static Texture getNexusPowerTexture() {
-        return new Texture(makePath(VIGOR_POWER));
-    }
 
     /**
      * Makes a full path for a resource path

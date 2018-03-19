@@ -8,6 +8,8 @@
 
 **The Juggernaut** is an entirely new playable character. He does not overwrite The Ironclad or The Silent. This mod makes no changes to the base game other than adding **The Juggernaut**.
 
+**Heavy Body** Effects are: (Attack) Gain 4 Strength for the turn. (Skill) Gain 6 Block. (Power) Gain 2 Plated Armor. (Other) Select a card in your hand to Exhaust.
+
 ## Current State ##
 Currently **The Juggernaut** is completely playable. We have art for all the cards but it is currently just color adjusted versions of base game assets until we can find an artists. We're still looking for an artist so if you want to do that make a `Github Issue` so we can talk to you about it. Also we are well aware that **The Juggernaut** is not fully balanced yet. We are doing our best to balance him in line with The Ironclad and The Silent.
 
