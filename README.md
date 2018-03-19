@@ -4,7 +4,7 @@
 ## Content/Gameplay ##
 **JuggerMod** for **Slay The Spire** adds an entirely new character class, **The Juggernaut**, and a new set of 75 cards for him to use. **The Juggernaut** is a copper colored behemoth that uses brute force to shrug off blows while crushing enemies.
 
-**The Juggernaut** focuses on Plated Armor, self-debuffs, and a new mechanic called Overflow that gives unique effects when a card is in hand at the end of the turn.
+**The Juggernaut** focuses on Plated Armor, self-debuffs like -dex, draw reduction, and confusion, and a new mechanic called Overflow that gives unique effects when a card is in hand at the end of the turn.
 
 **The Juggernaut** is an entirely new playable character. He does not overwrite The Ironclad or The Silent. This mod makes no changes to the base game other than adding **The Juggernaut**.
 

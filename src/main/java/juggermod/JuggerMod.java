@@ -52,6 +52,7 @@ import juggermod.patches.TheJuggernautEnum;
 import juggermod.relics.HeavyBody;
 import juggermod.relics.SneckoHeart;
 import juggermod.relics.RigidArmor;
+import juggermod.relics.BrittleRock;
 
 @SpireInitializer
 public class JuggerMod implements PostInitializeSubscriber,
@@ -180,6 +181,7 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String HEAVY_BODY_RELIC = "relics/mechanicalCore.png";
     public static final String SNECKO_HEART_RELIC = "relics/sneckoHeart.png";
     public static final String RIGID_ARMOR_RELIC = "relics/rigidArmor.png";
+    public static final String BRITTLE_ROCK_RELIC = "relics/brittleRock.png";
 
     
     // seeker assets
@@ -258,6 +260,8 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static Texture getSneckoHeartTexture() { return new Texture(makePath(SNECKO_HEART_RELIC)); }
 
     public static Texture getRigidArmorTexture() { return new Texture(makePath(RIGID_ARMOR_RELIC)); }
+
+    public static Texture getBrittleRockTexture() { return new Texture(makePath(BRITTLE_ROCK_RELIC)); }
 
     /**
      * Makes a full path for a resource path
@@ -357,6 +361,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 		BaseMod.addRelicToCustomPool(new HeavyBody(), AbstractCardEnum.COPPER.toString());
         BaseMod.addRelicToCustomPool(new SneckoHeart(), AbstractCardEnum.COPPER.toString());
         BaseMod.addRelicToCustomPool(new RigidArmor(), AbstractCardEnum.COPPER.toString());
+        BaseMod.addRelicToCustomPool(new BrittleRock(), AbstractCardEnum.COPPER.toString());
         
         logger.info("done editting relics");
 	}

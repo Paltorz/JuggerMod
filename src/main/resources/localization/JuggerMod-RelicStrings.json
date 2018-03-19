@@ -21,5 +21,13 @@
     [
       "At the end of your turn, if you played 2 or less cards this turn, gain 2 Plated Armor."
     ]
+  },
+  "Brittle Rock": {
+    "NAME": "Brittle Rock",
+    "FLAVOR": "Great power comes with great risk of crumbling... sometimes.",
+    "DESCRIPTIONS":
+    [
+      "At the start of combat, gain 3 Strength. Lose 3 Strength at the end of the First Turn."
+    ]
   }
 }
