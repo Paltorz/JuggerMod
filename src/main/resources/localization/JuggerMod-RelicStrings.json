@@ -29,5 +29,13 @@
     [
       "At the start of combat, gain 3 Strength. Lose 3 Strength at the end of the First Turn."
     ]
+  },
+  "Kinetic Rock": {
+    "NAME": "Kinetic Rock",
+    "FLAVOR": "You can't have your rock and throw it too.",
+    "DESCRIPTIONS":
+    [
+      "Gain 1 Energy at the start of each turn. Draw 1 less card each turn."
+    ]
   }
 }
