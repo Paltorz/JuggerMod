@@ -28,7 +28,7 @@
 	},
 	"Earthquake": {
 		"NAME": "Earthquake",
-		"DESCRIPTION": "Deal !D! damage and apply 2 Vulnerable to All enemies."
+		"DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable to All enemies."
 	},
 	"Skull Bash": {
 		"NAME": "Skull Bash",
@@ -135,7 +135,7 @@
 	},
 	"Thunder Struck": {
 		"NAME": "Thunder Struck",
-		"DESCRIPTION": "Deal !D! damage to All enemies. All enemies lose 8 Strength for 1 turn. Overflow - All enemies lose !M! Strength for 1 turn."
+		"DESCRIPTION": "Deal !D! damage to All enemies. All enemies lose 6 Strength for 1 turn. Overflow - All enemies lose !M! Strength for 1 turn."
 	},
 	"Hysteria": {
 		"NAME": "Hysteria",
@@ -191,7 +191,7 @@
 	},
 	"Endure": {
 		"NAME": "Endure",
-		"DESCRIPTION": "All enemies lose !M! Strength for 1 turn."
+		"DESCRIPTION": "For each of your Draw-Reduction, gain !B! Block."
 	},
 	"Bide": {
 		"NAME": "Bide",
@@ -232,8 +232,8 @@
 	},
 	"Grapple": {
 		"NAME": "Grapple",
-		"DESCRIPTION": "Apply !M! Vulnerable. Whenever you play a card this turn, targeted enemy loses 3 HP.",
-		"UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. Whenever you play a card this turn, targeted enemy loses 5 HP."
+		"DESCRIPTION": "Apply !M! Vulnerable. Gain !B! Block. Whenever you play a card this turn, targeted enemy loses 3 HP.",
+		"UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. Gain !B! Block. Whenever you play a card this turn, targeted enemy loses 5 HP."
 	},
 	"Inhuman Recovery": {
 		"NAME": "Inhuman Recovery",

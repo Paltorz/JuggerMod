@@ -26,9 +26,9 @@ public class ThunderStruck extends OverflowCard{
     private static final int COST = 3;
     private static final int ATTACK_DMG = 20;
     private static final int UPGRADE_PLUS_DMG = 4;
-    private static final int OVERFLOW_SHACKLE = 2;
+    private static final int OVERFLOW_SHACKLE = 1;
     private static final int OVERFLOW_SHACKLE_UP = 1;
-    private static final int SHACKLE = 8;
+    private static final int SHACKLE = 6;
     private static final int POOL = 1;
 
     public ThunderStruck() {

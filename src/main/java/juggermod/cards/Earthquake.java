@@ -23,10 +23,10 @@ public class Earthquake extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 2;
+	private static final int ATTACK_DMG = 3;
 	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int VULNERABLE_AMT = 2;
-	private static final int UPGRADE_PLUS_VULNERABLE = 0;
+	private static final int VULNERABLE_AMT = 1;
+	private static final int UPGRADE_PLUS_VULNERABLE = 1;
 	private static final int POOL = 1;
 
 	public Earthquake() {
@@ -63,7 +63,7 @@ public class Earthquake extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			this.upgradeDamage(UPGRADE_PLUS_DMG);
+			//this.upgradeDamage(UPGRADE_PLUS_DMG);
 			this.upgradeMagicNumber(UPGRADE_PLUS_VULNERABLE);
 		}
 	}

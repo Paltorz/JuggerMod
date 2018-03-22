@@ -16,10 +16,10 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class HeavyBodyAction extends AbstractGameAction {
-    private static final int TMP_STRENGTH = 4;
-    private static final int TMP_STRENGTH_UP = 6;
-    private static final int BLOCK_AMT = 6;
-    private static final int BLOCK_AMT_UP = 9;
+    private static final int TMP_STRENGTH = 3;
+    private static final int TMP_STRENGTH_UP = 5;
+    private static final int BLOCK_AMT = 5;
+    private static final int BLOCK_AMT_UP = 8;
     private static final int PLATE_AMT = 2;
     private static final int PLATE_AMT_UP = 3;
     private static final int DRAW_AMT = 1;
