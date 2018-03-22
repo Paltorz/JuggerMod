@@ -20,8 +20,8 @@ public class Colossus extends CustomCard{
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
-    private static final int PLATE_AMT = 8;
-    private static final int STR_AMOUNT = 6;
+    private static final int PLATE_AMT = 6;
+    private static final int STR_AMOUNT = 4;
     private static final int STR_AMOUNT_UP = 3;
     private static final int POOL = 1;
 

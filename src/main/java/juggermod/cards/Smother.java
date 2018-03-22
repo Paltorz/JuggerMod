@@ -25,7 +25,7 @@ public class Smother extends OverflowCard{
     private static final int COST = 1;
     private static final int POOL = 1;
     private static final int WEAK_AMOUNT = 1;
-    private static final int ATTACK_DMG = 9;
+    private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_DMG_AMT = 2;
     private static final int UPGRADE_PLUS_WEAK = 1;
     private static final int OVERFLOW_AMT = 1;

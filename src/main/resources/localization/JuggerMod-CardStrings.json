@@ -153,7 +153,7 @@
 	},
 	"On Guard": {
 		"NAME": "On Guard",
-		"DESCRIPTION": "Gain !M! Plated-Armor."
+		"DESCRIPTION": "Gain !M! Plated-Armor. Gain !B! Block."
 	},
 	"Breakthrough": {
 		"NAME": "Breakthrough",
@@ -264,7 +264,7 @@
 	},
 	"Living Armor": {
 		"NAME": "Living Armor",
-		"DESCRIPTION": "Gain !M! Plated-Armor. Can be Upgraded any number of times."
+		"DESCRIPTION": "Gain !M! Plated-Armor. Can be Upgraded any number of times. Exhaust."
 	},
 	"Unshakable": {
 		"NAME": "Unshakable",
