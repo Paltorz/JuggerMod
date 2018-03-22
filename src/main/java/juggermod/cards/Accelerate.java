@@ -3,6 +3,7 @@ package juggermod.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,6 +25,7 @@ public class Accelerate extends OverflowCard{
     private static final int COST = 1;
     private static final int DEX_GAIN_AMT = 1;
     private static final int OVERFLOW_DRAW = 1;
+    private static final int BLOCK_AMT = 1;
     private static final int DRAW = 2;
     private static final int POOL = 1;
 
@@ -32,6 +34,7 @@ public class Accelerate extends OverflowCard{
                 AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = DRAW;
+        this.baseBlock = BLOCK_AMT;
     }
 
     @Override
@@ -47,6 +50,7 @@ public class Accelerate extends OverflowCard{
             AbstractDungeon.actionManager.addToBottom(new EmptyDeckShuffleAction());
         }
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, DEX_GAIN_AMT), DEX_GAIN_AMT));
     }
 

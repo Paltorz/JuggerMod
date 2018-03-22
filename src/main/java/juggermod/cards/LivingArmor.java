@@ -31,6 +31,7 @@ public class LivingArmor extends CustomCard{
                 AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
         this.magicNumber = this.baseMagicNumber = PLATE_AMT;
         this.timesUpgraded = upgrades;
+        this.exhaust = true;
     }
 
     @Override
