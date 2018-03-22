@@ -50,7 +50,7 @@ public class HeavyBodyAction extends AbstractGameAction {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, PLATE_AMT), PLATE_AMT));
                         break;
                     default:
-                        AbstractDungeon.actionManager.addToBottom(new ExhaustAction(AbstractDungeon.player, AbstractDungeon.player, 1, false));
+                        AbstractDungeon.actionManager.addToTop(new ExhaustAction(AbstractDungeon.player, AbstractDungeon.player, 1, false));
                         break;
                 }
                 AbstractDungeon.player.hand.addToTop(c);

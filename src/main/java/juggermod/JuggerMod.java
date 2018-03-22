@@ -157,6 +157,7 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String BATTLE_SHOUT = "cards/battle_shout.png";
     public static final String BLITZ = "cards/blitz.png";
     public static final String IMPROVISATION = "cards/improvisation.png";
+    public static final String SLUGFEST = "cards/slugfest.png";
     
     // power images
 
@@ -380,6 +381,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Strike_Purple());
 		BaseMod.addCard(new Defend_Purple());
 
+        BaseMod.addCard(new Slugfest());
         BaseMod.addCard(new Improvisation());
         BaseMod.addCard(new Blitz());
         BaseMod.addCard(new BattleShout());
