@@ -20,7 +20,7 @@ public class Feast extends CustomCard{
     private static final int COST = 1;
     private static final int ATTACK_DMG = 12;
     private static final int ATTACK_DMG_UP = 2;
-    private static final int HEAL_AMOUNT = 8;
+    private static final int HEAL_AMOUNT = 6;
     private static final int HEAL_AMOUNT_UP = 2;
     private static final int POOL = 1;
 

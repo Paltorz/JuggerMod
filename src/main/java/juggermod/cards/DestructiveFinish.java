@@ -22,7 +22,7 @@ public class DestructiveFinish extends CustomCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 10;
+    private static final int ATTACK_DMG = 8;
     private static final int DISCARD_AMT = 1;
     private static final int DISCARD_AMT_UP = 1;
     private static final int POOL = 1;

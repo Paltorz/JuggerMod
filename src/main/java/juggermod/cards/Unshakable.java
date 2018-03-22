@@ -20,8 +20,8 @@ public class Unshakable extends CustomCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 2;
-    private static final int PLATE_AMT= 7;
-    private static final int UPGRADED_PLATE = 8;
+    private static final int PLATE_AMT= 5;
+    private static final int UPGRADED_PLATE = 6;
     private static final int WEAK_AMOUNT = 2;
     private static final int UPGRADE_PLUS_WEAK = 1;
     private static final int POOL = 1;

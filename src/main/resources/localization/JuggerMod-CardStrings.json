@@ -237,7 +237,7 @@
 	},
 	"Inhuman Recovery": {
 		"NAME": "Inhuman Recovery",
-		"DESCRIPTION": "Ethereal. Heal 4 HP at the start of your turn for !M! turns. Overflow - Heal 6 HP. Exhaust."
+		"DESCRIPTION": "Ethereal. Heal 3 HP at the start of your turn for !M! turns. Overflow - Heal 6 HP. Exhaust."
 	},
 	"Mercurial": {
 		"NAME": "Mercurial",
@@ -251,7 +251,7 @@
 	"Hunker Down": {
 		"NAME": "Hunker Down",
 		"DESCRIPTION": "If your Dexterity is less than 0, gain Plated-Armor equal to the difference. Overflow - Lose 1 Dexterity. Exhaust.",
-		"UPGRADE_DESCRIPTION": "If your Dexterity is less than 0, gain Plated-Armor equal to the difference. Overflow - Lose 1 Dexterity.",
+		"UPGRADE_DESCRIPTION": "If your Dexterity is less than 0, gain Plated-Armor equal to half of the difference. Overflow - Lose 1 Dexterity.",
 		"EXTENDED_DESCRIPTION": [ "I have too much Dexterity." ]
 	},
 	"Focused Power": {
@@ -268,8 +268,8 @@
 	},
 	"Unshakable": {
 		"NAME": "Unshakable",
-		"DESCRIPTION": "Gain 7 Plated-Armor. Apply !M! Weak.",
-		"UPGRADE_DESCRIPTION": "Gain 8 Plated-Armor. Apply !M! Weak."
+		"DESCRIPTION": "Gain 5 Plated-Armor. Apply !M! Weak.",
+		"UPGRADE_DESCRIPTION": "Gain 6 Plated-Armor. Apply !M! Weak."
 	},
 	"Reversal": {
 		"NAME": "Reversal",

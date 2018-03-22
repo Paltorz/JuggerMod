@@ -58,7 +58,7 @@ public class HunkerDown extends OverflowCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int dexCount = GetPowerCount(p, "Dexterity");
         if (dexCount < 0) {
-            int plateCount = dexCount * -1;
+            int plateCount = (int)(dexCount * -.5);
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, plateCount), plateCount));
         }
     }

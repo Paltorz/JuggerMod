@@ -51,9 +51,9 @@ public class SkullBash extends CustomCard{
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_DMG_AMT);
-            this.isInnate = true;
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            //this.isInnate = true;
+            //this.rawDescription = UPGRADE_DESCRIPTION;
+            //this.initializeDescription();
         }
     }
 }
