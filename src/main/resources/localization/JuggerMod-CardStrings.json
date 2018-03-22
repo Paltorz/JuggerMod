@@ -115,7 +115,7 @@
 	},
 	"Cascading Steel": {
 		"NAME": "Cascading Steel",
-		"DESCRIPTION": "Deal !D! damage to All enemies. Overflow - gain !M! Artifact."
+		"DESCRIPTION": "Ethereal. Deal !D! damage to All enemies. Overflow - gain !M! Artifact."
 	},
 	"Giga Impact": {
 		"NAME": "Giga Impact",
@@ -290,7 +290,7 @@
 	},
 	"Inertia": {
 		"NAME": "Inertia",
-		"DESCRIPTION": "At the end of your turn, you no longer discard your hand."
+		"DESCRIPTION": "At the end of your turn, you Retain your hand, except for Overflow cards."
 	},
 	"Release Restraint": {
 		"NAME": "Release Restraint",

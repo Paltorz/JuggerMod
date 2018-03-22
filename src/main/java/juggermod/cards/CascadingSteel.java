@@ -20,8 +20,8 @@ public class CascadingSteel extends OverflowCard{
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
-    private static final int ATTACK_DMG = 18;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int ATTACK_DMG = 16;
+    private static final int UPGRADE_PLUS_DMG = 4;
     private static final int ARTIFACT_AMT = 1;
     private static final int UPGRADE_ARTIFACT = 1;
     private static final int POOL = 1;
@@ -39,6 +39,7 @@ public class CascadingSteel extends OverflowCard{
     @Override
     public void triggerOnEndOfPlayerTurn() {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ArtifactPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        AbstractDungeon.player.hand.moveToExhaustPile(this);
     }
 
     @Override
@@ -56,7 +57,7 @@ public class CascadingSteel extends OverflowCard{
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_PLUS_DMG);
-            this.upgradeMagicNumber(UPGRADE_ARTIFACT);
+            //this.upgradeMagicNumber(UPGRADE_ARTIFACT);
         }
     }
 }

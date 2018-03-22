@@ -590,6 +590,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 		}
 	}
 
+	/*
     public static boolean hasRelicCustomI(String relicID) {
         System.out.println("I was checked!");
         // if it's checking for relicID.equals("Runic Pyramid") then we know we're in the block where
@@ -601,6 +602,7 @@ public class JuggerMod implements PostInitializeSubscriber,
             return AbstractDungeon.player.hasRelic(relicID);
         }
     }
+    */
 
     // used by fruitmod.patches.com.megacrit.cardcrawl.cards.status.Dazed.UseDazed
 	public static void maybeUseDazed(Dazed dazed) {

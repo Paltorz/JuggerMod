@@ -1,5 +1,6 @@
 package juggermod.patches;
 
+/*
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
@@ -18,3 +19,4 @@ public class InertiaPowerPatch {
         };
     }
 }
+*/
