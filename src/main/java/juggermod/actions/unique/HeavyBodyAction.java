@@ -36,7 +36,7 @@ public class HeavyBodyAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == 0.5f) {
-            AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, true, false, false, false);
+            AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, true, true, false, false, false);
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25f));
             this.tickDuration();
             return;

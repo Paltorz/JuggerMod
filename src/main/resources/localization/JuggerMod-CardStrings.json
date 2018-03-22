@@ -214,7 +214,7 @@
 	},
 	"Accelerate": {
 		"NAME": "Accelerate",
-		"DESCRIPTION": "Draw 2 cards. Gain 1 Dexterity.",
+		"DESCRIPTION": "Draw 2 cards. Gain !B! Block. Gain 1 Dexterity.",
 		"UPGRADE_DESCRIPTION": "Draw 2 cards. Gain 1 Dexterity. Overflow - Next turn, draw 1 card."
 	},
 	"Bolster": {
