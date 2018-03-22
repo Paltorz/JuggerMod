@@ -1,21 +1,15 @@
 package juggermod;
 
-import java.nio.charset.StandardCharsets;
-
-import juggermod.cards.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import basemod.BaseMod;
+import basemod.ModPanel;
+import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Dazed;
@@ -25,35 +19,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-
-import basemod.BaseMod;
-import basemod.ModPanel;
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditCharactersSubscriber;
-import basemod.interfaces.EditKeywordsSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
-import basemod.interfaces.OnCardUseSubscriber;
-import basemod.interfaces.OnPowersModifiedSubscriber;
-import basemod.interfaces.PostBattleSubscriber;
-import basemod.interfaces.PostDrawSubscriber;
-import basemod.interfaces.PostDungeonInitializeSubscriber;
-import basemod.interfaces.PostExhaustSubscriber;
-import basemod.interfaces.PostInitializeSubscriber;
-import basemod.interfaces.SetUnlocksSubscriber;
-import juggermod.actions.unique.ConvergenceAction;
+import juggermod.cards.*;
 import juggermod.characters.TheJuggernaut;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.TheJuggernautEnum;
-import juggermod.relics.HeavyBody;
-import juggermod.relics.SneckoHeart;
-import juggermod.relics.RigidArmor;
-import juggermod.relics.BrittleRock;
-import juggermod.relics.KineticRock;
+import juggermod.relics.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.nio.charset.StandardCharsets;
 
 @SpireInitializer
 public class JuggerMod implements PostInitializeSubscriber,
@@ -158,7 +134,8 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String BLITZ = "cards/blitz.png";
     public static final String IMPROVISATION = "cards/improvisation.png";
     public static final String SLUGFEST = "cards/slugfest.png";
-    
+    public static final String HEAVIER_BODY = "cards/heavier_body.png";
+
     // power images
 
     public static final String BRUTE_FORCE_POWER = "powers/brute_force.png";
@@ -177,6 +154,7 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String OVERFLOWING_PLATE_POWER = "powers/overflowing_plate.png";
     public static final String ATLAS_POWER = "powers/atlas.png";
     public static final String IMPENETRABLE_POWER = "powers/impenetrable.png";
+    public static final String HEAVIER_BODY_POWER = "powers/heavier_body.png";
 
     // relic images
 
@@ -200,6 +178,10 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String BADGE_IMG = "FRelicBadge.png";
     
     // texture loaders
+    public static Texture getHeavierBodyPowerTexture() {
+        return new Texture(makePath(HEAVIER_BODY_POWER));
+    }
+
     public static Texture getImpenetrablePowerTexture() {
         return new Texture(makePath(IMPENETRABLE_POWER));
     }
@@ -381,6 +363,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Strike_Purple());
 		BaseMod.addCard(new Defend_Purple());
 
+        BaseMod.addCard(new HeavierBody());
         BaseMod.addCard(new Slugfest());
         BaseMod.addCard(new Improvisation());
         BaseMod.addCard(new Blitz());

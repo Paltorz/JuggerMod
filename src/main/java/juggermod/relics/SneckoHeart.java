@@ -1,12 +1,10 @@
 package juggermod.relics;
 
+import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.ConfusionPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import juggermod.JuggerMod;
-import juggermod.actions.unique.HeavyBodyAction;
-import basemod.abstracts.CustomRelic;
 
 public class SneckoHeart extends CustomRelic{
     private static final String ID = "Snecko Heart";

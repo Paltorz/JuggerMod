@@ -1,7 +1,6 @@
 package juggermod.patches.com.megacrit.cardcrawl.cards.status.Dazed;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;

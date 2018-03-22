@@ -332,5 +332,9 @@
 		"NAME": "Slugfest",
 		"DESCRIPTION": "ALL enemies without Slow gain Slow for the turn. ALL Attacks currently in your hand cost 0 for the turn.",
 		"UPGRADE_DESCRIPTION": "ALL enemies without Slow gain Slow for the turn. ALL Attacks currently in your hand cost 0 for the turn."
+	},
+	"Heavier Body": {
+		"NAME": "Heavier Body",
+		"DESCRIPTION": "Improve the effects of the Heavy Body Relic."
 	}
 }

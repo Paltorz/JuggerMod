@@ -2,6 +2,7 @@ package juggermod.actions.unique;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -16,8 +17,12 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class HeavyBodyAction extends AbstractGameAction {
     private static final int TMP_STRENGTH = 4;
+    private static final int TMP_STRENGTH_UP = 6;
     private static final int BLOCK_AMT = 6;
-    private static final int PLATE_AMT = 3;
+    private static final int BLOCK_AMT_UP = 9;
+    private static final int PLATE_AMT = 2;
+    private static final int PLATE_AMT_UP = 3;
+    private static final int DRAW_AMT = 1;
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("RetainCardsAction");
     public static final String[] TEXT = {
             "gain an effect based on its type"
@@ -40,17 +45,35 @@ public class HeavyBodyAction extends AbstractGameAction {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 switch (c.type) {
                     case ATTACK:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, TMP_STRENGTH), TMP_STRENGTH));
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, TMP_STRENGTH), TMP_STRENGTH));
+                        if (AbstractDungeon.player.hasPower("Heavier Body")){
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, TMP_STRENGTH_UP), TMP_STRENGTH_UP));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, TMP_STRENGTH_UP), TMP_STRENGTH_UP));
+                        }else {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, TMP_STRENGTH), TMP_STRENGTH));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, TMP_STRENGTH), TMP_STRENGTH));
+                        }
                         break;
                     case SKILL:
-                        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, BLOCK_AMT));
+                        if (AbstractDungeon.player.hasPower("Heavier Body")) {
+                            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, BLOCK_AMT_UP));
+                        }else{
+                            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, BLOCK_AMT));
+                        }
                         break;
                     case POWER:
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, PLATE_AMT), PLATE_AMT));
+                        if (AbstractDungeon.player.hasPower("Heavier Body")) {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, PLATE_AMT_UP), PLATE_AMT_UP));
+                        }else {
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, PLATE_AMT), PLATE_AMT));
+                        }
                         break;
                     default:
-                        AbstractDungeon.actionManager.addToTop(new ExhaustAction(AbstractDungeon.player, AbstractDungeon.player, 1, false));
+                        if (AbstractDungeon.player.hasPower("Heavier Body")) {
+                            AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, DRAW_AMT));
+                            AbstractDungeon.actionManager.addToTop(new ExhaustAction(AbstractDungeon.player, AbstractDungeon.player, 1, false));
+                        }else {
+                            AbstractDungeon.actionManager.addToTop(new ExhaustAction(AbstractDungeon.player, AbstractDungeon.player, 1, false));
+                        }
                         break;
                 }
                 AbstractDungeon.player.hand.addToTop(c);

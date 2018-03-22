@@ -1,9 +1,8 @@
 package juggermod.relics;
 
+import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-
-import basemod.abstracts.CustomRelic;
 import juggermod.JuggerMod;
 import juggermod.actions.unique.HeavyBodyAction;
 

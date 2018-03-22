@@ -1,10 +1,8 @@
 package juggermod.powers;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import juggermod.JuggerMod;
-import juggermod.actions.unique.InertiaAction;
 
 public class InertiaPower extends AbstractPower{
     public static final String POWER_ID = "Inertia";
