@@ -155,6 +155,7 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String ATLAS_POWER = "powers/atlas.png";
     public static final String IMPENETRABLE_POWER = "powers/impenetrable.png";
     public static final String HEAVIER_BODY_POWER = "powers/heavier_body.png";
+    public static final String FOOLHARDY_POWER = "powers/foolhardy.png";
 
     // relic images
 
@@ -178,6 +179,10 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String BADGE_IMG = "FRelicBadge.png";
     
     // texture loaders
+    public static Texture getFoolhardyPowerTexture() {
+        return new Texture(makePath(FOOLHARDY_POWER));
+    }
+
     public static Texture getHeavierBodyPowerTexture() {
         return new Texture(makePath(HEAVIER_BODY_POWER));
     }

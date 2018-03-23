@@ -1,15 +1,18 @@
 package juggermod.characters;
 
 import basemod.abstracts.CustomPlayer;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import juggermod.JuggerMod;
 import juggermod.actions.unique.HeavyBodyAction;
 import juggermod.patches.TheJuggernautEnum;
+import juggermod.powers.PlateBalancePower;
 
 import java.util.ArrayList;
 
@@ -79,6 +82,19 @@ public class TheJuggernaut extends CustomPlayer {
 		}
 		if (AbstractDungeon.player.hasRelic("Heavy Body"))
 		AbstractDungeon.actionManager.addToBottom(new HeavyBodyAction(AbstractDungeon.player, 1));
+		if (AbstractDungeon.player.hasPower("Foolhardy") != true){
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlateBalancePower()));
+		}
+	}
+
+	public void applyStartOfCombatLogic() {
+		for (AbstractRelic r : this.relics) {
+			if (r == null) continue;
+			r.atBattleStart();
+		}
+		if (AbstractDungeon.player.hasPower("Foolhardy") != true){
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlateBalancePower()));
+		}
 	}
 
 	public static ArrayList<String> getStartingDeck() {
