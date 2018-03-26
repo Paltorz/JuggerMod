@@ -7,6 +7,11 @@
 		"NAME": "Defend",
 		"DESCRIPTION": "Gain !B! Block."
 	},
+	"Parry": {
+		"NAME": "Parry",
+		"DESCRIPTION": "Deal !D! damage. Gain Block equal to 1/3 of the damage dealt (affected by Dexterity).",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. Gain Block equal to 1/3 of the damage dealt (affected by Dexterity)."
+	},
 	"Struggle": {
 		"NAME": "Struggle",
 		"DESCRIPTION": "Deal !D! damage. Gain [R] . Costs 1 more [R] for each card in your hand."

@@ -18,10 +18,9 @@ public class Struggle extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int UPGRADED_COST = 0;
 	private static final int ENERGY_GAIN = 1;
 	private static final int ATTACK_DMG = 15;
-	//private static final int UPGRADE_PLUS_DMG = 5;
+	private static final int UPGRADE_PLUS_DMG = 5;
 	private static final int POOL = 1;
 
 	public Struggle() {
@@ -41,8 +40,14 @@ public class Struggle extends CustomCard {
     
     @Override
     public void applyPowers() {
-    	super.applyPowers();        
-    	this.setCostForTurn(getHandCount());
+    	super.applyPowers();
+    	if (!AbstractDungeon.player.hasPower("Confusion")) {
+			if (getHandCount() == 1){
+				this.setCostForTurn(0);
+			}else {
+				this.setCostForTurn(getHandCount() - 2);
+			}
+		}
     }
     
     private int getHandCount() {
@@ -69,8 +74,8 @@ public class Struggle extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(UPGRADED_COST);
-			//upgradeDamage(UPGRADE_PLUS_DMG);
+			//upgradeBaseCost(UPGRADED_COST);
+			upgradeDamage(UPGRADE_PLUS_DMG);
 		}
 	}
 }
