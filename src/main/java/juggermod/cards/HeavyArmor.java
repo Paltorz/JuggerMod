@@ -33,8 +33,7 @@ public class HeavyArmor extends CustomCard{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int strengthCount = GetPowerCount(p, "Strength") * this.magicNumber;
-        this.block = this.baseBlock + strengthCount;
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block + strengthCount));
     }
 
     private int GetPowerCount(AbstractCreature c, String powerId) {

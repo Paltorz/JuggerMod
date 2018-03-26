@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -34,25 +33,25 @@ public class TheJuggernaut extends CustomPlayer {
 	};
 
 	public static final String[] orbTextures = {
-			"img/char/seeker/orb/layer1.png",
-			"img/char/seeker/orb/layer2.png",
-			"img/char/seeker/orb/layer3.png",
-			"img/char/seeker/orb/layer4.png",
-			"img/char/seeker/orb/layer5.png",
-			"img/char/seeker/orb/layer6.png",
-			"img/char/seeker/orb/layer1d.png",
-			"img/char/seeker/orb/layer2d.png",
-			"img/char/seeker/orb/layer3d.png",
-			"img/char/seeker/orb/layer4d.png",
-			"img/char/seeker/orb/layer5d.png",
+			"img/char/juggernaut/orb/juggernaut_layer1.png",
+			"img/char/juggernaut/orb/juggernaut_layer2.png",
+			"img/char/juggernaut/orb/juggernaut_layer3.png",
+			"img/char/juggernaut/orb/juggernaut_layer4.png",
+			"img/char/juggernaut/orb/juggernaut_layer5.png",
+			"img/char/juggernaut/orb/juggernaut_layer6.png",
+			"img/char/juggernaut/orb/juggernaut_layer1d.png",
+			"img/char/juggernaut/orb/juggernaut_layer2d.png",
+			"img/char/juggernaut/orb/juggernaut_layer3d.png",
+			"img/char/juggernaut/orb/juggernaut_layer4d.png",
+			"img/char/juggernaut/orb/juggernaut_layer5d.png",
 	};
 	
 	public TheJuggernaut(String name, PlayerClass setClass) {
-		super(name, setClass, orbTextures, "img/char/seeker/orb/vfx.png", "img/char/seeker/seeker2.g3dj", "sls_md|idle");
+		super(name, setClass, orbTextures, "img/char/juggernaut/orb/vfx_juggernaut.png", "img/char/juggernaut/juggernaut2.g3dj", "sls_md_juggernaut|idle");
 		
-		initializeClass(null, JuggerMod.makePath(JuggerMod.SEEKER_SHOULDER_2),
-				JuggerMod.makePath(JuggerMod.SEEKER_SHOULDER_1),
-				JuggerMod.makePath(JuggerMod.SEEKER_CORPSE),
+		initializeClass(null, JuggerMod.makePath(JuggerMod.JUGGERNAUT_SHOULDER_2),
+				JuggerMod.makePath(JuggerMod.JUGGERNAUT_SHOULDER_1),
+				JuggerMod.makePath(JuggerMod.JUGGERNAUT_CORPSE),
 				getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
 	}
 

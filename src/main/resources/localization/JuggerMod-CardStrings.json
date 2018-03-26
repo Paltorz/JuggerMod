@@ -9,7 +9,7 @@
 	},
 	"Struggle": {
 		"NAME": "Struggle",
-		"DESCRIPTION": "Deal !D! damage. Costs 1 more [R] for each card in your hand except this card."
+		"DESCRIPTION": "Deal !D! damage. Gain [R] . Costs 1 more [R] for each card in your hand."
 	},
 	"Fury": {
 		"NAME": "Fury",
@@ -148,8 +148,8 @@
 	},
 	"Simple Minded": {
 		"NAME": "Simple Minded",
-		"DESCRIPTION": "Gain Confusion. Exhaust.",
-		"UPGRADE_DESCRIPTION": "Innate. Gain Confusion. Exhaust."
+		"DESCRIPTION": "Gain Confusion. Draw a card. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. Gain Confusion. Draw a card. Exhaust."
 	},
 	"On Guard": {
 		"NAME": "On Guard",
@@ -200,7 +200,7 @@
 	},
 	"Impenetrable": {
 		"NAME": "Impenetrable",
-		"DESCRIPTION": "Gain 3 Plated-Armor. Overflow - You do not lose Plated-Armor for !M! turn",
+		"DESCRIPTION": "Gain 2 Plated-Armor. Overflow - You do not lose Plated-Armor for !M! turn",
 		"UPGRADE_DESCRIPTION": "Gain 4 Plated-Armor. Overflow - You do not lose Plated-Armor for !M! turns."
 	},
 	"Battle Shout": {
@@ -237,7 +237,7 @@
 	},
 	"Inhuman Recovery": {
 		"NAME": "Inhuman Recovery",
-		"DESCRIPTION": "Ethereal. Heal 3 HP at the start of your turn for !M! turns. Overflow - Heal 6 HP. Exhaust."
+		"DESCRIPTION": "Ethereal. Heal 3 HP at the start of your turn for !M! turns. Overflow - Heal 4 HP. Exhaust."
 	},
 	"Mercurial": {
 		"NAME": "Mercurial",
@@ -290,7 +290,7 @@
 	},
 	"Inertia": {
 		"NAME": "Inertia",
-		"DESCRIPTION": "At the end of your turn, you Retain your hand, except for Overflow cards."
+		"DESCRIPTION": "At the end of your turn, you Retain your hand."
 	},
 	"Release Restraint": {
 		"NAME": "Release Restraint",

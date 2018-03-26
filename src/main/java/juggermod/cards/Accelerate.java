@@ -46,9 +46,6 @@ public class Accelerate extends OverflowCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.drawPile.isEmpty()) {
-            AbstractDungeon.actionManager.addToBottom(new EmptyDeckShuffleAction());
-        }
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, DEX_GAIN_AMT), DEX_GAIN_AMT));

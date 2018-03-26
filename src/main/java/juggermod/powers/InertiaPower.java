@@ -10,7 +10,7 @@ public class InertiaPower extends AbstractPower{
     public static final String POWER_ID = "Inertia";
     public static final String NAME = "Inertia";
     public static final String[] DESCRIPTIONS = new String[]{
-            "At the end of your turn, you no longer discard your hand, except for Overflow cards."
+            "At the end of your turn, you no longer discard your hand."
     };
 
     public InertiaPower(AbstractCreature owner) {
@@ -27,10 +27,12 @@ public class InertiaPower extends AbstractPower{
         this.description = DESCRIPTIONS[0];
     }
 
+    /*
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
             AbstractDungeon.actionManager.addToBottom(new InertiaAction());
         }
     }
+    */
 }

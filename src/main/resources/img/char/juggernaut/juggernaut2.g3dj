@@ -21,7 +21,7 @@
 	],
 	"materials": [
 		{
-			"id": "sls_md",
+			"id": "sls_md_juggernaut",
 			"ambient": [ 0.000000,  0.000000,  0.000000],
 			"diffuse": [ 0.800000,  0.800000,  0.800000],
 			"emissive": [ 0.800000,  0.800000,  0.800000],
@@ -30,8 +30,8 @@
 			"shininess":  9.607843,
 			"textures": [
 				{
-					"id": "sls_md",
-					"filename": "sls_md.png",
+					"id": "sls_md_juggernaut",
+					"filename": "sls_md_juggernaut.png",
 					"type": "DIFFUSE"
 				}
 			]
@@ -39,13 +39,13 @@
 	],
 	"nodes": [
 		{
-			"id": "sls_md",
+			"id": "sls_md_juggernaut",
 			"rotation": [ 0.707107,  0.000000,  0.000000,  0.707107],
 			"scale": [ 350.000000,  350.000000,  350.000000],
 			"parts": [
 				{
 					"meshpartid": "sls_md_part1",
-					"materialid": "sls_md",
+					"materialid": "sls_md_juggernaut",
 					"uvMapping": [[]]
 				}
 			]
@@ -65,10 +65,10 @@
 	],
 	"animations": [
 		{
-			"id": "sls_md|idle",
+			"id": "sls_md_juggernaut|idle",
 			"bones": [
 				{
-					"boneId": "sls_md",
+					"boneId": "sls_md_juggernaut",
 					"keyframes": [
 						{
 							"keytime":  0.000000,

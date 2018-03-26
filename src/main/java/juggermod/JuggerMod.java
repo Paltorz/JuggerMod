@@ -166,17 +166,17 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String KINETIC_ROCK_RELIC = "relics/kineticRock.png";
 
     
-    // seeker assets
-    private static final String SEEKER_BUTTON = "charSelect/seekerButton.png";
-    private static final String SEEKER_PORTRAIT = "charSelect/SeekerPortraitBG.jpg";
-    public static final String SEEKER_SHOULDER_1 = "char/seeker/shoulder.png";
-    public static final String SEEKER_SHOULDER_2 = "char/seeker/shoulder2.png";
-    public static final String SEEKER_CORPSE = "char/seeker/corpse.png";
-    public static final String SEEKER_SKELETON_ATLAS = "char/seeker/skeleton.atlas";
-    public static final String SEEKER_SKELETON_JSON = "char/seeker/skeleton.json";
+    // juggernaut assets
+    private static final String JUGGERNAUT_BUTTON = "charSelect/juggernautButton.png";
+    private static final String JUGGERNAUT_PORTRAIT = "charSelect/JuggernautPortraitBG.jpg";
+    public static final String JUGGERNAUT_SHOULDER_1 = "char/juggernaut/shoulder.png";
+    public static final String JUGGERNAUT_SHOULDER_2 = "char/juggernaut/shoulder2.png";
+    public static final String JUGGERNAUT_CORPSE = "char/juggernaut/corpse.png";
+    public static final String JUGGERNAUT_SKELETON_ATLAS = "char/juggernaut/skeleton.atlas";
+    public static final String JUGGERNAUT_SKELETON_JSON = "char/juggernaut/skeleton.json";
     
     // badge
-    public static final String BADGE_IMG = "FRelicBadge.png";
+    public static final String BADGE_IMG = "JRelicBadge.png";
     
     // texture loaders
     public static Texture getFoolhardyPowerTexture() {
@@ -338,7 +338,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 		logger.info("add " + TheJuggernautEnum.THE_JUGGERNAUT.toString());
 		BaseMod.addCharacter(TheJuggernaut.class, "The Juggernaut", "Juggernaut class string",
 				AbstractCardEnum.COPPER.toString(), "The Juggernaut",
-				makePath(SEEKER_BUTTON), makePath(SEEKER_PORTRAIT),
+				makePath(JUGGERNAUT_BUTTON), makePath(JUGGERNAUT_PORTRAIT),
 				TheJuggernautEnum.THE_JUGGERNAUT.toString());
 		
 		logger.info("done editting characters");
@@ -438,7 +438,7 @@ public class JuggerMod implements PostInitializeSubscriber,
         BaseMod.addCard(new Pulverize());
         BaseMod.addCard(new HammerArm());
         BaseMod.addCard(new SkullBash());
-        BaseMod.addCard(new Struggle());
+        //BaseMod.addCard(new Struggle());
         BaseMod.addCard(new Fury());
         BaseMod.addCard(new OnGuard());
         BaseMod.addCard(new Earthquake());
@@ -546,12 +546,12 @@ public class JuggerMod implements PostInitializeSubscriber,
 //		UnlockTracker.addCard("Flicker");
 //		UnlockTracker.addCard("Transference");
 //		UnlockTracker.addCard("ForceRipple");
-//		// seeker unlock 1
+//		// juggernaut unlock 1
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 //				"Flicker", "Transference", "ForceRipple"
 //				), TheJuggernautEnum.THE_JUGGERNAUT, 1);
 //		
-//		// seeker unlock 2
+//		// juggernaut unlock 2
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 //				"Channel", "Shimmer", "ThoughtRaze"
 //				), TheJuggernautEnum.THE_JUGGERNAUT, 2);
@@ -559,7 +559,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 //		UnlockTracker.addCard("Shimmer");
 //		UnlockTracker.addCard("ThoughtRaze");
 //		
-//		// seeker unlock 3 (Vacuum tmp in place of Feedback)
+//		// juggernaut unlock 3 (Vacuum tmp in place of Feedback)
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 //				"Convergence", "Hypothesis", "Nexus"
 //				), TheJuggernautEnum.THE_JUGGERNAUT, 3);
@@ -595,7 +595,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 		}
 	}
 
-	/*
+
     public static boolean hasRelicCustomI(String relicID) {
         System.out.println("I was checked!");
         // if it's checking for relicID.equals("Runic Pyramid") then we know we're in the block where
@@ -607,7 +607,7 @@ public class JuggerMod implements PostInitializeSubscriber,
             return AbstractDungeon.player.hasRelic(relicID);
         }
     }
-    */
+
 
     // used by fruitmod.patches.com.megacrit.cardcrawl.cards.status.Dazed.UseDazed
 	public static void maybeUseDazed(Dazed dazed) {

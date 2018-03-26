@@ -2,6 +2,7 @@ package juggermod.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,8 +18,10 @@ public class Struggle extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
+	private static final int UPGRADED_COST = 0;
+	private static final int ENERGY_GAIN = 1;
 	private static final int ATTACK_DMG = 15;
-	private static final int UPGRADE_PLUS_DMG = 5;
+	//private static final int UPGRADE_PLUS_DMG = 5;
 	private static final int POOL = 1;
 
 	public Struggle() {
@@ -30,11 +33,11 @@ public class Struggle extends CustomCard {
 		this.baseDamage = ATTACK_DMG;
 	}
 	
-    @Override
-    public void triggerWhenDrawn() {
-        super.triggerWhenDrawn();        
-        this.setCostForTurn(getHandCount());
-    }
+    //@Override
+    //public void atTurnStart() {
+    //    //super.triggerWhenDrawn();
+    //    this.setCostForTurn(getHandCount());
+    //}
     
     @Override
     public void applyPowers() {
@@ -48,7 +51,7 @@ public class Struggle extends CustomCard {
 			if (c==null) continue;
             ++count;
         }
-        return count-1;
+        return count;
     }
 
 
@@ -56,6 +59,7 @@ public class Struggle extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
 					new DamageInfo(p, this.damage, this.damageTypeForTurn),
 					AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+		AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN));
 	}
 
 	public AbstractCard makeCopy() {
@@ -65,7 +69,8 @@ public class Struggle extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeBaseCost(UPGRADED_COST);
+			//upgradeDamage(UPGRADE_PLUS_DMG);
 		}
 	}
 }

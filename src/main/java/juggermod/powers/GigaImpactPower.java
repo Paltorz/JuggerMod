@@ -22,7 +22,6 @@ public class GigaImpactPower extends AbstractPower{
         this.amount = Amt;
         this.updateDescription();
         this.img = JuggerMod.getGigaImpactPowerTexture();
-        this.type = AbstractPower.PowerType.DEBUFF;
         this.isTurnBased = true;
     }
 
