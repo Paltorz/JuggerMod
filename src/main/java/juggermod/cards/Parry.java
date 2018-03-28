@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import juggermod.JuggerMod;
 import juggermod.patches.AbstractCardEnum;
 
@@ -36,13 +37,19 @@ public class Parry extends CustomCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int dexCount = GetPowerCount(p, "Dexterity");
         if (this.upgraded){
             this.scaling = .5;
         }else{
             this.scaling = .33;
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction((AbstractCreature)m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, (this.block + (int)(scaling * this.damage))));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, (dexCount + (int)(scaling * this.damage))));
+    }
+
+    private int GetPowerCount(AbstractCreature c, String powerId) {
+        AbstractPower power =  c.getPower(powerId);
+        return power != null ? power.amount : 0;
     }
 
     @Override

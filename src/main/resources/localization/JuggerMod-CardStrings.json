@@ -10,7 +10,7 @@
 	"Parry": {
 		"NAME": "Parry",
 		"DESCRIPTION": "Deal !D! damage. Gain Block equal to 1/3 of the damage dealt (affected by Dexterity).",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. Gain Block equal to 1/3 of the damage dealt (affected by Dexterity)."
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. Gain Block equal to 1/2 of the damage dealt (affected by Dexterity)."
 	},
 	"Struggle": {
 		"NAME": "Struggle",
@@ -220,7 +220,7 @@
 	"Accelerate": {
 		"NAME": "Accelerate",
 		"DESCRIPTION": "Draw 2 cards. Gain !B! Block. Gain 1 Dexterity.",
-		"UPGRADE_DESCRIPTION": "Draw 2 cards. Gain 1 Dexterity. Overflow - Next turn, draw 1 card."
+		"UPGRADE_DESCRIPTION": "Draw 2 cards. Gain !B! Block. Gain 1 Dexterity. Overflow - Next turn, draw 1 card."
 	},
 	"Bolster": {
 		"NAME": "Bolster",
