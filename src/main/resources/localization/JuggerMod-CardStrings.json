@@ -128,7 +128,7 @@
 	},
 	"Apex Predator": {
 		"NAME": "Apex Predator",
-		"DESCRIPTION": "Gain !B! Block. Deal !D! damage. If this kills a non-minion enemy, All enemies lose !M! Strength. Exhaust."
+		"DESCRIPTION": "Gain !B! Block. Deal !D! damage. If this kills a non-minion enemy, All enemies lose !M! Strength."
 	},
 	"Bulldoze": {
 		"NAME": "Bulldoze",

@@ -32,7 +32,6 @@ public class ApexPredator extends CustomCard{
                 AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = this.damage =  ATTACK_DMG;
         this.baseBlock = BLOCK_AMT;
-        this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = STR_LOSS;
     }
 
