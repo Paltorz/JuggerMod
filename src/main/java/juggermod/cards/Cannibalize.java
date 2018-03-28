@@ -29,7 +29,7 @@ public class Cannibalize extends CustomCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new CannibalizeAction(p, 1));
+            AbstractDungeon.actionManager.addToBottom(new CannibalizeAction(p, 1));
     }
 
     @Override

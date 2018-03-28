@@ -22,19 +22,22 @@ public class CannibalizeAction extends AbstractGameAction{
 
     @Override
     public void update() {
-        if (this.duration == 0.5f) {
-            AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, false, false, false, false);
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25f));
-            this.tickDuration();
-            return;
-        }
-        if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(c.costForTurn));
-                AbstractDungeon.player.hand.moveToExhaustPile(c);
+        if (!AbstractDungeon.player.hand.isEmpty()) {
+            if (this.duration == 0.5f) {
+                AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, false, false, false, false);
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25f));
+                this.tickDuration();
+                return;
             }
-            AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+            if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+                for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
+                    AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(c.costForTurn));
+                    AbstractDungeon.player.hand.moveToExhaustPile(c);
+                }
+                AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+            }
+            this.tickDuration();
         }
-        this.tickDuration();
+        this.isDone = true;
     }
 }

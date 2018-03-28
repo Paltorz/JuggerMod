@@ -331,7 +331,7 @@
 	},
 	"Colossus": {
 		"NAME": "Colossus",
-		"DESCRIPTION": "Gain !M! Strength. Gain 8 Plated-Armor. You cannot gain Block from cards."
+		"DESCRIPTION": "Gain !M! Strength. Gain 6 Plated-Armor. You cannot gain Block from cards."
 	},
 	"Slugfest": {
 		"NAME": "Slugfest",
