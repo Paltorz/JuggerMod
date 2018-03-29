@@ -15,7 +15,7 @@ public class HeavierBodyPower extends AbstractPower{
         this.name = NAME;
         this.ID = "Heavier Body";
         this.owner = owner;
-        this.amount = -1;
+        this.amount = 1;
         this.description = DESCRIPTIONS[0];
         this.updateDescription();
         this.img = JuggerMod.getHeavierBodyPowerTexture();
