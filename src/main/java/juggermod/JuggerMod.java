@@ -575,9 +575,12 @@ public class JuggerMod implements PostInitializeSubscriber,
 	public void receiveEditKeywords() {
         logger.info("setting up custom keywords");
         BaseMod.addKeyword(new String[] {"plated-armor", "Plated-Armor"}, "Gain Block equal to your Plated-Armor at the end of your turn. Taking damage from an attack reduces Plated-Armor by 1.");
-        BaseMod.addKeyword(new String[] {"overflow", "Overflow"}, "When a card with Overflow is in your hand at the end of the turn, activate an effect.");
+        BaseMod.addKeyword(new String[] {"overflow", "Overflow"}, "When a card with Overflow is in your hand at the end of the turn, activate an effect. This effect has a limited amount of uses.");
         BaseMod.addKeyword(new String[] {"draw-reduction", "Draw-Reduction"}, "Draw 1 less card at the beginning of your turn.");
         BaseMod.addKeyword(new String[] {"confusion", "Confusion"}, "The costs of your cards are randomized when they are drawn.");
+        BaseMod.addKeyword(new String[] {"slow", "Slow"}, "Creatures with Slow take 10% more damage for each card played this turn.");
+        BaseMod.addKeyword(new String[] {"encumbered", "Encumbered"}, "Only happens while you have less than 0 Dexterity.");
+        BaseMod.addKeyword(new String[] {"instinct", "Instinct"}, "Has an improved effect on the first turn of combat.");
 	}
 	
 	//

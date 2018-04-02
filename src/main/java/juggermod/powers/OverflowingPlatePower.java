@@ -41,7 +41,7 @@ public class OverflowingPlatePower extends AbstractPower{
             for (AbstractCard c : AbstractDungeon.player.hand.group) {
                 if (c == null) continue;
                 if(c instanceof OverflowCard) {
-                    if (((OverflowCard) c).isOverflow) {
+                    if (((OverflowCard) c).isOverflow == true) {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new PlatedArmorPower(this.owner, this.amount), this.amount));
                     }
                 }

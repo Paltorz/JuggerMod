@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
 
@@ -25,6 +26,7 @@ public class Accelerate extends OverflowCard{
     private static final int COST = 1;
     private static final int DEX_GAIN_AMT = 1;
     private static final int OVERFLOW_DRAW = 1;
+    private static final int OVERFLOW_AMT = 2;
     private static final int BLOCK_AMT = 1;
     private static final int DRAW = 2;
     private static final int POOL = 1;
@@ -33,20 +35,26 @@ public class Accelerate extends OverflowCard{
         super (ID, NAME, JuggerMod.makePath(JuggerMod.ACCELERATE), COST, DESCRIPTION,
                 AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
-        this.magicNumber = this.baseMagicNumber = DRAW;
+        this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.baseBlock = BLOCK_AMT;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
         if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, OVERFLOW_DRAW), OVERFLOW_DRAW));
+            if (this.magicNumber > 0) {
+                AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, OVERFLOW_DRAW), OVERFLOW_DRAW));
+                if (this.magicNumber == 1) {
+                    this.isOverflow = false;
+                }
+            }
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, DEX_GAIN_AMT), DEX_GAIN_AMT));
     }

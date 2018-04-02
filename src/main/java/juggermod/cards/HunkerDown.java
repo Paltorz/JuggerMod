@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
 
@@ -23,19 +24,27 @@ public class HunkerDown extends OverflowCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     private static final int DEX_LOSS = -1;
+    private static final int OVERFLOW_AMT = 5;
     private static final int COST = 1;
     private static final int POOL = 1;
 
     public HunkerDown() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HUNKER_DOWN), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
                 AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
+        this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.exhaust = true;
         this.isOverflow = true;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, DEX_LOSS), DEX_LOSS));
+        if (this.magicNumber > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, DEX_LOSS), DEX_LOSS));
+            if (this.magicNumber == 1) {
+                this.isOverflow = false;
+            }
+        }
     }
 
     @Override

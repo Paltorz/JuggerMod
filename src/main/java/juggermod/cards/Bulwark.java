@@ -19,7 +19,7 @@ public class Bulwark extends CustomCard{
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BLOCK = 10;
+    private static final int BLOCK = 11;
     private static final int UPGRADE_BLOCK_AMT = 4;
     private static final int POOL = 1;
 

@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
 
@@ -26,6 +27,7 @@ public class Hysteria extends OverflowCard{
     private static final int COST = 3;
     private static final int ATTACK_DMG = 16;
     private static final int UPGRADE_DMG_AMT = 4;
+    private static final int OVERFLOW_AMT = 1;
     private static final int DRAW = 2;
     private static final int POOL = 1;
 
@@ -34,7 +36,7 @@ public class Hysteria extends OverflowCard{
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
-        this.baseMagicNumber = this.magicNumber = DRAW;
+        this.baseMagicNumber = this.magicNumber = OVERFLOW_AMT;
         this.isOverflow = true;
     }
 
@@ -44,12 +46,18 @@ public class Hysteria extends OverflowCard{
         if (AbstractDungeon.player.drawPile.isEmpty()) {
             AbstractDungeon.actionManager.addToBottom(new EmptyDeckShuffleAction());
         }
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW));
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ConfusionPower(AbstractDungeon.player)));
+        if (this.magicNumber > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ConfusionPower(AbstractDungeon.player)));
+            if (this.magicNumber == 1) {
+                this.isOverflow = false;
+            }
+        }
     }
 
     @Override

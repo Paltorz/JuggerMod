@@ -52,8 +52,8 @@ public class HeavyBodyAction extends AbstractGameAction {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 switch (c.type) {
                     case ATTACK:
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, TMP_STRENGTH + heavierBodyCount * TMP_STRENGTH_UP), heavierBodyCount * TMP_STRENGTH_UP));
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, TMP_STRENGTH + heavierBodyCount * TMP_STRENGTH_UP), heavierBodyCount * TMP_STRENGTH_UP));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, TMP_STRENGTH + heavierBodyCount * TMP_STRENGTH_UP), TMP_STRENGTH + heavierBodyCount * TMP_STRENGTH_UP));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, TMP_STRENGTH + heavierBodyCount * TMP_STRENGTH_UP), TMP_STRENGTH + heavierBodyCount * TMP_STRENGTH_UP));
                         break;
                     case SKILL:
                             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, BLOCK_AMT + heavierBodyCount * BLOCK_AMT_UP));

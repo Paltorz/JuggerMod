@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
 
@@ -23,14 +24,15 @@ public class SlowAndSteady extends OverflowCard{
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 0;
     private static final int OVERFLOW_DEX = -1;
+    private static final int OVERFLOW_AMT = 5;
     private static final int CARDS_TOP = 1;
-    private static final int CARDS_TOP_UP = 1;
+    private static final int CARDS_TOP_UP = 2;
     private static final int POOL = 1;
 
     public SlowAndSteady() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SLOW_AND_STEADY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
                 AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
-        this.magicNumber = this.baseMagicNumber = CARDS_TOP;
+        this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.isOverflow = true;
     }
 
@@ -49,14 +51,26 @@ public class SlowAndSteady extends OverflowCard{
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, OVERFLOW_DEX), OVERFLOW_DEX));
+        if (this.magicNumber > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, OVERFLOW_DEX), OVERFLOW_DEX));
+            if (this.magicNumber == 1) {
+                this.isOverflow = false;
+            }
         }
+    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int cardsTop;
+        if (this.upgraded) {
+            cardsTop = CARDS_TOP_UP;
+        }else{
+            cardsTop = CARDS_TOP;
+        }
         int dexCount = GetPowerCount(p, "Dexterity");
         if (dexCount < 0) {
-            for (int i = 0; i < this.magicNumber; i++) {
+            for (int i = 0; i < cardsTop; i++) {
                 AbstractDungeon.actionManager.addToBottom(new DiscardPileToTopOfDeckAction(p));
             }
         }
@@ -76,7 +90,6 @@ public class SlowAndSteady extends OverflowCard{
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(CARDS_TOP_UP);
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

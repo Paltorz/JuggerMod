@@ -11,8 +11,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
 
@@ -25,7 +27,8 @@ public class Lunge extends OverflowCard{
     private static final int ATTACK_DMG = 10;
     private static final int ATTACK_UPGRADE = 4;
     private static final int STRENGTH_GAIN_AMT = 2;
-    private static final int OVERFLOW_AMT = 1;
+    private static final int OVERFLOW_STRENGTH = 1;
+    private static final int OVERFLOW_AMT = 2;
     private static final int POOL = 1;
 
     public Lunge() {
@@ -33,12 +36,19 @@ public class Lunge extends OverflowCard{
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.baseDamage = ATTACK_DMG;
+        this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.isOverflow = true;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, OVERFLOW_AMT), OVERFLOW_AMT));
+        if (this.magicNumber > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, OVERFLOW_STRENGTH), OVERFLOW_STRENGTH));
+            if (this.magicNumber == 1) {
+                this.isOverflow = false;
+            }
+        }
     }
 
     @Override

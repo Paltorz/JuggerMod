@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
 import juggermod.actions.unique.PursuitAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
@@ -19,6 +20,7 @@ public class Pursuit extends OverflowCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
+    private static final int OVERFLOW_AMT = 3;
     private static final int BLOCK = 3;
     private static final int POOL = 1;
 
@@ -26,12 +28,19 @@ public class Pursuit extends OverflowCard{
         super(ID, NAME, JuggerMod.makePath(JuggerMod.PURSUIT), COST, DESCRIPTION,
                 AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF_AND_ENEMY, POOL);
         this.baseBlock = BLOCK;
+        this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
         if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+            if (this.magicNumber > 0) {
+                AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+                if (this.magicNumber == 1) {
+                    this.isOverflow = false;
+                }
+            }
         }
     }
 

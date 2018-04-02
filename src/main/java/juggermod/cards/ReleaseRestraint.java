@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
 import juggermod.powers.ReleaseRestraintPower;
@@ -24,18 +25,26 @@ public class ReleaseRestraint extends OverflowCard{
     private static final int STR_AMT = -4;
     private static final int DEX_AMT = 2;
     private static final int DEX_OVERFLOW = 1;
+    private static final int OVERFLOW_AMT = 2;
     private static final int POOL = 1;
 
     public ReleaseRestraint() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.RELEASE_RESTRAINT), COST, DESCRIPTION,
                 AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
                 AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+        this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
         if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, DEX_OVERFLOW), DEX_OVERFLOW));
+            if (this.magicNumber > 0) {
+                AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, DEX_OVERFLOW), DEX_OVERFLOW));
+                if (this.magicNumber == 1) {
+                    this.isOverflow = false;
+                }
+            }
         }
     }
 

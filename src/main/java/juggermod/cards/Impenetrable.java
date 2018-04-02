@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
 import juggermod.powers.ImpenetrablePower;
@@ -21,29 +22,38 @@ public class Impenetrable extends OverflowCard {
     private static final int COST = 1;
     private static final int PLATE_AMT = 2;
     private static final int UPGRADED_PLATE = 4;
+    private static final int OVERFLOW_AMT = 3;
     private static final int POWER_AMT = 1;
-    private static final int POWER_AMT_UP = 1;
+    private static final int POWER_AMT_UP = 2;
     private static final int POOL = 1;
 
     public Impenetrable() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.IMPENETRABLE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
                 AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
-        this.magicNumber = this.baseMagicNumber = POWER_AMT;
+        this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.isOverflow = true;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ImpenetrablePower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        int powerAmt;
+        if (this.upgraded) {
+            powerAmt = POWER_AMT_UP;
+        } else {
+            powerAmt = POWER_AMT;
+        }
+        if (this.magicNumber > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ImpenetrablePower(AbstractDungeon.player, powerAmt), powerAmt));
+            if (this.magicNumber == 1) {
+                this.isOverflow = false;
+            }
+        }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //if (this.upgraded) {
-           // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, UPGRADED_PLATE), UPGRADED_PLATE));
-       // } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, PLATE_AMT), PLATE_AMT));
-        //}
     }
 
     @Override
@@ -55,7 +65,6 @@ public class Impenetrable extends OverflowCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(POWER_AMT_UP);
         }
     }
 }

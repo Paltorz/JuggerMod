@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
 
@@ -23,9 +24,11 @@ public class ThunderStruck extends OverflowCard{
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 3;
     private static final int ATTACK_DMG = 20;
     private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int OVERFLOW_AMT = 4;
     private static final int OVERFLOW_SHACKLE = 1;
     private static final int OVERFLOW_SHACKLE_UP = 1;
     private static final int SHACKLE = 6;
@@ -35,19 +38,31 @@ public class ThunderStruck extends OverflowCard{
         super(ID, NAME, JuggerMod.makePath(JuggerMod.THUNDER_STRUCK), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
                 AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY, POOL);
         this.isMultiDamage = true;
-        this.magicNumber = this.baseMagicNumber = OVERFLOW_SHACKLE;
+        this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.damage = this.baseDamage = ATTACK_DMG;
         this.isOverflow = true;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new StrengthPower(mo, - this.magicNumber), - this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        int shackle;
+        if (this.upgraded){
+            shackle = OVERFLOW_SHACKLE_UP;
+        }else{
+            shackle = OVERFLOW_SHACKLE;
         }
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (mo.hasPower("Artifact")) continue;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new GainStrengthPower(mo, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        if (this.magicNumber > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new StrengthPower(mo, -shackle), -shackle, true, AbstractGameAction.AttackEffect.NONE));
+            }
+            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (mo.hasPower("Artifact")) continue;
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new GainStrengthPower(mo, shackle), shackle, true, AbstractGameAction.AttackEffect.NONE));
+            }
+            if (this.magicNumber == 1) {
+                this.isOverflow = false;
+            }
         }
     }
 
@@ -80,7 +95,8 @@ public class ThunderStruck extends OverflowCard{
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_PLUS_DMG);
-            this.upgradeMagicNumber(OVERFLOW_SHACKLE_UP);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 }

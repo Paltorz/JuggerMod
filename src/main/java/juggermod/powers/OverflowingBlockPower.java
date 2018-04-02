@@ -40,7 +40,7 @@ public class OverflowingBlockPower extends AbstractPower{
             for (AbstractCard c : AbstractDungeon.player.hand.group) {
                 if (c == null) continue;
                 if(c instanceof OverflowCard) {
-                    if (((OverflowCard) c).isOverflow) {
+                    if (((OverflowCard) c).isOverflow == true) {
                         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.amount));
                     }
                 }

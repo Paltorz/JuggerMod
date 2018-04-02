@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
+import juggermod.actions.unique.ArcanosphereAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
 
@@ -23,7 +25,7 @@ public class CascadingSteel extends OverflowCard{
     private static final int ATTACK_DMG = 16;
     private static final int UPGRADE_PLUS_DMG = 4;
     private static final int ARTIFACT_AMT = 1;
-    private static final int UPGRADE_ARTIFACT = 1;
+    private static final int OVERFLOW_AMT = 1;
     private static final int POOL = 1;
 
     public CascadingSteel() {
@@ -32,14 +34,19 @@ public class CascadingSteel extends OverflowCard{
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
         this.isMultiDamage = true;
         this.damage=this.baseDamage = ATTACK_DMG;
-        this.magicNumber = this.baseMagicNumber = ARTIFACT_AMT;
+        this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.isOverflow = true;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ArtifactPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
-        AbstractDungeon.player.hand.moveToExhaustPile(this);
+        if (this.magicNumber > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ArtifactPower(AbstractDungeon.player, ARTIFACT_AMT), ARTIFACT_AMT));
+            if (this.magicNumber == 1) {
+                this.isOverflow = false;
+            }
+        }
     }
 
     @Override
@@ -57,7 +64,6 @@ public class CascadingSteel extends OverflowCard{
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_PLUS_DMG);
-            //this.upgradeMagicNumber(UPGRADE_ARTIFACT);
         }
     }
 }

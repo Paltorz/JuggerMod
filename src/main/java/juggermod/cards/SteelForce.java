@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import juggermod.JuggerMod;
+import juggermod.actions.common.ModifyMagicNumberAction;
 import juggermod.patches.AbstractCardEnum;
 import juggermod.patches.OverflowCard;
 
@@ -26,6 +27,7 @@ public class SteelForce extends OverflowCard{
     private static final int COST = 0;
     private static final int ATTACK_DMG = 12;
     private static final int UPGRADE_DMG_AMT = 4;
+    private static final int OVERFLOW_AMT = 4;
     private static final int PLATE_AMT = 1;
     private static final int POOL = 1;
 
@@ -33,13 +35,19 @@ public class SteelForce extends OverflowCard{
         super(ID, NAME, JuggerMod.makePath(JuggerMod.STEEL_FORCE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
                 AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
         this.damage=this.baseDamage = ATTACK_DMG;
-        this.magicNumber = this.baseMagicNumber = PLATE_AMT;
+        this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.isOverflow = true;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player,  this.magicNumber), this.magicNumber));
+        if (this.magicNumber > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, PLATE_AMT), PLATE_AMT));
+            AbstractDungeon.actionManager.addToBottom(new ModifyMagicNumberAction(this, -1));
+            if (this.magicNumber == 1){
+                this.isOverflow = false;
+            }
+        }
     }
 
     @Override
