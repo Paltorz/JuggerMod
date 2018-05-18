@@ -297,7 +297,7 @@
 	},
 	"Inertia": {
 		"NAME": "Inertia",
-		"DESCRIPTION": "At the end of every other turn, you Retain your hand."
+		"DESCRIPTION": "At the end of your turn, you Retain your hand."
 	},
 	"Release Restraint": {
 		"NAME": "Release Restraint",

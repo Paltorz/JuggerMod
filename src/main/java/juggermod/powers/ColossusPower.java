@@ -26,7 +26,7 @@ public class ColossusPower extends AbstractPower{
     }
 
     @Override
-    public int modifyBlock(int blockAmount) {
+    public float modifyBlock(float blockAmount) {
         return 0;
     }
 }

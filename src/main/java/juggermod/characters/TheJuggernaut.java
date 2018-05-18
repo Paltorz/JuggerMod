@@ -120,7 +120,7 @@ public class TheJuggernaut extends CustomPlayer {
 	
 	public static CharSelectInfo getLoadout() {
 		return new CharSelectInfo("The Juggernaut", "A fearless behemoth. He has weathered countless blows, and dealt countless more.",
-				90, 90, 99, 5,
+				90, 90, 0, 99, 5,
 			TheJuggernautEnum.THE_JUGGERNAUT, getStartingRelics(), getStartingDeck(), false);
 	}
 
