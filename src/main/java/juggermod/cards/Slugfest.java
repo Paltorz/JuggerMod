@@ -22,11 +22,10 @@ public class Slugfest extends CustomCard{
     private static final int COST = 3;
     private static final int COST_UPGRADE = 2;
     private static final int DRAW_AMT= 1;
-    private static final int POOL = 1;
 
     public Slugfest() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SLUGFEST), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = DRAW_AMT;
     }
     @Override

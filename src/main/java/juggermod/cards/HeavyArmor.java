@@ -22,11 +22,10 @@ public class HeavyArmor extends CustomCard{
     private static final int BLOCK_AMT = 5;
     private static final int STR_SCALING= 1;
     private static final int STR_SCALING_UP = 1;
-    private static final int POOL = 1;
 
     public HeavyArmor() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HEAVY_ARMOR), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.baseBlock = BLOCK_AMT;
         this.magicNumber = this.baseMagicNumber = STR_SCALING;
     }

@@ -22,11 +22,10 @@ public class OnGuard extends CustomCard{
     private static final int PLATE_AMT= 1;
     private static final int UPGRADE_PLUS_PLATE = 1;
     private static final int BLOCK_AMT = 1;
-    private static final int POOL = 1;
 
     public OnGuard() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.ON_GUARD), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = PLATE_AMT;
         this.baseBlock = BLOCK_AMT;
     }

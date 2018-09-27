@@ -25,11 +25,10 @@ public class ConvertFlesh extends CustomCard{
     private static final int HP_COST = 8;
     private static final int HP_COST_UPGRADE = -2;
     private static final double MULTIPLIER = 0.5;
-    private static final int POOL = 1;
 
     public ConvertFlesh() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.CONVERT_FLESH), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = HP_COST;
         this.exhaust = true;
     }

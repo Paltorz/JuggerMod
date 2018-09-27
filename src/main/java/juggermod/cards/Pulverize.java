@@ -24,12 +24,11 @@ public class Pulverize extends CustomCard{
     private static final int COST = 1;
     private static final int ATTACK_DMG = 13;
     private static final int UPGRADE_DMG_AMT = 3;
-    private static final int POOL = 1;
 
     public Pulverize() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.PULVERIZE), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
     }
 

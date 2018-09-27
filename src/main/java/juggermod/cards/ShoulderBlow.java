@@ -26,11 +26,10 @@ public class ShoulderBlow extends CustomCard{
     private static final int UPGRADE_PLUS_PLATE = 1;
     private static final int ATTACK_DMG = 4;
     private static final int UPGRADE_DMG_AMT = 2;
-    private static final int POOL = 1;
 
     public ShoulderBlow() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SHOULDER_BLOW), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = PLATE_AMT;
         this.baseDamage = ATTACK_DMG;
     }

@@ -23,12 +23,11 @@ public class Charge extends CustomCard{
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
     private static final int ATTACK_DMG = 9;
-    private static final int POOL = 1;
 
     public Charge() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.CHARGE), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
     }
 

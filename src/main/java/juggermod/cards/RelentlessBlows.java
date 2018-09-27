@@ -25,12 +25,11 @@ public class RelentlessBlows extends CustomCard{
     private static final int ATTACK_DMG = 13;
     private static final int UPGRADE_DMG_AMT = 7;
     private static final int ENERGY_GAIN = 1;
-    private static final int POOL = 1;
 
     public RelentlessBlows() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.RELENTLESS_BLOWS), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = ENERGY_GAIN;
     }

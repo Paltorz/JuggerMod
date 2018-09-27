@@ -23,11 +23,10 @@ public class Colossus extends CustomCard{
     private static final int PLATE_AMT = 6;
     private static final int STR_AMOUNT = 4;
     private static final int STR_AMOUNT_UP = 3;
-    private static final int POOL = 1;
 
     public Colossus() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.COLOSSUS), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = STR_AMOUNT;
     }
     @Override

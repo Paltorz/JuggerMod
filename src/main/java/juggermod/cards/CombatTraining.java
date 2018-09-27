@@ -20,12 +20,11 @@ public class CombatTraining extends CustomCard{
     private static final int COST = 1;
     private static final int COST_UPGRADE = 0;
     private static final int AMOUNT_UP = 1;
-    private static final int POOL = 1;
 
     public CombatTraining() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.COMBAT_TRAINING), COST, DESCRIPTION,
                 AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = AMOUNT_UP;
     }
 

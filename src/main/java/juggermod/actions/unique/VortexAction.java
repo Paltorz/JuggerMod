@@ -29,8 +29,7 @@ public class VortexAction extends AbstractGameAction {
 			}
 			
 			// add dazed
-			AbstractDungeon.actionManager.addToTop(
-					new MakeTempCardInDrawPileAction(p, p, new Dazed(), count * this.dazedAmt, true, true));
+			AbstractDungeon.actionManager.addToTop(new MakeTempCardInDrawPileAction(new Dazed(), count * this.dazedAmt, true, true));
 		}
 		
 		tickDuration();

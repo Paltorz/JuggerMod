@@ -25,11 +25,10 @@ public class Impenetrable extends OverflowCard {
     private static final int OVERFLOW_AMT = 3;
     private static final int POWER_AMT = 1;
     private static final int POWER_AMT_UP = 2;
-    private static final int POOL = 1;
 
     public Impenetrable() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.IMPENETRABLE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.isOverflow = true;
     }

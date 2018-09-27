@@ -22,12 +22,11 @@ public class SimpleMinded extends CustomCard{
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 0;
     private static final int DRAW = 1;
-    private static final int POOL = 1;
 
     public SimpleMinded() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SIMPLE_MINDED), COST, DESCRIPTION,
                 AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
         this.exhaust = true;
     }
 

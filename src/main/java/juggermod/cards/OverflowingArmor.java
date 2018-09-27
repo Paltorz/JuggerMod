@@ -20,12 +20,11 @@ public class OverflowingArmor extends CustomCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
-    private static final int POOL = 1;
 
     public OverflowingArmor() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.OVERFLOWING_ARMOR), COST, DESCRIPTION,
                 AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
     }
 
     @Override

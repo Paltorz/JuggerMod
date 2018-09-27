@@ -22,11 +22,10 @@ public class Improvisation extends CustomCard{
     private static final int COST = 1;
     private static final int COPY_AMT = 1;
     private static final int ENERGY_GAIN = 1;
-    private static final int POOL = 1;
 
     public Improvisation() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.IMPROVISATION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.isEthereal = true;
     }
 

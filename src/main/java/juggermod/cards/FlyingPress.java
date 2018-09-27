@@ -24,12 +24,11 @@ public class FlyingPress extends CustomCard{
     private static final int COST = 1;
     private static final int ATTACK_DMG = 0;
     private static final int BLOCK_SCALING = 2;
-    private static final int POOL = 1;
 
     public FlyingPress() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.FLYING_PRESS), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.exhaust = true;
     }

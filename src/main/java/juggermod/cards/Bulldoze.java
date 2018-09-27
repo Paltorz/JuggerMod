@@ -26,10 +26,9 @@ public class Bulldoze extends CustomCard{
     private static final int DAMAGE = 12;
     private static final int UPGRADE_DAMAGE = 3;
     private static final int DEX_LOSS = -3;
-    private static final int POOL = 1;
 
     public Bulldoze() {
-        super(ID, NAME, JuggerMod.makePath(JuggerMod.BULLDOZE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+        super(ID, NAME, JuggerMod.makePath(JuggerMod.BULLDOZE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
     }
 

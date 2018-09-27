@@ -32,11 +32,10 @@ public class ThunderStruck extends OverflowCard{
     private static final int OVERFLOW_SHACKLE = 1;
     private static final int OVERFLOW_SHACKLE_UP = 1;
     private static final int SHACKLE = 6;
-    private static final int POOL = 1;
 
     public ThunderStruck() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.THUNDER_STRUCK), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY);
         this.isMultiDamage = true;
         this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.damage = this.baseDamage = ATTACK_DMG;

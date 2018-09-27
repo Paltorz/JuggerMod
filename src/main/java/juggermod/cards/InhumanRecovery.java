@@ -23,11 +23,10 @@ public class InhumanRecovery extends OverflowCard{
     private static final int TURNS_HEALED = 3;
     private static final int TURNS_HEALED_UP = 1;
     private static final int HEAL_OVERFLOW = 4;
-    private static final int POOL = 1;
 
     public InhumanRecovery() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.INHUMAN_RECOVERY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = TURNS_HEALED;
         this.exhaust = true;
         this.isEthereal = true;

@@ -20,13 +20,12 @@ public class Endure extends CustomCard{
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int POOL = 1;
     private static final int BASE_WEAK = 4;
     private static final int WEAK_UPGRADE = 2;
 
     public Endure() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.ENDURE), COST, DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.COPPER, CardRarity.COMMON, CardTarget.ALL_ENEMY, POOL);
+                CardType.SKILL, AbstractCardEnum.COPPER, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.magicNumber = this.baseMagicNumber = BASE_WEAK;
     }
 

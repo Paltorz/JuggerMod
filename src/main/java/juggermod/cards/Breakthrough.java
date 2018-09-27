@@ -25,11 +25,10 @@ public class Breakthrough extends CustomCard{
     private static final int COST = 0;
     private static final int DRAW = 1;
     private static final int DRAW_UP = 1;
-    private static final int POOL = 1;
 
     public Breakthrough() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BREAKTHROUGH), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = DRAW;
     }
 

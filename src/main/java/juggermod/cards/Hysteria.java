@@ -29,12 +29,11 @@ public class Hysteria extends OverflowCard{
     private static final int UPGRADE_DMG_AMT = 4;
     private static final int OVERFLOW_AMT = 1;
     private static final int DRAW = 2;
-    private static final int POOL = 1;
 
     public Hysteria() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HYSTERIA), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = OVERFLOW_AMT;
         this.isOverflow = true;

@@ -29,11 +29,10 @@ public class SteelForce extends OverflowCard{
     private static final int UPGRADE_DMG_AMT = 4;
     private static final int OVERFLOW_AMT = 4;
     private static final int PLATE_AMT = 1;
-    private static final int POOL = 1;
 
     public SteelForce() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.STEEL_FORCE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         this.damage=this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.isOverflow = true;

@@ -24,11 +24,10 @@ public class Unshakable extends CustomCard{
     private static final int UPGRADED_PLATE = 6;
     private static final int WEAK_AMOUNT = 2;
     private static final int UPGRADE_PLUS_WEAK = 1;
-    private static final int POOL = 1;
 
     public Unshakable() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.UNSHAKABLE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = WEAK_AMOUNT;
     }
 

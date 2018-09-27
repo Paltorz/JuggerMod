@@ -22,11 +22,10 @@ public class Pursuit extends OverflowCard{
     private static final int COST = 1;
     private static final int OVERFLOW_AMT = 3;
     private static final int BLOCK = 3;
-    private static final int POOL = 1;
 
     public Pursuit() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.PURSUIT), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF_AND_ENEMY, POOL);
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF_AND_ENEMY);
         this.baseBlock = BLOCK;
         this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
     }

@@ -23,11 +23,10 @@ public class Blitz extends CustomCard{
     private static final int COST = 0;
     private static final int ENERGY_GAIN = 1;
     private static final int CARD_DRAW = 2;
-    private static final int POOL = 1;
 
     public Blitz() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BLITZ), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.exhaust = true;
     }
 

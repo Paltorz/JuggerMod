@@ -2,6 +2,7 @@ package juggermod.cards;
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModTags;
+import basemod.helpers.CardTags;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,14 +22,13 @@ public class Defend_Purple extends CustomCard {
 	private static final int COST = 1;
 	private static final int BLOCK_AMT = 5;
 	private static final int UPGRADE_PLUS_BLOCK = 3;
-	private static final int POOL = 0;
 
 	public Defend_Purple() {
 		super(ID, NAME, JuggerMod.makePath(JuggerMod.DEFEND_PURPLE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF, POOL);
+				AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
 
 		this.baseBlock = BLOCK_AMT;
-        CardTags.addTags(this, BaseModTags.BASIC_DEFEND);
+		CardTags.addTags(this, BaseModTags.BASIC_DEFEND);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

@@ -19,12 +19,11 @@ public class HeavierBody extends CustomCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
     private static final int COST_UPGRADE = 1;
-    private static final int POOL = 1;
 
     public HeavierBody() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HEAVIER_BODY), COST, DESCRIPTION,
                 AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
     }
 
     @Override

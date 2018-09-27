@@ -23,13 +23,12 @@ public class ChallengingRoar extends OverflowCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 0;
-    private static final int POOL = 1;
     private static final int WEAK_AMOUNT = 1;
     private static final int VULNERABLE_AMOUNT = 2;
     private static final int OVERFLOW_AMT = 2;
 
     public ChallengingRoar() {
-        super(ID, NAME, JuggerMod.makePath(JuggerMod.CHALLENGING_ROAR), COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+        super(ID, NAME, JuggerMod.makePath(JuggerMod.CHALLENGING_ROAR), COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
         this.baseMagicNumber = this.magicNumber = OVERFLOW_AMT;
     }
 

@@ -27,12 +27,11 @@ public class Frenzy extends CustomCard{
     private static final int ATTACK_DMG =10;
     private static final int UPGRADE_DMG_AMT = 3;
     private static final int DRAW = 1;
-    private static final int POOL = 1;
 
     public Frenzy() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.FRENZY), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = DRAW;
         this.magicNumber = DRAW;

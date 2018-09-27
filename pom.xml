@@ -3,7 +3,7 @@
 
 	<groupId>juggermod</groupId>
 	<artifactId>JuggerMod</artifactId>
-	<version>0.1.0</version>
+	<version>0.1.1</version>
 
 	<name>JuggerMod</name>
 	<description>Currently, adds a few new relics.</description>

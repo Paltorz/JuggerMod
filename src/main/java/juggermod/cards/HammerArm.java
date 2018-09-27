@@ -25,12 +25,11 @@ public class HammerArm extends CustomCard{
     private static final int ATTACK_DMG = 12;
     private static final int UPGRADE_DMG_AMT = 4;
     private static final int DEX_LOSS = -2;
-    private static final int POOL = 1;
 
     public HammerArm() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HAMMER_ARM), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
     }
 

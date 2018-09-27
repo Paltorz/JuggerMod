@@ -23,11 +23,10 @@ public class Reversal extends CustomCard{
     private static final int COST = 3;
     private static final int STR_GAIN = 2;
     private static final int STR_GAIN_DOWN = -1;
-    private static final int POOL = 1;
 
     public Reversal() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.REVERSAL), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = STR_GAIN;
         this.exhaust = true;
     }

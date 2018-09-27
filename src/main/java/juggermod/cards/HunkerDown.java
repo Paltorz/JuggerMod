@@ -26,11 +26,10 @@ public class HunkerDown extends OverflowCard {
     private static final int DEX_LOSS = -1;
     private static final int OVERFLOW_AMT = 5;
     private static final int COST = 1;
-    private static final int POOL = 1;
 
     public HunkerDown() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HUNKER_DOWN), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.exhaust = true;
         this.isOverflow = true;

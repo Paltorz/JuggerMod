@@ -23,13 +23,12 @@ public class Endure extends CustomCard{
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int POOL = 1;
     private static final int BLOCK_AMT = 1;
     private static final int BLOCK_AMT_PLUS = 1;
 
     public Endure() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.ENDURE), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY);
         this.baseBlock = BLOCK_AMT;
     }
 

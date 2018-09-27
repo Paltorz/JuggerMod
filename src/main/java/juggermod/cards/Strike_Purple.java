@@ -2,6 +2,7 @@ package juggermod.cards;
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModTags;
+import basemod.helpers.CardTags;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,15 +19,14 @@ public class Strike_Purple extends CustomCard {
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 6;
 	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int POOL = 0;
 
 	public Strike_Purple() {
 		super(ID, NAME, JuggerMod.makePath(JuggerMod.STRIKE_PURPLE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC,
-				AbstractCard.CardTarget.ENEMY, POOL);
+				AbstractCard.CardTarget.ENEMY);
 
 		this.baseDamage = ATTACK_DMG;
-        CardTags.addTags(this, BaseModTags.BASIC_STRIKE, BaseModTags.STRIKE);
+		CardTags.addTags(this, BaseModTags.BASIC_STRIKE, BaseModTags.STRIKE);
 	}
 
 	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {

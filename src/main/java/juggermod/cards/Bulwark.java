@@ -21,11 +21,10 @@ public class Bulwark extends CustomCard{
     private static final int COST = 1;
     private static final int BLOCK = 11;
     private static final int UPGRADE_BLOCK_AMT = 4;
-    private static final int POOL = 1;
 
     public Bulwark() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BULWARK), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
         this.baseBlock = BLOCK;
     }
 
