@@ -19,12 +19,11 @@ public class Mercurial extends OverflowCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
-    private static final int POOL = 1;
 
     public Mercurial() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.MERCURIAL), COST, DESCRIPTION,
                 AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
     }
 
     @Override

@@ -21,12 +21,11 @@ public class BruteForce extends CustomCard{
     private static final int AMT = 4;
     private static final int UPGRADED_AMT = -2;
     private static final int ENERGY = 1;
-    private static final int POOL = 1;
 
     public BruteForce() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BRUTE_FORCE), COST, DESCRIPTION,
                 AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = AMT;
     }
 

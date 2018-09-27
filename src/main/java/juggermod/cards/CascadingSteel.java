@@ -26,12 +26,11 @@ public class CascadingSteel extends OverflowCard{
     private static final int UPGRADE_PLUS_DMG = 4;
     private static final int ARTIFACT_AMT = 1;
     private static final int OVERFLOW_AMT = 1;
-    private static final int POOL = 1;
 
     public CascadingSteel() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.CASCADING_STEEL), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
         this.isMultiDamage = true;
         this.damage=this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;

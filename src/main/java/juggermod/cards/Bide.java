@@ -20,12 +20,11 @@ public class Bide extends CustomCard{
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 2;
     private static final int AMOUNT = 1;
-    private static final int POOL = 1;
 
     public Bide() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BIDE), COST, DESCRIPTION,
                 AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = AMOUNT;
     }

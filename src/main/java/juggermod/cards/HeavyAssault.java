@@ -24,11 +24,10 @@ public class HeavyAssault extends CustomCard{
     private static final int ATTACK_DMG = 0;
     private static final int DEX_SCALING = 2;
     private static final int DEX_SCALING_UP = 1;
-    private static final int POOL = 1;
 
     public HeavyAssault() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HEAVY_ASSAULT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = DEX_SCALING;
         this.isEthereal = true;

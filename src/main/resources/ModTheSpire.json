@@ -1,0 +1,9 @@
+{
+  "modid": "JuggerMod",
+  "name": "JuggerMod",
+  "author_list": ["Paltorz, with the framework from the FruityMod team"],
+  "description": "Adds Juggernaut as a new playable character.",
+  "version": "0.1.1",
+  "sts_version": "09-06-2018",
+  "mts_version": "3.0.0"
+}

@@ -26,12 +26,11 @@ public class Feint extends CustomCard{
     private static final int DRAW = 1;
     private static final int ATTACK_DMG = 5;
     private static final int UPGRADE_DMG_AMT = 3;
-    private static final int POOL = 1;
 
     public Feint() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.FEINT), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
     }
 

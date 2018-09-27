@@ -1,6 +1,9 @@
 package juggermod.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModTags;
+import basemod.helpers.CardTags;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -25,13 +28,13 @@ public class Overpower extends CustomCard{
     private static final int ATTACK_DMG = 6;
     private static final int STR_SCALING = 2;
     private static final int STR_SCALING_UP = 1;
-    private static final int POOL = 1;
 
     public Overpower() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.OVERPOWER), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY);
         this.damage=this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = STR_SCALING;
+        CardTags.addTags(this, BaseModTags.GREMLIN_MATCH);
     }
 
     @Override

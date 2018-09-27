@@ -25,11 +25,10 @@ public class Bolster extends CustomCard{
     private static final int UPGRADE_PLUS_BLOCK = 2;
     private static final int PLATE_AMT= 4;
     private static final int UPGRADE_PLUS_PLATE = 1;
-    private static final int POOL = 1;
 
     public Bolster() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BOLSTER), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.baseBlock = BLOCK_AMT;
         this.magicNumber = this.baseMagicNumber = PLATE_AMT;
     }

@@ -25,11 +25,10 @@ public class HeavyCrash extends CustomCard{
     private static final int ATTACK_DMG = 0;
     private static final int PLATE_SCALING = 3;
     private static final int PLATE_SCALING_UP = 1;
-    private static final int POOL = 1;
 
     public HeavyCrash() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.HEAVY_CRASH), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
         this.damage=this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = PLATE_SCALING;
     }

@@ -19,12 +19,11 @@ public class Inertia extends CustomCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
     private static final int UPGRADE_COST = 1;
-    private static final int POOL = 1;
 
     public Inertia() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.INERTIA), COST, DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.COPPER,
-                CardRarity.RARE, CardTarget.SELF, POOL);
+                CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override

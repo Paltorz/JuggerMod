@@ -29,12 +29,11 @@ public class Overexert extends OverflowCard {
     private static final int OVERFLOW_AMT = 3;
     private static final int DRAW = 2;
     private static final int TOP_DECK = 1;
-    private static final int POOL = 1;
 
     public Overexert() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.OVEREXERT), COST, DESCRIPTION,
                 AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
         this.baseMagicNumber = OVERFLOW_AMT;
         this.magicNumber = OVERFLOW_AMT;
         this.exhaust = true;

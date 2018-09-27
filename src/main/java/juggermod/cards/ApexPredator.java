@@ -25,11 +25,10 @@ public class ApexPredator extends CustomCard{
     private static final int BLOCK_AMT_UP = 2;
     private static final int STR_LOSS = 3;
     private static final int STR_LOSS_UP = 1;
-    private static final int POOL = 1;
 
     public ApexPredator() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.APEX_PREDATOR), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = this.damage =  ATTACK_DMG;
         this.baseBlock = BLOCK_AMT;
         this.magicNumber = this.baseMagicNumber = STR_LOSS;

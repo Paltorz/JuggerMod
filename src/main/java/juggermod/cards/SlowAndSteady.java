@@ -27,11 +27,10 @@ public class SlowAndSteady extends OverflowCard{
     private static final int OVERFLOW_AMT = 5;
     private static final int CARDS_TOP = 1;
     private static final int CARDS_TOP_UP = 2;
-    private static final int POOL = 1;
 
     public SlowAndSteady() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SLOW_AND_STEADY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
         this.isOverflow = true;
     }

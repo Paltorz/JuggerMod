@@ -25,12 +25,11 @@ public class Parry extends CustomCard{
     private static final int COST = 1;
     private static final int ATTACK_DMG = 5;
     private double scaling;
-    private static final int POOL = 1;
 
     public Parry() {
         super (ID, NAME, JuggerMod.makePath(JuggerMod.PARRY), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.baseBlock = 0;
     }

@@ -20,7 +20,6 @@ public class LivingArmor extends CustomCard{
     private static final int COST = 2;
     private static final int PLATE_AMT = 7;
     private static final int UPGRADE_PLUS_PLATE = 1;
-    private static final int POOL = 1;
 
     public LivingArmor() {
         this(0);
@@ -28,7 +27,7 @@ public class LivingArmor extends CustomCard{
 
     public LivingArmor(int upgrades) {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.LIVING_ARMOR), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = PLATE_AMT;
         this.timesUpgraded = upgrades;
         this.exhaust = true;

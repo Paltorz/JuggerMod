@@ -25,12 +25,11 @@ public class SkullBash extends CustomCard{
     private static final int COST = 1;
     private static final int ATTACK_DMG = 10;
     private static final int UPGRADE_DMG_AMT = 4;
-    private static final int POOL = 1;
 
     public SkullBash() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.SKULL_BASH), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.exhaust = true;
     }

@@ -21,13 +21,12 @@ public class Struggle extends CustomCard {
 	private static final int ENERGY_GAIN = 1;
 	private static final int ATTACK_DMG = 15;
 	private static final int UPGRADE_PLUS_DMG = 5;
-	private static final int POOL = 1;
 
 	public Struggle() {
 		super(ID, NAME, JuggerMod.makePath(JuggerMod.STRUGGLE), COST, DESCRIPTION,
 				AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
 				AbstractCard.CardRarity.COMMON,
-				AbstractCard.CardTarget.ENEMY, POOL);
+				AbstractCard.CardTarget.ENEMY);
 
 		this.baseDamage = ATTACK_DMG;
 	}

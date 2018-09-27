@@ -1,4 +1,8 @@
-
-.idea/dictionaries/fiiiiilth.xml
+.idea
+.classpath
+.factorypath
+.project
+.settings
 bin/
 target/**
+dependency-reduced-pom.xml

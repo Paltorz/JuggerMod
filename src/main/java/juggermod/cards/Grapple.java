@@ -27,11 +27,10 @@ public class Grapple extends CustomCard{
     private static final int GRAPPLE_DMG = 3;
     private static final int GRAPPLE_DMG_UPGRADE = 5;
     private static final int BLOCK_AMT = 1;
-    private static final int POOL = 1;
 
     public Grapple() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.GRAPPLE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = VULNERABLE_AMT;
         this.baseBlock = BLOCK_AMT;
     }

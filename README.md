@@ -31,8 +31,8 @@ Card list: [click here ](https://drive.google.com/file/d/1oF5-2vDYaB9jAmvdYv6Wh2
 ## Requirements ##
 #### General Use ####
 * Java 8 (JRE). Currently only Java 8 should be used, issues with Java 9 are being looked into.
-* BaseMod v.1.8.0+ (https://github.com/daviscook477/BaseMod/releases)
-* ModTheSpire v2.3.0+ (https://github.com/kiooeht/ModTheSpire/releases)
+* BaseMod v3.0.0+ (https://github.com/daviscook477/BaseMod/releases)
+* ModTheSpire v3.0.0+ (https://github.com/kiooeht/ModTheSpire/releases)
 
 ## Installation ##
 1. If you have `ModTheSpire` already installed you can skip to step 5. Otherwise continue with step 2:
@@ -41,10 +41,10 @@ Card list: [click here ](https://drive.google.com/file/d/1oF5-2vDYaB9jAmvdYv6Wh2
 4. Create a `mods` folder in your **Slay The Spire** directory so it looks like `C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods`
 5. Download `BaseMod.jar` from the latest release (https://github.com/daviscook477/BaseMod/releases)
 6. Move `BaseMod.jar` into the `mods` folder you created in step 4
-7. Download `FruityMod.jar` from the latest release (https://github.com/gskleres/FruityMod-StS/releases)
-8. Move `FruityMod.jar` into the `mods` folder you created in step 4
+7. Download `JuggerMod.jar` from the latest release (https://github.com/Paltorz/JuggerMod/releases)
+8. Move `JuggerMod.jar` into the `mods` folder you created in step 4
 9. Your modded version of **Slay The Spire** can now be launched by double-clicking on `ModTheSpire.jar`
-10. This will open a mod select menu where you need to make sure that both `BaseMod` and `FruityMod` are checked before clicking **play**
+10. This will open a mod select menu where you need to make sure that both `BaseMod` and `JuggerMod` are checked before clicking **play**
 
 Here is a great video showing how to install mods, by Xterminator: https://www.youtube.com/watch?v=r2m2aL1eEjw
 
@@ -68,9 +68,8 @@ Creative Commons and other licenses are great and helped make some of this mod h
 * Java 8
 * Maven
 * CFR 124 (run this with Java 8, doesn't work well with 9)
-* BaseMod v.1.7.0+
-* ModTheSpire v2.2.1+
-* ModTheSpireLib (whatever version is associated with your version of ModTheSpire)
+* BaseMod v3.0.0+
+* ModTheSpire v3.0.0+
 
 ### Building ##
 1. Modify `pom.xml` to point to the location you've placed the dependencies

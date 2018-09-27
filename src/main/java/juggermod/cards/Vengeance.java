@@ -20,11 +20,10 @@ public class Vengeance extends CustomCard{
     private static final int COST = 2;
     private static final int COST_UPDATE = -1;
     private static final int ENERGY_GAIN = 1;
-    private static final int POOL = 1;
 
     public Vengeance() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.VENGEANCE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = ENERGY_GAIN;
         this.exhaust = true;
     }

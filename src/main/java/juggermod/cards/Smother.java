@@ -25,7 +25,6 @@ public class Smother extends OverflowCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
-    private static final int POOL = 1;
     private static final int WEAK_AMOUNT = 1;
     private static final int UPGRADE_PLUS_WEAK = 2;
     private static final int ATTACK_DMG = 6;
@@ -34,7 +33,7 @@ public class Smother extends OverflowCard{
     private static final int OVERFLOW_WEAK = 1;
 
     public Smother() {
-        super(ID, NAME, JuggerMod.makePath(JuggerMod.SMOTHER), COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+        super(ID, NAME, JuggerMod.makePath(JuggerMod.SMOTHER), COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.damage=this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = OVERFLOW_AMT;
         this.isOverflow = true;

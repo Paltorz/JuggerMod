@@ -22,11 +22,10 @@ public class Feast extends CustomCard{
     private static final int ATTACK_DMG_UP = 2;
     private static final int HEAL_AMOUNT = 6;
     private static final int HEAL_AMOUNT_UP = 2;
-    private static final int POOL = 1;
 
     public Feast() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.FEAST), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = this.damage =  ATTACK_DMG;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = this.HEAL_AMOUNT;

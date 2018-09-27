@@ -19,11 +19,10 @@ public class Taunt extends CustomCard{
     private static final int STR_LOSS = 3;
     private static final int STR_LOSS_UP = 1;
     private static final int COST = 1;
-    private static final int POOL = 1;
 
     public Taunt() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.TAUNT), COST, DESCRIPTION,
-                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
         this.magicNumber = this.baseMagicNumber = STR_LOSS;
         this.exhaust = true;
     }

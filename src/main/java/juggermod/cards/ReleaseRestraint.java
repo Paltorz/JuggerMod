@@ -26,12 +26,11 @@ public class ReleaseRestraint extends OverflowCard{
     private static final int DEX_AMT = 2;
     private static final int DEX_OVERFLOW = 1;
     private static final int OVERFLOW_AMT = 2;
-    private static final int POOL = 1;
 
     public ReleaseRestraint() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.RELEASE_RESTRAINT), COST, DESCRIPTION,
                 AbstractCard.CardType.POWER, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = OVERFLOW_AMT;
     }
 

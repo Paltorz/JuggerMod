@@ -22,12 +22,11 @@ public class LashOut extends CustomCard{
     private static final int ATTACK_UPGRADE = 0;
     private static final int NUM_ATTACKS = 3;
     private static final int NUM_ATTACKS_UPGRADE = 1;
-    private static final int POOL = 1;
 
     public LashOut() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.LASH_OUT), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY, POOL);
+                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
         this.damage = this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = NUM_ATTACKS;
         this.exhaust = true;

@@ -21,11 +21,10 @@ public class FocusedPower extends CustomCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
     private static final int COST_UPGRADE = 1;
-    private static final int POOL = 1;
 
     public FocusedPower() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.FOCUSED_POWER), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.exhaust = true;
     }
 

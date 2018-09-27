@@ -21,11 +21,10 @@ public class BattleShout extends CustomCard{
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
     private static final int STR_GAIN = 2;
-    private static final int POOL = 1;
 
     public BattleShout() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.BATTLE_SHOUT), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCardEnum.COPPER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
     }
 
     @Override

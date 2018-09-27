@@ -23,12 +23,11 @@ public class PerfectedBlow extends CustomCard{
     private static final int COST = 1;
     private static final int ATTACK_DMG = 5;
     private static final int UPGRADE_DMG_AMT = 2;
-    private static final int POOL = 1;
 
     public PerfectedBlow() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.PERFECTED_BLOW), COST, DESCRIPTION,
                 AbstractCard.CardType.ATTACK, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY, POOL);
+                AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
     }
 

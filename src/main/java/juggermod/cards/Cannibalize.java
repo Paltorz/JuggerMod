@@ -18,12 +18,11 @@ public class Cannibalize extends CustomCard{
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int COST_UPGRADE = 0;
-    private static final int POOL = 1;
 
     public Cannibalize() {
         super(ID, NAME, JuggerMod.makePath(JuggerMod.CANNIBALIZE), COST, DESCRIPTION,
                 AbstractCard.CardType.SKILL, AbstractCardEnum.COPPER,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF, POOL);
+                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.exhaust = true;
     }
 
