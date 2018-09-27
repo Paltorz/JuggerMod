@@ -10,8 +10,13 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import juggermod.JuggerMod;
 import juggermod.actions.unique.HeavyBodyAction;
+import juggermod.cards.Defend_Purple;
+import juggermod.cards.OnGuard;
+import juggermod.cards.Overpower;
+import juggermod.cards.Strike_Purple;
 import juggermod.patches.TheJuggernautEnum;
 import juggermod.powers.PlateBalancePower;
+import juggermod.relics.HeavyBody;
 
 import java.util.ArrayList;
 
@@ -79,9 +84,9 @@ public class TheJuggernaut extends CustomPlayer {
 		for (AbstractPower p : this.powers) {
 			p.atStartOfTurnPostDraw();
 		}
-		if (AbstractDungeon.player.hasRelic("Heavy Body"))
+		if (AbstractDungeon.player.hasRelic(HeavyBody.ID))
 		AbstractDungeon.actionManager.addToBottom(new HeavyBodyAction(AbstractDungeon.player, 1));
-		if (AbstractDungeon.player.hasPower("Foolhardy") != true){
+		if (AbstractDungeon.player.hasPower(PlateBalancePower.POWER_ID) != true){
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlateBalancePower()));
 		}
 	}
@@ -91,29 +96,29 @@ public class TheJuggernaut extends CustomPlayer {
 			if (r == null) continue;
 			r.atBattleStart();
 		}
-		if (AbstractDungeon.player.hasPower("Foolhardy") != true){
+		if (AbstractDungeon.player.hasPower(PlateBalancePower.POWER_ID) != true){
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlateBalancePower()));
 		}
 	}
 
 	public static ArrayList<String> getStartingDeck() {
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add("Strike_P");
-		retVal.add("Strike_P");
-		retVal.add("Strike_P");
-		retVal.add("Strike_P");
-		retVal.add("Defend_P");
-		retVal.add("Defend_P");
-		retVal.add("Defend_P");
-		retVal.add("Defend_P");
-		retVal.add("On Guard");
-		retVal.add("Overpower");
+		retVal.add(Strike_Purple.ID);
+		retVal.add(Strike_Purple.ID);
+		retVal.add(Strike_Purple.ID);
+		retVal.add(Strike_Purple.ID);
+		retVal.add(Defend_Purple.ID);
+		retVal.add(Defend_Purple.ID);
+		retVal.add(Defend_Purple.ID);
+		retVal.add(Defend_Purple.ID);
+		retVal.add(OnGuard.ID);
+		retVal.add(Overpower.ID);
 		return retVal;
 	}
 	
 	public static ArrayList<String> getStartingRelics() {
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add("Heavy Body");
+		retVal.add(HeavyBody.ID);
 		UnlockTracker.markRelicAsSeen("Heavy Body");
 		return retVal;
 	}

@@ -266,35 +266,7 @@ public class JuggerMod implements PostInitializeSubscriber,
     }
     
     public JuggerMod() {
-    	logger.info("subscribing to postInitialize event");
-        BaseMod.subscribeToPostInitialize(this);
-        
-        logger.info("subscribing to editCharacters event");
-        BaseMod.subscribeToEditCharacters(this);
-        
-        logger.info("subscribing to editRelics event");
-        BaseMod.subscribeToEditRelics(this);
-        
-        logger.info("subscribing to editCards event");
-        BaseMod.subscribeToEditCards(this);
-
-        logger.info("subscribing to editStrings event");
-        BaseMod.subscribeToEditStrings(this);
-        
-        /* Disable this during playtesting for being counterproductive */
-        // logger.info("subscribing to setUnlocks event");
-        // BaseMod.subscribeToSetUnlocks(this);
-        
-        logger.info("subscribing to onCardUse event");
-        BaseMod.subscribeToOnCardUse(this);
-        
-        logger.info("subscribing to editKeywords event");
-        BaseMod.subscribeToEditKeywords(this);
-        
-        BaseMod.subscribeToOnPowersModified(this);
-        BaseMod.subscribeToPostExhaust(this);
-        BaseMod.subscribeToPostBattle(this);
-        BaseMod.subscribeToPostDraw(this);
+        BaseMod.subscribe(this);
         
         /*
          * Note that for now when installing JuggerMod, in the `mods/` folder another folder named
@@ -302,7 +274,7 @@ public class JuggerMod implements PostInitializeSubscriber,
          * `images/` folder must be relocated
          */
         logger.info("creating the color " + AbstractCardEnum.COPPER.toString());
-        BaseMod.addColor(AbstractCardEnum.COPPER.toString(),
+        BaseMod.addColor(AbstractCardEnum.COPPER,
         		COPPER, COPPER, COPPER, COPPER, COPPER, COPPER, COPPER,
         		makePath(ATTACK_COPPER), makePath(SKILL_COPPER),
         		makePath(POWER_COPPER), makePath(ENERGY_ORB_COPPER),
@@ -323,9 +295,7 @@ public class JuggerMod implements PostInitializeSubscriber,
     public void receivePostInitialize() {
         // Mod badge
         Texture badgeTexture = new Texture(makePath(BADGE_IMG));
-        ModPanel settingsPanel = new ModPanel();
-        settingsPanel.addLabel("JuggerMod does not have any settings (yet)!", 400.0f, 700.0f, (me) -> {});
-        BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
+        BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, null);
         
         Settings.isDailyRun = false;
         Settings.isTrial = false;
@@ -336,11 +306,11 @@ public class JuggerMod implements PostInitializeSubscriber,
 	public void receiveEditCharacters() {
 		logger.info("begin editting characters");
 		
-		logger.info("add " + TheJuggernautEnum.THE_JUGGERNAUT.toString());
+		logger.info("add " + TheJuggernautEnum.THE_JUGGERNAUT);
 		BaseMod.addCharacter(TheJuggernaut.class, "The Juggernaut", "Juggernaut class string",
-				AbstractCardEnum.COPPER.toString(), "The Juggernaut",
+				AbstractCardEnum.COPPER, "The Juggernaut",
 				makePath(JUGGERNAUT_BUTTON), makePath(JUGGERNAUT_PORTRAIT),
-				TheJuggernautEnum.THE_JUGGERNAUT.toString());
+				TheJuggernautEnum.THE_JUGGERNAUT);
 		
 		logger.info("done editting characters");
 	}
@@ -351,11 +321,11 @@ public class JuggerMod implements PostInitializeSubscriber,
 		logger.info("begin editting relics");
         
         // Add relics
-		BaseMod.addRelicToCustomPool(new HeavyBody(), AbstractCardEnum.COPPER.toString());
-        BaseMod.addRelicToCustomPool(new SneckoHeart(), AbstractCardEnum.COPPER.toString());
-        BaseMod.addRelicToCustomPool(new RigidArmor(), AbstractCardEnum.COPPER.toString());
-        BaseMod.addRelicToCustomPool(new BrittleRock(), AbstractCardEnum.COPPER.toString());
-        BaseMod.addRelicToCustomPool(new KineticRock(), AbstractCardEnum.COPPER.toString());
+		BaseMod.addRelicToCustomPool(new HeavyBody(), AbstractCardEnum.COPPER);
+        BaseMod.addRelicToCustomPool(new SneckoHeart(), AbstractCardEnum.COPPER);
+        BaseMod.addRelicToCustomPool(new RigidArmor(), AbstractCardEnum.COPPER);
+        BaseMod.addRelicToCustomPool(new BrittleRock(), AbstractCardEnum.COPPER);
+        BaseMod.addRelicToCustomPool(new KineticRock(), AbstractCardEnum.COPPER);
         
         logger.info("done editting relics");
 	}
@@ -364,7 +334,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 	public void receiveEditCards() {
 		logger.info("begin editting cards");
 		
-		logger.info("add cards for " + TheJuggernautEnum.THE_JUGGERNAUT.toString());
+		logger.info("add cards for " + TheJuggernautEnum.THE_JUGGERNAUT);
 		
 		BaseMod.addCard(new Strike_Purple());
 		BaseMod.addCard(new Defend_Purple());
