@@ -1,6 +1,8 @@
 package juggermod.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModTags;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -24,6 +26,7 @@ public class Strike_Purple extends CustomCard {
 				AbstractCard.CardTarget.ENEMY, POOL);
 
 		this.baseDamage = ATTACK_DMG;
+        CardTags.addTags(this, BaseModTags.BASIC_STRIKE, BaseModTags.STRIKE);
 	}
 
 	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {

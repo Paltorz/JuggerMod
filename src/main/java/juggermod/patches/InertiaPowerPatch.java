@@ -6,7 +6,7 @@ import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 
-@SpirePatch(cls="com.megacrit.cardcrawl.actions.common.DiscardAtEndOfTurnAction", method="update")
+@SpirePatch(clz=com.megacrit.cardcrawl.actions.common.DiscardAtEndOfTurnAction.class, method="update")
 public class InertiaPowerPatch {
     public static ExprEditor Instrument() {
         return new ExprEditor() {

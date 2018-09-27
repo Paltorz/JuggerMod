@@ -119,7 +119,7 @@ public class TheJuggernaut extends CustomPlayer {
 	public static ArrayList<String> getStartingRelics() {
 		ArrayList<String> retVal = new ArrayList<>();
 		retVal.add(HeavyBody.ID);
-		UnlockTracker.markRelicAsSeen("Heavy Body");
+		UnlockTracker.markRelicAsSeen(HeavyBody.ID);
 		return retVal;
 	}
 	

@@ -1,6 +1,8 @@
 package juggermod.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModTags;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,6 +34,7 @@ public class Overpower extends CustomCard{
                 AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY, POOL);
         this.damage=this.baseDamage = ATTACK_DMG;
         this.magicNumber = this.baseMagicNumber = STR_SCALING;
+        CardTags.addTags(this, BaseModTags.GREMLIN_MATCH);
     }
 
     @Override

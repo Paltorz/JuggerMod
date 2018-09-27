@@ -416,8 +416,8 @@ public class JuggerMod implements PostInitializeSubscriber,
         BaseMod.addCard(new Earthquake());
 		
 		// make sure everything is always unlocked
-		UnlockTracker.unlockCard("Strike_P");
-		UnlockTracker.unlockCard("Defend_P");
+		UnlockTracker.unlockCard(Strike_Purple.ID);
+		UnlockTracker.unlockCard(Defend_Purple.ID);
 		
 		/*UnlockTracker.unlockCard("Starburst");
 		UnlockTracker.unlockCard("Irradiate");

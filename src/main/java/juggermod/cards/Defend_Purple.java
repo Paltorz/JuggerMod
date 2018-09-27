@@ -1,6 +1,8 @@
 package juggermod.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModTags;
+
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -26,6 +28,7 @@ public class Defend_Purple extends CustomCard {
 				AbstractCardEnum.COPPER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF, POOL);
 
 		this.baseBlock = BLOCK_AMT;
+        CardTags.addTags(this, BaseModTags.BASIC_DEFEND);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
